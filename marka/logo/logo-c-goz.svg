@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- Logo C — "Dinleyen göz": göz kapağının içi ses dalgası; göz bebeği kırmızı dikey yarık. -->
+  <defs>
+    <clipPath id="goz">
+      <path d="M120 400 C 220 230 580 230 680 400 C 580 570 220 570 120 400 Z"/>
+    </clipPath>
+    <radialGradient id="parilti" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FF2E3B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0A0A0D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="#0A0A0D"/>
+  <circle cx="400" cy="400" r="300" fill="url(#parilti)"/>
+  <g clip-path="url(#goz)" stroke="#EDE6D6" stroke-width="30" stroke-linecap="round" opacity="0.9">
+    <line x1="200" y1="370" x2="200" y2="430"/>
+    <line x1="262" y1="330" x2="262" y2="470"/>
+    <line x1="324" y1="300" x2="324" y2="500"/>
+    <line x1="476" y1="300" x2="476" y2="500"/>
+    <line x1="538" y1="330" x2="538" y2="470"/>
+    <line x1="600" y1="370" x2="600" y2="430"/>
+  </g>
+  <path d="M120 400 C 220 230 580 230 680 400 C 580 570 220 570 120 400 Z" fill="none" stroke="#EDE6D6" stroke-width="34" stroke-linejoin="round"/>
+  <path d="M400 255 C 440 320 440 480 400 545 C 360 480 360 320 400 255 Z" fill="#FF2E3B"/>
+</svg>
