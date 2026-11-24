@@ -48,6 +48,15 @@ Türkçe: Her iki font ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük
 - Profil dosyaları: `marka/logo/profil-800.png`, `profil-320.png`, `profil-200.png`.
 - Logoyu değiştirmek ya da yeni marka görseli yapmak için `logo-tasarim` skill'ini oku.
 
+## Filigran
+| Dosya | Nerede | Kural |
+|---|---|---|
+| `marka/filigran/filigran-video.png` (600x128, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede 300x64, sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
+| `marka/filigran/filigran-youtube-300.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
+
+- Yerleşim kontrolü: `marka/filigran/yerlesim-onizleme.html` render edilip bakılır.
+- Filigran yazısı her zaman koyu hap zemin üstünde (parlak karede kırmızı "SAKIN" kaybolmasın).
+
 ## Açılış
 - **Logo ya da kanal adıyla açılış YOK.** İlk kare videonun en çarpıcı görüntüsüdür (bkz. `video-uretim`).
 

@@ -10,6 +10,8 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 |---|---|
 | `node araclar/marka_render.js <girdi.svg/html> <cikti.png> <G> <Y> [--olcek N]` | SVG/HTML'i Chromium ile PNG'ye çevirir; fontların yüklenmesini bekler |
 | `node araclar/logo_kontrol.js <pano.png> <logo1.png> [logo2.png …]` | Her logoyu 320/160/98/48/32 px profil yuvarlağında, koyu ve açık zeminde tek panoda gösterir |
+| `node araclar/banner_kontrol.js <banner.html> <onizleme.png> [--pay 60]` | Banner'ın TV / bilgisayar / telefon görünümlerini çıkarır, her öğenin güvenli alana sığdığını **ölçer** (GEÇTİ/KALDI, çıkış kodu 0/2) |
+| `--seffaf` (marka_render.js) | Şeffaf zeminli PNG (filigran); SVG'de zemin rect'i olmamalı |
 
 ## Akış (her adımda ölçmeden geçme)
 1. **Fikir:** En az 3 seçenek. Her biri tek bir fikir anlatır (ör. "sessizlikte tek ses"). Kanal adıyla anlam bağı olsun ("Duyma Sakın" → ses, kulak, dinleyen göz).
@@ -32,8 +34,8 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 
 ## Banner (YouTube 2560x1440)
 - Kaynak: `marka/banner/banner-youtube.html`. Render: `marka_render.js … 2560 1440`.
-- **Güvenli alan:** ortadaki 1546x423 (sol 507, üst 508). Tüm yazı ve logo bunun içinde. `banner-youtube-guvenli.html` yeşil kesikli çerçeveyle render edilip bakılır.
-- Mobil görünümü kontrol: PNG'den (507,508,2053,931) kırpıp Read ile bak.
+- **Güvenli alan:** YouTube Yardım: 2048x1152'de 1235x338 → 2560x1440'ta 1546x423 (sol 507, üst 508). Tüm yazı ve logo bunun **60 px içinde** (bazı kaynaklar alanı ölçeklemeden 1235x338 veriyor; 60 px pay ikisini de karşılar).
+- Kontrol: `node araclar/banner_kontrol.js marka/banner/banner-youtube.html marka/banner/banner-cihaz-onizleme.png --pay 60` → GEÇTİ olmalı, sonra önizlemeye Read ile bak.
 - Dalga deseni tohumlu rastgele (aynı render → aynı görüntü).
 - Arka plan deseni metnin arkasından geçiyorsa metne koyu `text-shadow` ver; küçük satır `sis` (#B4B0B8) rengi, `kül` değil.
 
@@ -56,4 +58,7 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | Anton "D" harfinin iç boşluğu dar; içine öğe koyunca kayboluyor | Harf içine öğe koyma; harf + öğe yan yana ya da harfsiz sembol |
 | Sert kenarlı yarı saydam arka plan dairesi küçük boyutta "halka" gibi görünüyor | `radialGradient` ile kenarı sıfıra indir |
 | Göz/çok çizgili logolar 32 px'te bulanık | Çubuk sayısını azalt veya kalınlaştır; ana sembolü tek öğeye indir |
+| Kırmızı/kemik renkli filigran yazısı parlak (turuncu, beyaz) karede kayboluyor | Filigranı %78 opak koyu hap zemin üstüne koy |
+| `page.addStyleTag` SVG belgesinde hata veriyor (head yok) | Şeffaflık için SVG'de stil ekleme; `omitBackground` yeterli |
+| YouTube kanal filigranı Shorts'ta görünmüyor | Shorts/Reels/TikTok için filigranı videoya göm (`filigran-video.png`) |
 | Font yüklenmeden ekran görüntüsü alınması (yedek fontla render) | `marka_render.js` `document.fonts.ready` bekler; yeni araç yazarsan aynısını yap |

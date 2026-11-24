@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- Filigran yerleşim önizlemesi: 1080x1920 Shorts karesi (platform düğme alanları kırmızı taralı) + 1920x1080 yatay kare.
+     Render: node araclar/marka_render.js marka/filigran/yerlesim-onizleme.html marka/filigran/yerlesim-onizleme.png 3120 1920 -->
+<html><head><meta charset="utf-8"><style>
+  body{margin:0;width:3120px;height:1920px;display:flex;gap:60px;background:#222;font:600 30px sans-serif;color:#fff}
+  .dikey{position:relative;width:1080px;height:1920px;overflow:hidden;
+    background:linear-gradient(135deg,#f4d58d 0%,#e98a4f 38%,#3a2a4a 62%,#0b0b10 100%)}
+  .yatay{position:relative;width:1920px;height:1080px;align-self:center;overflow:hidden;
+    background:linear-gradient(90deg,#0b0b10 0%,#2a3550 50%,#e8e2d0 100%)}
+  .bolge{position:absolute;background:repeating-linear-gradient(45deg,rgba(255,0,0,.28) 0 14px,rgba(255,0,0,.08) 14px 28px);
+    outline:2px solid rgba(255,60,60,.9);display:flex;align-items:center;justify-content:center;text-align:center;font-size:26px}
+  .bant{position:absolute;left:60px;right:60px;top:190px}
+  .bant .cubuk{display:flex;gap:8px}.bant .cubuk i{flex:1;height:8px;border-radius:4px;background:rgba(107,106,114,.6)}
+  .bant .cubuk i.d{background:#FF2E3B}
+  .bant b{display:block;margin-top:14px;font:700 34px Inter, sans-serif;color:#EDE6D6;text-shadow:0 2px 6px #000}
+</style></head><body>
+  <div class="dikey">
+    <div class="bolge" style="left:0;top:0;width:1080px;height:170px">Platform üst simgeleri</div>
+    <div class="bolge" style="right:0;top:880px;width:170px;height:860px">Beğen / yorum /<br>paylaş düğmeleri</div>
+    <div class="bolge" style="left:0;bottom:0;width:1080px;height:330px">Kanal adı, açıklama, ses bilgisi</div>
+    <div class="bant"><div class="cubuk"><i class="d"></i><i class="d"></i><i></i><i></i><i></i></div><b>Karabasan</b></div>
+    <img src="filigran-video.png" style="position:absolute;right:60px;top:290px;width:300px;height:64px;opacity:.85">
+    <div style="position:absolute;left:60px;top:1500px;width:830px;text-align:center;font:800 64px Inter,sans-serif;color:#fff;text-shadow:0 3px 8px #000">altyazı burada akar</div>
+  </div>
+  <div class="yatay">
+    <div style="position:absolute;left:40px;top:30px;font-size:34px">Yatay video (YouTube kanal filigranı, sağ alt)</div>
+    <img src="filigran-youtube-300.png" style="position:absolute;right:28px;bottom:28px;width:150px;height:150px;opacity:.9">
+  </div>
+</body></html>

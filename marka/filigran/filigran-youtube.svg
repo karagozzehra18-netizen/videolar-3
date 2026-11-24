@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- YouTube Studio kanal filigranı (yalnız yatay videolarda görünür). Kare, şeffaf köşeler. -->
+  <circle cx="150" cy="150" r="146" fill="#0A0A0D" fill-opacity="0.88"/>
+  <circle cx="150" cy="150" r="144" fill="none" stroke="#EDE6D6" stroke-opacity="0.25" stroke-width="3"/>
+  <g stroke="#EDE6D6" stroke-width="17" stroke-linecap="round">
+    <line x1="62" y1="139" x2="62" y2="161"/><line x1="91" y1="126" x2="91" y2="174"/><line x1="120" y1="109" x2="120" y2="191"/>
+    <line x1="180" y1="109" x2="180" y2="191"/><line x1="209" y1="126" x2="209" y2="174"/><line x1="238" y1="139" x2="238" y2="161"/>
+  </g>
+  <line x1="150" y1="64" x2="150" y2="210" stroke="#FF2E3B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M150 230 C 143 241 141 248 141 252 A 9 9 0 0 0 159 252 C 159 248 157 241 150 230 Z" fill="#FF2E3B"/>
+</svg>

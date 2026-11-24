@@ -41,3 +41,5 @@ Yarım dakikalık korku hikâyeleri. Kulaklığını tak, ışığı kapatma.
 | Instagram profil (isteğe bağlı küçük) | `marka/logo/profil-320.png` | 320x320 |
 | TikTok profil (isteğe bağlı küçük) | `marka/logo/profil-200.png` | 200x200 |
 | YouTube banner | `marka/banner/banner-youtube.png` | 2560x1440 |
+| YouTube kanal filigranı (Studio → Özelleştirme → Filigran → "Videonun tamamı") | `marka/filigran/filigran-youtube-300.png` | 300x300 |
+| Video içi filigran (videolara otomatik gömülür) | `marka/filigran/filigran-video.png` | 600x128 |
