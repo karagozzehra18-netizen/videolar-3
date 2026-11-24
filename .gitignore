@@ -17,3 +17,15 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Gizli anahtarlar
+.env
+.env.*
+
+# Bağımlılıklar ve üretim çıktıları
+node_modules/
+out/
+render/
+ses/ham/*
+!ses/ham/.gitkeep
+__pycache__/
