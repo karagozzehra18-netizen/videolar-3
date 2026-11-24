@@ -1,0 +1,19 @@
+# Büyük video ve ses dosyaları (Drive / harici diskte sakla)
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.aiff
+
+# Kurgu proje dosyaları
+*.prproj
+*.aep
+*.drp
+*.fcpbundle/
+*.veg
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+desktop.ini
