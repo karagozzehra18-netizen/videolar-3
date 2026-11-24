@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- 2 — "Dikişli kulak": kulak, kırmızı dikişlerle kapatılmış. Duyma. -->
+  <defs><radialGradient id="p" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF2E3B" stop-opacity=".18"/><stop offset="1" stop-color="#0A0A0D" stop-opacity="0"/></radialGradient></defs>
+  <rect width="800" height="800" fill="#0A0A0D"/><circle cx="400" cy="400" r="330" fill="url(#p)"/>
+  <g fill="none" stroke="#EDE6D6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M318 250 C 400 150 590 170 590 330 C 590 420 530 455 512 510 C 498 552 505 612 452 640 C 400 666 350 630 352 585" stroke-width="54"/>
+    <path d="M392 318 C 440 268 520 300 510 360 C 503 405 458 418 452 470" stroke-width="34"/>
+    <path d="M330 400 C 300 420 304 466 340 478" stroke-width="30"/>
+  </g>
+  <g stroke="#FF2E3B" stroke-linecap="round">
+    <path d="M418 330 C 424 370 412 420 420 474" fill="none" stroke-width="12"/>
+    <line x1="392" y1="346" x2="446" y2="338" stroke-width="13"/>
+    <line x1="388" y1="380" x2="444" y2="376" stroke-width="13"/>
+    <line x1="390" y1="414" x2="446" y2="414" stroke-width="13"/>
+    <line x1="394" y1="450" x2="448" y2="454" stroke-width="13"/>
+  </g>
+</svg>

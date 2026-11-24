@@ -43,18 +43,20 @@ Kurallar:
 Türkçe: Her iki font ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
 
 ## Logo
-- Seçili logo: **A — "Kesik dalga"** (`marka/logo/logo-a-dalga.svg`): sessizlik içinde tek kırmızı ses çubuğu ve altından damla.
-- Alternatifler (saklı): `logo-b-kulak.svg` (kulak-soru işareti), `logo-c-goz.svg` (dinleyen göz).
-- Profil dosyaları: `marka/logo/profil-800.png`, `profil-320.png`, `profil-200.png`.
+- **Durum: SEÇİM BEKLENİYOR** (ilk set A/B/C beğenilmedi, `marka/logo/eski/`).
+- Yeni seçenekler `marka/logo/v2/`: 1 Şşş (parmak+dudak) · 2 Dikişli kulak · 3 Kanayan kulaklık · 4 Girdap · 5 Rozet (sansür bandı).
+- Karşılaştırma: `marka/secenek-panosu.png`; banner'lar `marka/banner/v2/`.
+- Seçim yapılınca: buraya "Seçili logo: N" yaz, `profil-800/320/200.png` dışa aktar, banner'ı `?logo=` ile render et, filigranları `marka/filigran/` köküne kopyala.
 - Logoyu değiştirmek ya da yeni marka görseli yapmak için `logo-tasarim` skill'ini oku.
 
 ## Filigran
 | Dosya | Nerede | Kural |
 |---|---|---|
-| `marka/filigran/filigran-video.png` (600x128, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede 300x64, sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
-| `marka/filigran/filigran-youtube-300.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
+| `marka/filigran/v2/filigran-video-N.png` (600x128, şeffaf; N = seçili logo) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede 300x64, sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
+| `marka/filigran/v2/filigran-youtube-N.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
 
 - Yerleşim kontrolü: `marka/filigran/yerlesim-onizleme.html` render edilip bakılır.
+- Şablonlar: `marka/filigran/sablon-video.html?logo=…` ve `sablon-youtube.html?logo=…` (bkz. `logo-tasarim`).
 - Filigran yazısı her zaman koyu hap zemin üstünde (parlak karede kırmızı "SAKIN" kaybolmasın).
 
 ## Açılış

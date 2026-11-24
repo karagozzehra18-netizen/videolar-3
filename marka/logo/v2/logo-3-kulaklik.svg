@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- 3 — "Kulaklık": slogandaki kulaklık; sol kulaklıktan tek kırmızı damla süzülür. -->
+  <defs><radialGradient id="p" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF2E3B" stop-opacity=".16"/><stop offset="1" stop-color="#0A0A0D" stop-opacity="0"/></radialGradient></defs>
+  <rect width="800" height="800" fill="#0A0A0D"/><circle cx="400" cy="410" r="330" fill="url(#p)"/>
+  <path d="M226 470 C 226 300 300 210 400 210 C 500 210 574 300 574 470" fill="none" stroke="#EDE6D6" stroke-width="46" stroke-linecap="round"/>
+  <rect x="180" y="420" width="110" height="190" rx="46" fill="#EDE6D6"/>
+  <rect x="510" y="420" width="110" height="190" rx="46" fill="#EDE6D6"/>
+  <rect x="270" y="446" width="40" height="138" rx="18" fill="#FF2E3B"/>
+  <rect x="490" y="446" width="40" height="138" rx="18" fill="#FF2E3B"/>
+  <path d="M235 640 C 222 662 216 676 216 688 A 19 19 0 0 0 254 688 C 254 676 248 662 235 640 Z" fill="#FF2E3B"/>
+</svg>

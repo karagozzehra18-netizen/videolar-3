@@ -1,0 +1,34 @@
+<!doctype html>
+<!--
+  secenek-panosu.html — Tüm logo seçeneklerini filigranlarıyla tek panoda karşılaştırır.
+  Render: node araclar/marka_render.js marka/secenek-panosu.html marka/secenek-panosu.png 1500 1700
+  Satır başına: logo (260), profil 98 ve 40 px, video filigranı parlak ve koyu karede (gerçek boyut 300x64), YouTube filigranı (150) yatay karede.
+-->
+<html lang="tr"><head><meta charset="utf-8"><style>
+  @font-face { font-family:'Inter'; src:url('fontlar/Inter[opsz,wght].ttf'); font-weight:100 900; }
+  body{margin:0;background:#141417;font:600 22px Inter,sans-serif;color:#EDE6D6;width:1500px}
+  .s{display:grid;grid-template-columns:50px 260px 150px 320px 320px 200px;gap:22px;align-items:center;padding:20px 30px;border-bottom:1px solid #2a2a30}
+  .no{font-size:44px;font-weight:800;color:#FF2E3B;text-align:center}
+  .ad{font-size:20px;color:#B4B0B8;margin-top:6px}
+  .logo img{width:260px;height:260px;border-radius:50%;display:block}
+  .kucuk{display:flex;align-items:center;gap:18px}.kucuk img{border-radius:50%}
+  .kare{position:relative;height:160px;border-radius:10px;overflow:hidden}
+  .parlak{background:linear-gradient(135deg,#f6dfa0,#ec8f52 60%,#c4543e)}
+  .koyu{background:linear-gradient(135deg,#0b0b10,#253048)}
+  .kare img{position:absolute;right:15px;top:48px;width:300px;height:64px}
+  .yatay{position:relative;height:146px;border-radius:10px;overflow:hidden;background:linear-gradient(90deg,#1a2233,#cfc8b6)}
+  .yatay img{position:absolute;right:8px;bottom:8px;width:75px;height:75px;opacity:.9}
+  .bas{display:grid;grid-template-columns:50px 260px 150px 320px 320px 200px;gap:22px;padding:18px 30px;color:#6B6A72;font-size:18px}
+</style></head><body>
+<div class="bas"><span></span><span>Logo</span><span>98 / 40 px</span><span>Video filigranı — parlak kare</span><span>Video filigranı — koyu kare</span><span>YouTube filigranı (yatay video)</span></div>
+<script>
+const s = [['1','sss','Şşş — parmak ve dudak'],['2','dikisli-kulak','Dikişli kulak'],['3','kulaklik','Kanayan kulaklık'],['4','spiral-kulak','Girdap'],['5','rozet','Rozet — sansür bandı']];
+for (const [n, ad, et] of s) {
+  const l = `logo/v2/logo-${n}-${ad}-800.png`, v = `filigran/v2/filigran-video-${n}.png`, y = `filigran/v2/filigran-youtube-${n}.png`;
+  document.write(`<div class="s"><div class="no">${n}</div>
+    <div class="logo"><img src="${l}"><div class="ad">${et}</div></div>
+    <div class="kucuk"><img src="${l}" width="98" height="98"><img src="${l}" width="40" height="40"></div>
+    <div class="kare parlak"><img src="${v}"></div><div class="kare koyu"><img src="${v}"></div>
+    <div class="yatay"><img src="${y}"></div></div>`);
+}
+</script></body></html>

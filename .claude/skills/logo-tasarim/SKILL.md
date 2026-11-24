@@ -11,10 +11,13 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | `node araclar/marka_render.js <girdi.svg/html> <cikti.png> <G> <Y> [--olcek N]` | SVG/HTML'i Chromium ile PNG'ye çevirir; fontların yüklenmesini bekler |
 | `node araclar/logo_kontrol.js <pano.png> <logo1.png> [logo2.png …]` | Her logoyu 320/160/98/48/32 px profil yuvarlağında, koyu ve açık zeminde tek panoda gösterir |
 | `node araclar/banner_kontrol.js <banner.html> <onizleme.png> [--pay 60]` | Banner'ın TV / bilgisayar / telefon görünümlerini çıkarır, her öğenin güvenli alana sığdığını **ölçer** (GEÇTİ/KALDI, çıkış kodu 0/2) |
+| `marka/filigran/sablon-video.html?logo=<dosya>` | Seçilen logodan Shorts filigranı (600x128); `?logo` yoksa yalnız yazı |
+| `marka/filigran/sablon-youtube.html?logo=<dosya>` | Seçilen logodan YouTube kanal filigranı (300x300) |
+| `marka/secenek-panosu.html` | Tüm seçenekleri logo + küçük boyut + filigran (parlak/koyu kare) + YouTube filigranı olarak tek panoda gösterir |
 | `--seffaf` (marka_render.js) | Şeffaf zeminli PNG (filigran); SVG'de zemin rect'i olmamalı |
 
 ## Akış (her adımda ölçmeden geçme)
-1. **Fikir:** En az 3 seçenek. Her biri tek bir fikir anlatır (ör. "sessizlikte tek ses"). Kanal adıyla anlam bağı olsun ("Duyma Sakın" → ses, kulak, dinleyen göz).
+1. **Fikir:** En az 3, tercihen 5 seçenek. Her biri tek bir fikir anlatır. Kanal adıyla **duygusal** bağ kursun, yalnız konu bağı yetmez: ilk set (ses dalgası, soru işareti, göz) "genel" bulunup reddedildi. Tutan yönler: beden + yasak (şşş parmağı, dikişli kulak), slogan nesnesi (kulaklık), tipografi (rozet).
 2. **Çizim:** Elle SVG yaz (`marka/logo/logo-<harf>-<ad>.svg`), 800x800 viewBox, tam kare `gece` zemin (platform yuvarlağı kendisi kırpar).
 3. **Render:** `marka_render.js` ile 800x800 PNG.
 4. **Kontrol panosu:** `logo_kontrol.js` ile panoyu üret ve **Read ile bak**. Geçme ölçütleri:
@@ -61,4 +64,7 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | Kırmızı/kemik renkli filigran yazısı parlak (turuncu, beyaz) karede kayboluyor | Filigranı %78 opak koyu hap zemin üstüne koy |
 | `page.addStyleTag` SVG belgesinde hata veriyor (head yok) | Şeffaflık için SVG'de stil ekleme; `omitBackground` yeterli |
 | YouTube kanal filigranı Shorts'ta görünmüyor | Shorts/Reels/TikTok için filigranı videoya göm (`filigran-video.png`) |
+| Ses dalgası / soru işareti / göz gibi genel semboller "sıradan" bulundu | Kanal adındaki yasağı bedene bağlayan, biraz rahatsız edici semboller ara |
+| Spiral gibi hesaplanan şekiller 0,85 yarıçapı aşabiliyor | Noktaların merkeze en uzak mesafesini hesapla, 340'ı geçmesin |
+| Yazılı filigranda dekor çizgisi harflerin üstünden geçince okunmuyor | Çizgiyi yazının altına al (alt çizgi) |
 | Font yüklenmeden ekran görüntüsü alınması (yedek fontla render) | `marka_render.js` `document.fonts.ready` bekler; yeni araç yazarsan aynısını yap |

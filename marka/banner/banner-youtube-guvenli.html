@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   banner-youtube.html — YouTube kanal banner'ı (2560x1440).
-  Render: node araclar/marka_render.js marka/banner/banner-youtube.html marka/banner/banner-youtube.png 2560 1440
+  Render: node araclar/marka_render.js "marka/banner/banner-youtube.html?logo=<logo-dosyası>" marka/banner/banner-youtube.png 2560 1440
   Güvenli alan kontrolü için adrese ?guvenli eklenmiş kopya: banner-youtube-guvenli.html
   Tüm yazı ve logo, ortadaki 1546x423 güvenli alanın içinde kalmalı (tüm cihazlarda görünen kısım).
 -->
@@ -31,7 +31,7 @@
   <svg class="gren" width="2560" height="1440"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
   <div class="vinyet"></div>
   <div class="icerik">
-    <img src="../logo/logo-a-dalga-800.png" alt="">
+    <img id="logo" alt="">
     <div class="metin">
       <h1>DUYMA <span>SAKIN</span></h1>
       <p>Kısa korku hikâyeleri · Şehir efsaneleri · Açıklanamayan olaylar</p>
@@ -40,6 +40,8 @@
   </div>
   <div class="guvenli"></div>
 <script>
+  // ?logo=logo-2-dikisli-kulak-800.png (marka/logo/v2/ altından). Seçili logo kanal-kimligi skill'inde yazar.
+  document.getElementById('logo').src = '../logo/v2/' + (new URLSearchParams(location.search).get('logo') || 'logo-2-dikisli-kulak-800.png');
   if (location.search.includes('guvenli') || document.title === 'guvenli') document.querySelector('.guvenli').style.display = 'block';
   // Tohumlu rastgele: her render aynı dalgayı çizer.
   let t = 1337; const r = () => (t = (t * 16807) % 2147483647) / 2147483647;

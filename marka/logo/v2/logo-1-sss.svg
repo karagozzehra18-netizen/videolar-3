@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- 1 — "Şşş": dudakların önünde tek parmak. Kırmızı dudak, kemik parmak. -->
+  <defs><radialGradient id="p" cx="50%" cy="55%" r="50%"><stop offset="0" stop-color="#FF2E3B" stop-opacity=".22"/><stop offset="1" stop-color="#0A0A0D" stop-opacity="0"/></radialGradient></defs>
+  <rect width="800" height="800" fill="#0A0A0D"/><circle cx="400" cy="440" r="330" fill="url(#p)"/>
+  <path d="M196 480 C 240 420 318 392 368 428 C 384 416 416 416 432 428 C 482 392 560 420 604 480 C 520 470 280 470 196 480 Z" fill="#FF2E3B"/>
+  <path d="M196 492 C 280 484 520 484 604 492 C 560 580 240 580 196 492 Z" fill="#FF2E3B"/>
+  <rect x="352" y="214" width="96" height="430" rx="48" fill="#0A0A0D"/>
+  <rect x="362" y="222" width="76" height="414" rx="38" fill="#EDE6D6"/>
+  <path d="M378 262 C 378 236 422 236 422 262 L 422 300 C 422 312 378 312 378 300 Z" fill="none" stroke="#0A0A0D" stroke-opacity=".35" stroke-width="6"/>
+  <g fill="none" stroke="#0A0A0D" stroke-opacity=".3" stroke-width="6" stroke-linecap="round">
+    <path d="M382 566 C 394 574 406 574 418 566"/><path d="M384 582 C 396 590 404 590 416 582"/>
+  </g>
+</svg>

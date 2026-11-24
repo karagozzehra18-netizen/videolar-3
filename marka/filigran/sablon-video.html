@@ -1,0 +1,28 @@
+<!doctype html>
+<!--
+  sablon-video.html — Shorts/Reels/TikTok için gömülü filigran şablonu (600x128, şeffaf).
+  Kullanım (logo adı marka/logo/v2/ altından):
+    node araclar/marka_render.js "marka/filigran/sablon-video.html?logo=logo-2-dikisli-kulak-800.png" marka/filigran/v2/filigran-video-2.png 600 128 --seffaf
+  ?logo= verilmezse yalnız yazı (rozet logosu için).
+-->
+<html lang="tr"><head><meta charset="utf-8"><style>
+  @font-face { font-family:'Anton'; src:url('../fontlar/Anton-Regular.ttf'); }
+  html,body{margin:0;width:600px;height:128px;background:transparent}
+  .hap{position:absolute;left:4px;top:6px;height:116px;border-radius:58px;background:rgba(10,10,13,.8);
+       display:flex;align-items:center;gap:16px;padding:0 34px 0 6px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.7))}
+  .hap.yazi{padding-left:34px}
+  .hap.yazi b{margin-top:-12px}
+  img{width:104px;height:104px;border-radius:50%;display:block}
+  b{font:400 72px/1 'Anton';letter-spacing:2px;color:#EDE6D6;white-space:nowrap;padding-top:4px}
+  b span{color:#FF2E3B}
+  .cizgi{position:absolute;left:34px;right:34px;top:96px;height:6px;background:#FF2E3B;transform:rotate(-1.5deg)}
+</style></head><body>
+  <div class="hap" id="hap"><img id="logo" alt=""><b>DUYMA <span>SAKIN</span></b></div>
+<script>
+  const logo = new URLSearchParams(location.search).get('logo');
+  const img = document.getElementById('logo');
+  if (logo) img.src = '../logo/v2/' + logo;
+  else { img.remove(); document.getElementById('hap').classList.add('yazi');
+         const c = document.createElement('div'); c.className = 'cizgi'; document.getElementById('hap').appendChild(c); }
+</script>
+</body></html>
