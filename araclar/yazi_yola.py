@@ -10,16 +10,22 @@ Kullanım:
   --y: taban çizgisi (baseline) konumu. SVG y ekseni aşağı doğru; çeviri otomatik yapılır.
 Not: Türkçe büyük harf için yazıyı önceden büyük harfe çevirin (İ, I, Ş, Ğ...).
 """
-import argparse, json
+import argparse, json, functools
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.varLib import instancer
 
-def yola(font_yolu, yazi, boyut, aralik=0.0, x0=0.0, y0=0.0, wght=None):
+@functools.lru_cache(maxsize=16)
+def _font(font_yolu, wght):
+    """Değişken fontu bir kez örnekler ve önbellekte tutar (her çağrıda örneklemek çok yavaş)."""
     f = TTFont(font_yolu)
     if 'fvar' in f and wght is not None:
         f = instancer.instantiateVariableFont(f, {"wght": wght})
+    return f
+
+def yola(font_yolu, yazi, boyut, aralik=0.0, x0=0.0, y0=0.0, wght=None):
+    f = _font(font_yolu, wght)
     upm = f['head'].unitsPerEm
     olcek = boyut / upm
     cmap = f.getBestCmap(); gs = f.getGlyphSet(); hmtx = f['hmtx']

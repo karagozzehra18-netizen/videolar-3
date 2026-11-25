@@ -44,7 +44,11 @@ Kurallar:
 
 Türkçe: Üç font da ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
 
-## Logo — SEÇİLDİ: Dikişli Kulak (neon)
+## Logo — YENİ YÖN: açık renkli illüstrasyonlu rozet (v5), seçim bekleniyor
+- Adaylar: A Alacakaranlıkta dikişli kulak · B Tepedeki yalnız ev · C Amblem (A + çember yazı). Dosyalar `marka/logo/v5/`. Seçilince renkler bölümü v5 paletine güncellenecek (bkz. `logo-tasarim` → v5).
+
+## Önceki seçim (koyu neon, v4) — yeni yön seçilene kadar geçerli
+### Dikişli Kulak (neon)
 - Kulak kırmızı dikişle kapatılmış; soldan gelen kesik kırmızı ses dalgaları içeri giremiyor.
 - **Profil fotoğrafı:** kullanıcının gönderdiği görsel (halka + duman) → `marka/secili/profil-800.png` (320, 200 de var). Kaynak: `marka/logo/v4/kaynak/`.
 - **Vektör sürüm (kodla çizildi):** `marka/logo/v4/uret.py` → sembol-neon / sembol-duz / sembol-siyah / sembol-beyaz / profil-vektor / yatay / filigran / banner.

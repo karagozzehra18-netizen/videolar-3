@@ -20,6 +20,14 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 Seçili logo: **v4 Dikişli Kulak (neon)**. Tek kaynak `marka/logo/v4/uret.py`; değişiklik orada yapılır, sonra render edilip `marka/secili/` güncellenir.
 Kullanıcı kendi görselini getirirse: görseli `kaynak/` altına koy, olduğu gibi kullanılacak yerde (profil) doğrudan kullan, geri kalanı için vektör sürümü çiz ve **orijinalle yan yana ve üst üste bindirerek** karşılaştır.
 
+## v5 — açık renkli illüstrasyonlu set (kullanıcı isteği: "açık renkli, Kurgalia tarzı, tek renk banner olmaz")
+- Kaynak: `python3 marka/logo/v5/uret.py` → `logo-a/b/c.svg` (rozet), `banner-a/b/c.svg` (kolaj + kart), `filigran-video-a/b/c.svg`.
+- Palet: krem `#F7EEDC`, kâğıt `#FBF5EA`, lacivert `#23284A`, mercan `#E5533C`, hardal `#F2B134`, şeftali `#F7B98B`, lavanta `#C9C0E8`, ay `#FCE6B0`, teal `#3E7C74` / açık `#86B5A6` / koyu `#24524D`.
+- Yazı: Fraunces 800 (başlık, slogan, hesap adı), Inter 600 (platform satırı); hepsi vektör yola çevrilir.
+- Banner kartı telefon alanında (x 507-2053, y 508-931) 20 px payla; kart içeriği **otomatik sığdırılır** (taşarsa yazı ölçeği küçülür, sağ sınır kart − 48 px).
+- Teslim: SVG kaynak + PNG (1024/800/512/320/200).
+- Rakip tarzı birebir kopyalama: Kurgalia'nın dalgalı turuncu tepeleri yerine orman ve tepedeki ev kullanıldı.
+
 ## Akış (her adımda ölçmeden geçme)
 1. **Fikir:** En az 3, tercihen 5 seçenek. Her biri tek bir fikir anlatır. Kanal adıyla **duygusal** bağ kursun, yalnız konu bağı yetmez: ilk set (ses dalgası, soru işareti, göz) "genel" bulunup reddedildi. Tutan yönler: beden + yasak (şşş parmağı, dikişli kulak), slogan nesnesi (kulaklık), tipografi (rozet).
 2. **Çizim:** Elle SVG yaz (`marka/logo/logo-<harf>-<ad>.svg`), 800x800 viewBox, tam kare `gece` zemin (platform yuvarlağı kendisi kırpar).
@@ -80,4 +88,8 @@ Kullanıcı kendi görselini getirirse: görseli `kaynak/` altına koy, olduğu 
 | Yazılı filigranın sağ ucu kırpılıyor | SVG genişliğini yazı genişliğinden hesapla; render sonrası sağ 3 px şeffaf mı ölç |
 | Kafatası, kan damlası, Wi-Fi'ye benzeyen yaylar, uyarı levhası üçgeni | Türün kalıpları ya da yanlış okumalar; kullanma |
 | `read W H < dosya` satır sonu yoksa hata kodu döndürüp && zincirini kırıyor | Boyut dosyalarını `\n` ile bitir |
+| `yazi_yola` döngüde çağrılınca değişken font her seferinde örneklenip betik dakikalarca sürüyor | `_font()` lru_cache ile önbellekte (düzeltildi; 4 sn) |
+| Banner kartında yazı + sosyal ikonlar kartın dışına taşıyor | Genişliği ölç, sığana kadar ölçeği %2 küçült; sonucu yazdır |
+| Kolajda sahne katmanı düz bir kenarla kesiliyor | Sahneyi yuvarlak köşeli, hafif dönük "kâğıt parçası" clipPath'ine al |
+| Çember yazılı amblem 48 px altında okunmuyor | Profil için yazısız rozeti öner; amblemi büyük kullanımlara bırak |
 | Font yüklenmeden ekran görüntüsü alınması (yedek fontla render) | `marka_render.js` `document.fonts.ready` bekler; yeni araç yazarsan aynısını yap |
