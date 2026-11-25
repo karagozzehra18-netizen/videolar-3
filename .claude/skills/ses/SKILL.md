@@ -13,7 +13,8 @@ description: Duyma Sakın'ın ses kuralları ve araçları — sabit kanal sesiy
 - Ölçülen gerçek maliyetler: 4 ses örneği × 80 karakter = **124 kredi** (multilingual v2 beklenenden ucuz çıktı). Efekt: resmî sayfa saniye başına 11-40 kredi diyor; `efekt_uret.py` en kötü durumu (40/sn) tahmin eder, gerçeği ölçer.
 
 ## Kanal sesi (sabit) — **Emin, 3 numara** (kullanıcı kararı 25.11.2026)
-- **Emin – Storyteller** `2olWvHmrPO1obgZX9ivZ`, bütün cümleler, hız 1,05. Bir ara denenen "gerilimde Emin, sakin anlatımda Emrullah" düzeni kullanıcı tarafından bırakıldı.
+- **Emin – Storyteller** `2olWvHmrPO1obgZX9ivZ`, bütün cümleler. Hız: tek video 1,05; **hikâye serisi 1,0** (gerilim için daha ağır; duraklamalar `anlatim_duzenle.py --en-uzun 0,55`).
+- Ölçülen: 5 part, 3.245 karakter seslendirme + 23 efekt → toplam sayaç ~2.200 kredi (25.11.2026; sayaç gecikmeli). Bir ara denenen "gerilimde Emin, sakin anlatımda Emrullah" düzeni kullanıcı tarafından bırakıldı.
 - `bolum.json → ses.sesler.gerilim` = Emin; `ses.cumle_sesleri` hepsi `"gerilim"` (araç ikinci sesi destekler ama kullanılmıyor).
 - Emin kütüphanede `rate 1` (2x ücretli değil). Kullanılmayan adaylar: Emrullah Uzun `DpEiQMnL9WxMsymCsjPY`, Can Seçkin `rSuyucEH95GpZEfLV0AM`, Gönül Filiz `xsGHrtxT5AdDzYXTQT0d`; örnekler `ses/ses-denemeleri/`.
 - Model `eleven_multilingual_v2`, `language_code: tr`, çıktı `mp3_44100_128` (192 kbps Starter'da 403 verir).
