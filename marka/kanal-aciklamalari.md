@@ -39,7 +39,7 @@ Yarım dakikalık korku hikâyeleri. Kulaklığını tak, ışığı kapatma.
 |---|---|---|
 | Profil fotoğrafı (üç platform) | `profil-800.png` (ayrıca 1024, 320, 200) | 800x800 |
 | YouTube banner | `banner-youtube.png` | 2560x1440, 265 KB |
-| YouTube kanal filigranı (Studio → Özelleştirme → Filigran → "Videonun tamamı") | `filigran-youtube.png` | 300x300 |
+| YouTube kanal filigranı (Studio → Özelleştirme → Filigran → "Videonun tamamı") | `filigran-youtube.png` (arka plan şeffaf, yalnız kulak) | 300x300 |
 | Video içi filigran (videolara otomatik gömülür) | `filigran-video.png` | 550x124 |
 | Yatay logo | `yatay-logo.png` (koyu zemin için `yatay-logo-koyu-zemin.png`) | 1344x256 |
 | Vektör kaynaklar | `logo.svg`, `yatay-logo.svg`, `banner-youtube.svg` | — |

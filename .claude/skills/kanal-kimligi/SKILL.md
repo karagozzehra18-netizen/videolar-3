@@ -35,7 +35,7 @@ description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tiple
 | `yatay-logo.png` / `.svg`, `yatay-logo-koyu-zemin.png` | Rozet + "Duyma Sakın" yazısı |
 | `banner-youtube.png` / `.svg` | YouTube banner 2560x1440 |
 | `filigran-video.png` | Shorts/Reels/TikTok'a gömülen filigran |
-| `filigran-youtube.png` | YouTube Studio kanal filigranı (300x300) |
+| `filigran-youtube.png` / `.svg` | YouTube Studio kanal filigranı: **tamamen şeffaf**, yalnız açık renk kulak + mercan dikiş, hafif gölge (300x300). Yedek: `filigran-youtube-rozet.png` |
 
 ## Renkler (v6)
 | Ad | Hex | Kullanım |
@@ -68,7 +68,9 @@ Kurallar:
 | Dosya | Nerede | Kural |
 |---|---|---|
 | `marka/secili/filigran-video.png` (550x124, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede yükseklik 64 px (genişlik ≈284), sağdan 60 px, üstten 290 px, opaklık %90. Sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) girmez. |
-| `marka/secili/filigran-youtube.png` (300x300) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). |
+| `marka/secili/filigran-youtube.png` (300x300, arka plan tamamen şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). |
+
+- Filigran kuralı: YouTube filigranı arka plansız (şeffaf) ve **açık renk** işaret olur; lacivert işaret koyu sahnede kaybolur (test edildi). Koyu gölge açık sahnede okunurluğu sağlar.
 
 ## Açılış
 - **Logo ya da kanal adıyla açılış YOK.** İlk kare videonun en çarpıcı görüntüsüdür (bkz. `video-uretim`).
