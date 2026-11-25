@@ -231,6 +231,18 @@
       "sure": 1.5,
       "db": -12,
       "tarif": "one long calm low exhale breath, soft, close microphone, realistic, no music"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "db": -10,
+      "sure": 0.5,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "(aynı tik dosyası) bitiş ekranı düğme dokunuşları: BitisEkrani.tsx DOKUNMA = [44, 52, 60]"
     }
   ],
   "kapak": {
@@ -250,5 +262,9 @@
   },
   "yukleme": {
     "dosya": "yukleme.md"
+  },
+  "bitis": {
+    "soru": "Sen hiç yaşadın mı?",
+    "vurgu": "yaşadın"
   }
 }

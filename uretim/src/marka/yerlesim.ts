@@ -28,4 +28,4 @@ export const KAPAK_KIRP = { x: 0, y: 300, w: 1080, h: 1130 };
 /** Filigran (kanal-kimligi): yükseklik 64, sağdan 60, üstten 290. */
 export const FILIGRAN = { h: 64, w: 284, sag: 60, ust: 290, opaklik: 0.9 };
 
-export const BITIS_SN = 2.5;
+export const BITIS_SN = 3.0; // bitiş ekranı (BitisEkrani.tsx, 90 kare)

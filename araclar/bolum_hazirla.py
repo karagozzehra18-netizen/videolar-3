@@ -23,7 +23,7 @@ FPS = 30
 KOK = Path(__file__).resolve().parent.parent
 FONT = KOK / "marka/fontlar/Inter[opsz,wght].ttf"
 ALTYAZI_BOYUT, ALTYAZI_GENISLIK, EN_FAZLA_SATIR, EN_FAZLA_KELIME = 66, 800, 2, 5
-BITIS_SN, SON_BEKLEME_SN = 2.5, 0.45
+BITIS_SN, SON_BEKLEME_SN = 3.0, 0.45  # uretim/src/marka/yerlesim.ts BITIS_SN ile aynı
 
 def tr_kucuk(s):
     return s.replace("I", "ı").replace("İ", "i").lower()

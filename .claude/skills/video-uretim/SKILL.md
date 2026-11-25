@@ -45,7 +45,7 @@ python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 - Tam ekran çizim, üstte yalnız kısa başlık, altyazı ortada ve sabit ön katmanın üstünde.
 - Kanca ≤7 kelime, "sen"; ilk kare en parlak ve çarpıcı, 0,5 sn'de büyük hareket; logo ile açılış yok.
 - 25-35 sn; ~2 sn'de bir yeni görsel olay (bolum_hazirla tempo uyarısı); boş köşe yok.
-- Son cümle ilk cümleye bağlanır; ilk ve son kare aynı kadraj (döngü); sonra 2,5 sn bitiş ekranı.
+- Son cümle ilk cümleye bağlanır; ilk ve son kare aynı kadraj (döngü); sonra 3 sn hareketli bitiş ekranı (soru + Beğen/Takip et/Paylaş + platform logoları; `bolum.json → bitis.soru`, dokunuş efekti `tik` olay `bitis` kayma 44, tekrar 3×8).
 - En az 3 derinlik katmanı, sürekli hafif kamera kayması, ekranda gereksiz yazı yok.
 
 ## Bilinen tuzaklar
@@ -69,5 +69,6 @@ python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 | Tek ses yerine iki ses istendi (gerilim/anlatıcı) | Mevcut kayıt hizalamayla kesilip önbelleğe kondu; yalnız yeni rolün cümleleri üretildi (190 karakter) |
 | Kullanıcı süre çubuğunu, çerçeveyi ve ikinci sesi istemedi | Tam ekran çizim + sabit ön katman (altyazı zemini), yalnız başlık, tek ses Emin. Eski Emin kaydı önbellekten kullanıldı (0 kredi) |
 | Tam ekranda başlık raftaki çizime biniyordu | Üst sol köşede (x 60-260, y 190-250) figür koyma |
+| Bitiş ekranının ilk karesi siyahtı (zemin opaklığı 0) | Son hikâye karesi donar, bitiş ekranı üstüne açılır (Video.tsx) |
 | Tam ekran yazılı kapak istenmedi | Sabit kapak şablonu: etiket · 2 satır · çerçeveli sahne kartı · logo şeridi (kanal-kimligi) |
 | Loudnorm sonrası sınırlayıcı sonucu -14,9 LUFS'a çekiyor | ±1 LU içinde; daha yakın istenirse loudnorm hedefini -13,5 yap |

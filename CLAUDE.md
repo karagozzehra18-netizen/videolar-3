@@ -14,7 +14,7 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 ## Değişmez kurallar
 1. **Kanca:** İlk cümle ≤7 kelime, şaşırtıcı iddia ya da soru, mümkünse "sen". Tarihle, yerle ya da "Bir zamanlar" ile başlama.
 2. **İlk kare:** En çarpıcı ve parlak kare; ilk 0,5 sn'de büyük hareket. Logo ile açılış yok.
-3. **Tempo:** Her ~2 sn'de yeni görsel olay; boş panel/köşe yok. Son cümle başa bağlanır (döngü), ardından 2-3 sn bitiş ekranı.
+3. **Tempo:** Her ~2 sn'de yeni görsel olay; boş panel/köşe yok. Son cümle başa bağlanır (döngü), ardından 3 sn **hareketli** bitiş ekranı: soru + Beğen/Takip et/Paylaş + YouTube/Instagram/TikTok logoları + @duymasakin.
 4. **Ekran:** **Tam ekran** çizim (çerçeve yok). Üstte yalnız kısa başlık (süre/ilerleme çubuğu YOK). Kelime kelime altyazı **yatayda ortada**, stilin sabit ön katmanının üstünde; **çizimin üstüne binmez**; sayılar yazıyla.
 5. **Ses:** 5-8 gerçekçi efekt (komik yok), her efekt olayla aynı karede (ölçerek). Müzik çok kısık. Son ses ≈ -14 LUFS, tepe ≤ -1 dBTP.
 6. **Doğruluk:** Her bilgiyi web'den doğrula; kesin değilse "anlatılır". Sayıların kaynağını kaydet. Gerçek kişiyi karalama, ölümü istismar etme, tehlikeye özendirme.
@@ -66,7 +66,7 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 - ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Anlatıcı sesi: **Emin** (3 numara, `2olWvHmrPO1obgZX9ivZ`), bütün cümleler — `ses` skill'i.
 - ✅ 4. adım: 7 kendi skill'i + araçlar + Remotion üretim projesi + stil kütüphanesi (30 sayfa; motor: gölge oyunu).
 - ✅ Kapak formatı kullanıcıyla belirlendi: etiket hapı · 2 satır · çerçeveli sahne kartı · logo/numara/İZLE şeridi (`kanal-kimligi`).
-- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,2 sn, tam ekran, Emin, -14,6 LUFS, -1,2 dBTP, 24 kare kontrol temiz, 17 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
+- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,7 sn, tam ekran, Emin, hareketli bitiş, -14,8 LUFS, -1,3 dBTP, 24 kare kontrol temiz, 20 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
 - ⚠️ Depo herkese açık olabilir; kullanıcıdan Private yapması istendi — kontrol et.
 - ⏳ Sıradaki: kullanıcı geri bildirimi → yükleme tarihi (onayla) → 2. video (farklı stil, `stil-kutuphanesi/gecmis.csv`).
 - Git: bu oturumun dalı `ccr-cac89f1a-do5gc6` (önceki dal `claude/githupa-baglan-youtube-repo-6dwnvh`).

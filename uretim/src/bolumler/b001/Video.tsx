@@ -43,15 +43,11 @@ const kamera = (f: number) => {
 };
 
 export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
-  const f = useCurrentFrame();
+  const gercek = useCurrentFrame();
   const bitis = zaman.bitis;
-  if (f >= bitis) {
-    return (
-      <AbsoluteFill>
-        <BitisEkrani f={f - bitis} />
-      </AbsoluteFill>
-    );
-  }
+  const bitisEkrani = gercek >= bitis ? <BitisEkrani f={gercek - bitis} soru={bolum.bitis?.soru} vurgu={bolum.bitis?.vurgu} /> : null;
+  if (gercek >= bitis + 6) return <AbsoluteFill>{bitisEkrani}</AbsoluteFill>;
+  const f = Math.min(gercek, bitis - 1); // bitiş geçişinde son kare donar, kâğıt zemin üstüne açılır
   // --- ışık
   let isik = interpolate(f, [0, 10], [1.22, 1], kenet); // ilk kare: parlak flaş
   const lt = O["lamba-titrer"];
@@ -220,6 +216,7 @@ export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
           <Altyazi f={f} parcalar={zaman.altyazi as AltyaziParca[]} />
         </>
       )}
+      {bitisEkrani}
     </AbsoluteFill>
   );
 };

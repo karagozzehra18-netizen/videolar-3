@@ -1,7 +1,7 @@
 {
  "kaynak": "elevenlabs",
  "fps": 30,
- "toplam": 996,
+ "toplam": 1011,
  "bitis": 921,
  "cumleler": [
   {
@@ -167,6 +167,24 @@
    "dosya": "ses/efekt/bitis-nefes.wav",
    "kare": 921,
    "db": -12
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 965,
+   "db": -10
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 973,
+   "db": -10
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 981,
+   "db": -10
   }
  ],
  "altyazi": [

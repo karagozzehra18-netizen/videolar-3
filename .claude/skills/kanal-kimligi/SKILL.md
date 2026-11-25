@@ -80,13 +80,17 @@ Kurallar:
 - **Üst:** yalnız kısa başlık (Inter 700, 34 px, `kâğıt` + koyu gölge, x 60, y 200, en fazla 24 karakter). **Süre/ilerleme çubuğu YOK.**
 - **Alt:** her stil motoru ekranın altına (y ≥ 1392) kamerayla hareket etmeyen **sabit ön katman** çizer (gölge oyununda oymalı koyu sahne tahtası). Altyazı bunun üstünde, yatayda tam ortada durur (bkz. `altyazi`).
 
-## Bitiş ekranı (2,5 sn, 1080x1920)
-1. 0,0 s: Hikâyenin son karesi 6 karede `kâğıt` zemine açılır (beyaz flaş değil, yumuşak geçiş); tek bir alçak "nefes" sesi.
-2. 0,2 s: Rozet logo 0,8→1,0 ölçekle belirir (merkez, 420 px); krem dikiş çizgileri sırayla "dikilir".
-3. 0,6 s: Altında "Duyma" (lacivert) "Sakın" (mercan), Fraunces 800, 110 px.
-4. 1,0 s: Altında "Takip et — bir sonrakini kaçırma" (Inter 600, 42 px, lacivert %70).
-5. Zeminde banner desenindeki şekiller (ses dalgası, dikiş, nokta) hafifçe süzülür.
-6. 2,5 s: Son kare; döngü başına sert kesme.
+## Bitiş ekranı (3 sn, 90 kare, HAREKETLİ) — kullanıcı kararı 25.11.2026
+Kod: `uretim/src/marka/BitisEkrani.tsx` (her videoda aynı; bölüm yalnız soruyu verir: `bolum.json → bitis {soru, vurgu}`).
+1. 0-6: Hikâyenin son karesi donar ve `kâğıt` zemine yumuşakça açılır (beyaz flaş yok); "nefes" efekti.
+2. 0-30: Rozet logo dönerek büyür (280 px), krem dikişler sırayla "dikilir"; altında "Duyma **Sakın**" (Fraunces 800, 96 px).
+3. 16-34: **Soru** kelime kelime zıplar (Fraunces 800, 92 px, vurgu kelimesi mercan), ör. "Sen hiç **yaşadın** mı?"; altında "Cevabını yorumlara yaz ↓". Soru yoksa başlık "Beğen, takip et, paylaş!".
+4. 34-48: **Beğen** (mercan, kalp) · **Takip et** (lacivert, +) · **Paylaş** (teal, ok) düğmeleri sırayla zıplar.
+5. 44 / 52 / 60: Dokunan "parmak" düğmeden düğmeye gider ve basar: kalp dolar, + → ✓ "Takiptesin", paylaş oku uçar; halka dalgası. Her dokunuşta "tik" efekti (aynı kare; `BitisEkrani.DOKUNMA`).
+6. 50-72: **YouTube, Instagram, TikTok** logoları sırayla yükselir, hafifçe süzülür; altında **@duymasakin**.
+7. Zeminde ses dalgası, kayan dikiş çizgisi, süzülen noktalar sürekli hareket eder. 90. karede döngü başına sert kesme.
+- İçerik x 150-930, y 200-1500 (platform düğmeleri ve alt yazı alanından uzak).
+- Platform logoları sade, kodla çizilmiş "bizi burada bul" işaretleridir; değiştirilmez, başka marka eklenmez.
 
 ## Kapak (1080x1920) — SABİT ŞABLON (kullanıcı onaylı format, 25.11.2026)
 Kod: `uretim/src/marka/Kapak.tsx` (bölüm başına yalnız veri değişir: `bolum.json → kapak`). Örnek: `bolumler/001-karabasan/cikti/kapak.png`.
