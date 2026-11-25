@@ -26,12 +26,13 @@
     "cumle_sesleri": [
       "gerilim",
       "gerilim",
-      "anlatici",
-      "anlatici",
-      "anlatici",
+      "gerilim",
+      "gerilim",
+      "gerilim",
       "gerilim",
       "gerilim"
-    ]
+    ],
+    "not": "Kullanıcı kararı (25.11.2026): anlatıcı sesi 3 numara, Emin. Emrullah kullanılmıyor."
   },
   "cumleler": [
     "Uyandın ama kımıldayamıyorsun.",

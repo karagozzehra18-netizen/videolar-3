@@ -9,7 +9,7 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import { FONT } from "./fontlar";
 import { Logo } from "./Logo";
-import { RENK, SAHNE } from "./yerlesim";
+import { KAPAK_KIRP, RENK } from "./yerlesim";
 import { hash } from "../motor/yardimci";
 
 export type KapakProps = { zemin: string; satir1: string; satir2: string; no: number; etiket: string; renk: string[]; desen: string[] };
@@ -19,8 +19,8 @@ const KART = { x: 100, y: 700, w: 880, cerceve: 12 };
 export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket, renk, desen }) => {
   const boyut = Math.min(150, Math.floor(900 / (Math.max(satir1.length, satir2.length) * 0.68)));
   const ic = KART.w - KART.cerceve * 2;
-  const olcek = ic / SAHNE.w;
-  const icH = Math.round(SAHNE.h * olcek);
+  const olcek = ic / KAPAK_KIRP.w;
+  const icH = Math.round(KAPAK_KIRP.h * olcek);
   const baslik: React.CSSProperties = {
     fontFamily: FONT.baslik, fontWeight: 900, fontSize: boyut, lineHeight: 1.0, color: RENK.kagit,
     WebkitTextStroke: `${Math.round(boyut * 0.09)}px ${RENK.lacivert}`, paintOrder: "stroke fill",
@@ -52,7 +52,7 @@ export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket,
       <div style={{ position: "absolute", left: KART.x, top: KART.y, width: KART.w, height: icH + KART.cerceve * 2,
         background: RENK.mercan, borderRadius: 34, padding: KART.cerceve, boxShadow: `0 10px 0 ${RENK.lacivert}, 0 24px 40px rgba(0,0,0,0.35)` }}>
         <div style={{ position: "relative", width: ic, height: icH, borderRadius: 24, overflow: "hidden", background: "#000" }}>
-          <Img src={staticFile(zemin)} style={{ position: "absolute", left: -SAHNE.x * olcek, top: -SAHNE.y * olcek, width: 1080 * olcek, height: 1920 * olcek }} />
+          <Img src={staticFile(zemin)} style={{ position: "absolute", left: -KAPAK_KIRP.x * olcek, top: -KAPAK_KIRP.y * olcek, width: 1080 * olcek, height: 1920 * olcek }} />
           {/* alt şerit */}
           <div style={{ position: "absolute", left: 18, right: 18, bottom: 18, height: 92, background: RENK.kagit, borderRadius: 22,
             display: "flex", alignItems: "center", padding: "0 16px", gap: 14, boxShadow: "0 4px 12px rgba(0,0,0,0.3)" }}>

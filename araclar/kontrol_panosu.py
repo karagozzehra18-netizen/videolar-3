@@ -17,8 +17,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 KOK = Path(__file__).resolve().parent.parent
-SAHNE = (40, 292, 1040, 1340)      # uretim/src/marka/yerlesim.ts ile aynı
-ALTYAZI = (0, 1368, 1080, 1572)
+SAHNE = (0, 170, 1080, 1392)       # tam ekran çizimin altyazı/ön katman üstü (uretim/src/marka/yerlesim.ts)
+ALTYAZI = (0, 1404, 1080, 1590)
 
 def kare_al(video, t):
     ham = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", str(video), "-frames:v", "1", "-f", "rawvideo",
@@ -56,7 +56,7 @@ def main():
         b = k[ALTYAZI[1]:ALTYAZI[3]].astype(int)
         acik = (b.min(axis=2) > 200) | ((b[..., 0] > 200) & (b[..., 1] < 120))
         xs = np.where(acik.any(axis=0))[0]
-        if len(xs) and (xs.min() < 70 or xs.max() > 930): uy.append("taşan yazı")
+        if len(xs) and (xs.min() < 120 or xs.max() > 960): uy.append("taşan yazı")
         satirlar.append({"t": t, "parlaklik": round(L, 3), "uyarilar": uy})
     bitis_disi = [r["parlaklik"] for r in satirlar if not r.get("bitis_ekrani")]
     ilk = satirlar[0]["parlaklik"]

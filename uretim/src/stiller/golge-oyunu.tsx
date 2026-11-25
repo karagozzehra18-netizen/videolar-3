@@ -1,10 +1,11 @@
 // STİL MOTORU: Gölge oyunu (renkli deri) — stil-kutuphanesi/stiller/golge-oyunu.md
 // Kaynak teknik: animation-styles #27 shadow-puppet (perde, lamba titremesi, derinlik bulanıklığı) ve
 // lemo-opuscar styles/shadow-puppet (eklemli kukla, yalnız dönme, ışık ipuçları). Belirli bir geleneksel karakter KOPYALANMAZ.
-// Görünüş: arkadan aydınlatılmış sıcak bez perde, koyu siluetler, ışığı geçiren renkli deri parçaları, çubuklar, pimler.
+// Görünüş: arkadan aydınlatılmış sıcak bez perde (TAM EKRAN), koyu siluetler, ışığı geçiren renkli deri parçaları,
+// çubuklar, pimler; en önde sabit koyu sahne tahtası (altyazı zemini).
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { SAHNE } from "../marka/yerlesim";
+import { ON_KATMAN_Y, SAHNE } from "../marka/yerlesim";
 import { gurultu, H, W } from "../motor/yardimci";
 import type { SahneProps, StilMotoru } from "../motor/tip";
 
@@ -44,35 +45,30 @@ export const Kukla: React.FC<KuklaProps> = ({ d, ic, delik, derinlik = 0, tf, op
   );
 };
 
-const Cerceve: React.FC<{ f: number }> = ({ f }) => {
-  // Perdenin çevresi: oymalı ahşap sahne. Üst bant ve altyazı bu ahşabın üstünde durur (çizimin üstünde değil).
-  const { x, y, w, h } = SAHNE;
-  const motif = (cy: number, n: number, r: number) =>
-    Array.from({ length: n }, (_, i) => {
-      const cx = 60 + (i * (W - 120)) / (n - 1);
-      return <path key={`${cy}-${i}`} d={`M${cx - r},${cy} Q${cx},${cy - r * 1.4} ${cx + r},${cy} Q${cx},${cy + r * 1.4} ${cx - r},${cy} Z`} fill={GO.ahsapAcik} opacity={0.55} />;
-    });
+/** Sabit ön katman: perdenin önündeki koyu sahne tahtası (en öndeki derinlik katmanı). Kamerayla hareket etmez;
+ *  altyazı bunun üstünde durur, böylece altyazı hiçbir zaman kuklaların üstüne binmez. Üst kenarı oyma lale/yaprak sırası. */
+const OnTahta: React.FC<{ f: number }> = ({ f }) => {
+  const y = ON_KATMAN_Y;
+  const motif = Array.from({ length: 12 }, (_, i) => {
+    const cx = 45 + i * 90, s = Math.sin(f * 0.03 + i) * 1.5;
+    return `M${cx - 30},${y} C${cx - 28},${y - 22} ${cx - 10 + s},${y - 34} ${cx},${y - 40} C${cx + 10 + s},${y - 34} ${cx + 28},${y - 22} ${cx + 30},${y} Z`;
+  }).join(" ");
   return (
-    <>
-      <rect x={0} y={0} width={W} height={y} fill={GO.ahsap} />
-      <rect x={0} y={y + h} width={W} height={H - y - h} fill={GO.ahsap} />
-      <rect x={0} y={y} width={x} height={h} fill={GO.ahsap} />
-      <rect x={x + w} y={y} width={W - x - w} height={h} fill={GO.ahsap} />
-      <path d={`M0,0 H${W} V${H} H0 Z M${x - 12},${y - 12} V${y + h + 12} H${x + w + 12} V${y - 12} Z`} fillRule="evenodd" fill="url(#go-ahsap-desen)" opacity={0.5} />
-      {motif(1700, 13, 12)}
-      {motif(130, 13, 16)}
-      {motif(y + h + 268, 13, 16)}
-      <path d={`M0,${y + h + 300} H${W}`} stroke={GO.ahsapAcik} strokeWidth={3} opacity={0.6} />
-      {/* perde kenarı: ince çıta + gölge */}
-      <rect x={x - 10} y={y - 10} width={w + 20} height={h + 20} fill="none" stroke={GO.ahsapKoyu} strokeWidth={14} />
-      <rect x={x - 3} y={y - 3} width={w + 6} height={h + 6} fill="none" stroke={GO.ahsapAcik} strokeWidth={3} opacity={0.8} />
-      {/* alt saçak: perdenin altından sarkan püsküller, hafif sallanır */}
-      {Array.from({ length: 25 }, (_, i) => {
-        const px = x + 20 + i * ((w - 40) / 24);
-        const s = Math.sin(f * 0.08 + i * 0.7) * 3;
-        return <path key={i} d={`M${px},${y + h + 12} L${px + s},${y + h + 40}`} stroke="#b9782f" strokeWidth={5} strokeLinecap="round" opacity={0.8} />;
+    <g>
+      <rect x={0} y={y + 18} width={W} height={H - y} fill={GO.ahsapKoyu} opacity={0.35} filter="url(#go-b3)" />
+      <path d={`M0,${y} H${W} V${H} H0 Z ${motif}`} fill={GO.murekkep} />
+      {/* oyma delikler: ışık sızar (yalnız üst şeritte; altyazı alanı düz kalır) */}
+      {Array.from({ length: 12 }, (_, i) => <circle key={i} cx={45 + i * 90} cy={y - 14} r={6} fill={GO.deri.hardal} opacity={0.75} />)}
+      <path d={`M0,${y + 6} H${W}`} stroke={GO.ahsapAcik} strokeWidth={3} opacity={0.5} />
+      {/* altyazının altında (platform düğmelerinin arkasında) oyma şerit: ışık sızan küçük lale delikleri */}
+      <path d={`M0,${H - 300} H${W}`} stroke={GO.ahsapAcik} strokeWidth={2} opacity={0.35} />
+      {Array.from({ length: 18 }, (_, i) => {
+        const cx = 30 + i * 60, cy = H - 250 + (i % 2) * 40;
+        return <path key={i} d={`M${cx},${cy - 14} C${cx + 10},${cy - 4} ${cx + 8},${cy + 10} ${cx},${cy + 14} C${cx - 8},${cy + 10} ${cx - 10},${cy - 4} ${cx},${cy - 14} Z`}
+          fill={i % 3 === 0 ? GO.deri.kirmizi : GO.deri.hardal} opacity={0.45 + 0.1 * Math.sin(f * 0.05 + i)} />;
       })}
-    </>
+      <path d={`M0,${H - 150} H${W}`} stroke={GO.ahsapAcik} strokeWidth={2} opacity={0.35} />
+    </g>
   );
 };
 
@@ -92,7 +88,7 @@ const Sahne: React.FC<SahneProps> = ({ f, isik = 1, kamera = { x: 0, y: 0, olcek
     <AbsoluteFill style={{ background: GO.ahsapKoyu }}>
       <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>
         <defs>
-          <radialGradient id="go-bez" gradientUnits="userSpaceOnUse" cx={w * 0.55 + lamba * 18} cy={h * 0.46} r={w * 0.95}>
+          <radialGradient id="go-bez" gradientUnits="userSpaceOnUse" cx={w * 0.55 + lamba * 18} cy={h * 0.42} r={h * 0.62}>
             <stop offset="0%" stopColor={GO.bez[0]} /><stop offset="42%" stopColor={GO.bez[1]} />
             <stop offset="80%" stopColor={GO.bez[2]} /><stop offset="100%" stopColor={GO.bez[3]} />
           </radialGradient>
@@ -120,7 +116,7 @@ const Sahne: React.FC<SahneProps> = ({ f, isik = 1, kamera = { x: 0, y: 0, olcek
           <rect width={w} height={h} fill="#1a0b04" opacity={Math.max(0, 1 - parlak) * 0.92} />
           <rect width={w} height={h} fill="#fff3cf" opacity={Math.max(0, parlak - 1) * 0.8} />
         </g>
-        <Cerceve f={f} />
+        <OnTahta f={f} />
       </svg>
     </AbsoluteFill>
   );

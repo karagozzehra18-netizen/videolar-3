@@ -12,17 +12,12 @@ description: Duyma Sakın'ın ses kuralları ve araçları — sabit kanal sesiy
 - Plan (25.11.2026): Starter, aylık 40.000 kredi (ticari kullanım dahil), yenilenme her ayın 24'ü.
 - Ölçülen gerçek maliyetler: 4 ses örneği × 80 karakter = **124 kredi** (multilingual v2 beklenenden ucuz çıktı). Efekt: resmî sayfa saniye başına 11-40 kredi diyor; `efekt_uret.py` en kötü durumu (40/sn) tahmin eder, gerçeği ölçer.
 
-## Kanal sesleri (iki ses, kullanıcı kararı 25.11.2026)
-| Rol | Ses | Ne zaman | Ayar |
-|---|---|---|---|
-| `gerilim` | **Emin – Storyteller** `2olWvHmrPO1obgZX9ivZ` | Gerilimli anlar: kanca, bedene/izleyiciye dokunan cümle, "ama" dönüşü, döngü cümlesi | hız 1,05 |
-| `anlatici` | **Emrullah Uzun – Storyteller** `DpEiQMnL9WxMsymCsjPY` | Sakin anlatım: halk anlatısı, bilimsel açıklama, sayı | hız 1,0 |
-
-- Her bölümde `bolum.json → ses.sesler` (rol → voice_id, hız, stability, style) ve `ses.cumle_sesleri` (her cümlenin rolü). Örnek dağılım: gerilim, gerilim, anlatici, anlatici, anlatici, gerilim, gerilim.
-- İkisi de kütüphanede `rate 1` (2x ücretli değil). Diğer adaylar (kullanılmıyor): Can Seçkin `rSuyucEH95GpZEfLV0AM`, Gönül Filiz `xsGHrtxT5AdDzYXTQT0d`; örnekler `ses/ses-denemeleri/`.
+## Kanal sesi (sabit) — **Emin, 3 numara** (kullanıcı kararı 25.11.2026)
+- **Emin – Storyteller** `2olWvHmrPO1obgZX9ivZ`, bütün cümleler, hız 1,05. Bir ara denenen "gerilimde Emin, sakin anlatımda Emrullah" düzeni kullanıcı tarafından bırakıldı.
+- `bolum.json → ses.sesler.gerilim` = Emin; `ses.cumle_sesleri` hepsi `"gerilim"` (araç ikinci sesi destekler ama kullanılmıyor).
+- Emin kütüphanede `rate 1` (2x ücretli değil). Kullanılmayan adaylar: Emrullah Uzun `DpEiQMnL9WxMsymCsjPY`, Can Seçkin `rSuyucEH95GpZEfLV0AM`, Gönül Filiz `xsGHrtxT5AdDzYXTQT0d`; örnekler `ses/ses-denemeleri/`.
 - Model `eleven_multilingual_v2`, `language_code: tr`, çıktı `mp3_44100_128` (192 kbps Starter'da 403 verir).
 - `seslendir.py`: art arda aynı roldeki cümleler **tek istekte** (komşu metin previous/next_text ile, tonlama tutarlı); parçalar `ses/parcalar/`'da önbelleklenir (değişmeyen parça yeniden ücretlendirilmez); parçalar konuşma seviyesine eşitlenip 0,40 sn boşlukla birleştirilir → `ses/anlatim.wav` + birleşik karakter hizalaması `ses/anlatim.json`.
-- Kontrol: cümle başına ebur128 ölç; iki ses arasında fark ≤2 LU olmalı (001'de ≤1,6 LU).
 
 ## Efekt tarifi yazma kuralları
 - 5-8 efekt türü / video. Her biri bir **görsel olaya** bağlı (`bolum.json → efektler[].olay`), olayla aynı karede başlar.

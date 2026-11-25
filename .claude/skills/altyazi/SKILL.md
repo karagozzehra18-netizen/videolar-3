@@ -5,15 +5,16 @@ description: Duyma Sakın altyazı kuralları — kelime kelime akan altyazı, �
 
 # Altyazı
 
-## Yerleşim (1080x1920) — `uretim/src/marka/yerlesim.ts`
+## Yerleşim (1080x1920, TAM EKRAN) — `uretim/src/marka/yerlesim.ts`
 | Alan | Koordinat | Not |
 |---|---|---|
 | Platform üst simgeleri | y 0-170 | yazı yok |
-| Üst bant | y 196 (çubuk 8 px), başlık y 222, Inter 700 34 px | çizimin üstünde değil, çerçevede |
-| **Sahne (çizim)** | x 40-1040, y 292-1340 | **altyazı buraya ASLA girmez** |
-| **Altyazı bandı** | x 90-900, y 1368-1572 | stilin çerçevesinin üstünde, düz zeminde |
+| Kısa başlık (süre çubuğu YOK) | x 60, y 200, Inter 700 34 px | çizimin üstünde ama küçük; arkasına önemli figür koyma |
+| **Çizim** | tam ekran 0-1080 × 0-1920 | kamera hareket eder |
+| **Sabit ön katman** | y ≥ 1392 | stilin kendi ön katmanı (gölge oyununda sahne tahtası); kamerayla hareket etmez |
+| **Altyazı bandı** | x 140-940 (**merkez 540, tam ortada**), y 1412-1586 | ön katmanın üstünde → çizime (figürlere) asla binmez |
 | Platform sağ şerit (beğeni/yorum) | x ≥ 940, y 880-1740 | yazı yok |
-| Platform alt alan (açıklama/ses) | y ≥ 1590 | yazı yok |
+| Platform alt alan (açıklama/ses) | y ≥ 1590 | yazı yok; ön katmanın süsü burada olabilir |
 | Filigran | sağdan 60, üstten 290, yükseklik 64 | kanal-kimligi |
 
 ## Akış

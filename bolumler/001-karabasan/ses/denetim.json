@@ -29,25 +29,49 @@
   },
   {
    "ad": "kalp",
-   "kare": 439,
-   "sn": 14.633,
-   "olculen_sn": 14.638,
+   "kare": 431,
+   "sn": 14.367,
+   "olculen_sn": 14.372,
    "fark_kare": 0.15,
    "gecti": true
   },
   {
    "ad": "kalp",
-   "kare": 453,
-   "sn": 15.1,
-   "olculen_sn": 15.105,
+   "kare": 445,
+   "sn": 14.833,
+   "olculen_sn": 14.838,
    "fark_kare": 0.15,
    "gecti": true
   },
   {
    "ad": "kalp",
-   "kare": 467,
-   "sn": 15.567,
-   "olculen_sn": 15.572,
+   "kare": 459,
+   "sn": 15.3,
+   "olculen_sn": 15.305,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 565,
+   "sn": 18.833,
+   "olculen_sn": 18.838,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 568,
+   "sn": 18.933,
+   "olculen_sn": 18.938,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 571,
+   "sn": 19.033,
+   "olculen_sn": 19.038,
    "fark_kare": 0.15,
    "gecti": true
   },
@@ -92,50 +116,26 @@
    "gecti": true
   },
   {
-   "ad": "tik",
-   "kare": 589,
-   "sn": 19.633,
-   "olculen_sn": 19.638,
-   "fark_kare": 0.15,
-   "gecti": true
-  },
-  {
-   "ad": "tik",
-   "kare": 592,
-   "sn": 19.733,
-   "olculen_sn": 19.738,
-   "fark_kare": 0.15,
-   "gecti": true
-  },
-  {
-   "ad": "tik",
-   "kare": 595,
-   "sn": 19.833,
-   "olculen_sn": 19.838,
-   "fark_kare": 0.15,
-   "gecti": true
-  },
-  {
    "ad": "kapi",
-   "kare": 789,
-   "sn": 26.3,
-   "olculen_sn": 26.305,
+   "kare": 768,
+   "sn": 25.6,
+   "olculen_sn": 25.605,
    "fark_kare": 0.15,
    "gecti": true
   },
   {
    "ad": "yukselen",
-   "kare": 864,
-   "sn": 28.8,
-   "olculen_sn": 28.805,
+   "kare": 843,
+   "sn": 28.1,
+   "olculen_sn": 28.105,
    "fark_kare": 0.15,
    "gecti": true
   },
   {
    "ad": "bitis-nefes",
-   "kare": 942,
-   "sn": 31.4,
-   "olculen_sn": 31.405,
+   "kare": 921,
+   "sn": 30.7,
+   "olculen_sn": 30.705,
    "fark_kare": 0.15,
    "gecti": true
   }

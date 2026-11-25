@@ -41,5 +41,5 @@ Kurallar:
 - Cümleler kısa; virgülde altyazı parçası biter.
 
 ## 4. bolum.json alanları
-`cumleler` (dizi), `olaylar` ({ad, cumle, kelime, kayma}), `efektler` ({ad, olay, sure, db, tarif, tekrar?}), `kapak` ({satir1, satir2 ≤10 karakter}), `bant_baslik` (≤24 karakter), `stil`, `ses` (`sesler` + `cumle_sesleri`: her cümle `gerilim` ya da `anlatici`; gerilimli anlar Emin, sakin anlatım Emrullah — bkz. `ses`).
+`cumleler` (dizi), `olaylar` ({ad, cumle, kelime, kayma}), `efektler` ({ad, olay, sure, db, tarif, tekrar?}), `kapak` ({satir1, satir2 ≤10 karakter}), `bant_baslik` (≤24 karakter), `stil`, `ses` (kanal sesi Emin; `cumle_sesleri` hepsi `gerilim` — bkz. `ses`).
 Örnek: `bolumler/001-karabasan/bolum.json`.

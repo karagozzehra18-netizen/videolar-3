@@ -1,8 +1,8 @@
 {
  "kaynak": "elevenlabs",
  "fps": 30,
- "toplam": 1017,
- "bitis": 942,
+ "toplam": 996,
+ "bitis": 921,
  "cumleler": [
   {
    "metin": "Uyandın ama kımıldayamıyorsun.",
@@ -17,27 +17,27 @@
   {
    "metin": "Anadolu'da buna karabasan denir; göğsüne bir karaltının oturduğu anlatılır.",
    "bas": 185,
-   "son": 357
+   "son": 352
   },
   {
    "metin": "Bilim buna uyku felci der: beyin uyanır, beden rüyada kalır.",
-   "bas": 357,
-   "son": 531
+   "bas": 352,
+   "son": 519
   },
   {
    "metin": "Yüz kişiden yaklaşık sekizi bunu en az bir kez yaşar.",
-   "bas": 531,
-   "son": 675
+   "bas": 519,
+   "son": 655
   },
   {
    "metin": "Ama tuhafı şu: yaşayanların yaklaşık yarısı odada biri varmış gibi hisseder.",
-   "bas": 675,
-   "son": 861
+   "bas": 655,
+   "son": 840
   },
   {
    "metin": "Ve bir gece gözlerini açtığında...",
-   "bas": 861,
-   "son": 942
+   "bas": 840,
+   "son": 921
   }
  ],
  "olaylar": {
@@ -46,24 +46,24 @@
   "agirlik-duser": 100,
   "nefes-daralir": 132,
   "lamba-titrer": 188,
-  "karabasan-acilir": 218,
-  "karabasan-tirmanir": 266,
-  "karabasan-egilir": 307,
-  "lamba-gecis": 354,
-  "bedene-kayis": 404,
-  "beyin-yanar": 439,
-  "ruya-yukselir": 489,
-  "pano-gelir": 530,
-  "sekiz-yanar": 574,
-  "pano-sallanir": 629,
-  "pano-gider": 676,
-  "goz-kayar": 728,
-  "perde-dalgalanir": 766,
-  "kapi-acilir": 789,
-  "golge-yaklasir": 829,
-  "kamera-yuze": 864,
-  "goz-acilir-son": 899,
-  "bitis": 942
+  "karabasan-acilir": 225,
+  "karabasan-tirmanir": 267,
+  "karabasan-egilir": 309,
+  "lamba-gecis": 349,
+  "bedene-kayis": 398,
+  "beyin-yanar": 431,
+  "ruya-yukselir": 481,
+  "pano-gelir": 518,
+  "sekiz-yanar": 565,
+  "pano-sallanir": 617,
+  "pano-gider": 656,
+  "goz-kayar": 707,
+  "perde-dalgalanir": 745,
+  "kapi-acilir": 768,
+  "golge-yaklasir": 809,
+  "kamera-yuze": 843,
+  "goz-acilir-son": 878,
+  "bitis": 921
  },
  "efektler": [
   {
@@ -87,20 +87,38 @@
   {
    "ad": "kalp",
    "dosya": "ses/efekt/kalp.wav",
-   "kare": 439,
+   "kare": 431,
    "db": -5
   },
   {
    "ad": "kalp",
    "dosya": "ses/efekt/kalp.wav",
-   "kare": 453,
+   "kare": 445,
    "db": -5
   },
   {
    "ad": "kalp",
    "dosya": "ses/efekt/kalp.wav",
-   "kare": 467,
+   "kare": 459,
    "db": -5
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 565,
+   "db": -12
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 568,
+   "db": -12
+  },
+  {
+   "ad": "tik",
+   "dosya": "ses/efekt/tik.wav",
+   "kare": 571,
+   "db": -12
   },
   {
    "ad": "tik",
@@ -133,39 +151,21 @@
    "db": -12
   },
   {
-   "ad": "tik",
-   "dosya": "ses/efekt/tik.wav",
-   "kare": 589,
-   "db": -12
-  },
-  {
-   "ad": "tik",
-   "dosya": "ses/efekt/tik.wav",
-   "kare": 592,
-   "db": -12
-  },
-  {
-   "ad": "tik",
-   "dosya": "ses/efekt/tik.wav",
-   "kare": 595,
-   "db": -12
-  },
-  {
    "ad": "kapi",
    "dosya": "ses/efekt/kapi.wav",
-   "kare": 789,
+   "kare": 768,
    "db": -6
   },
   {
    "ad": "yukselen",
    "dosya": "ses/efekt/yukselen.wav",
-   "kare": 864,
+   "kare": 843,
    "db": -9
   },
   {
    "ad": "bitis-nefes",
    "dosya": "ses/efekt/bitis-nefes.wav",
-   "kare": 942,
+   "kare": 921,
    "db": -12
   }
  ],
@@ -256,336 +256,336 @@
   },
   {
    "bas": 186,
-   "son": 264,
+   "son": 265,
    "kelimeler": [
     {
      "w": "Anadolu'da",
      "bas": 188,
-     "son": 207,
+     "son": 209,
      "satir": 0
     },
     {
      "w": "buna",
-     "bas": 209,
-     "son": 216,
+     "bas": 215,
+     "son": 223,
      "satir": 0
     },
     {
      "w": "karabasan",
-     "bas": 218,
-     "son": 236,
+     "bas": 225,
+     "son": 241,
      "satir": 1
     },
     {
      "w": "denir;",
-     "bas": 237,
-     "son": 253,
+     "bas": 242,
+     "son": 255,
      "satir": 1
     }
    ]
   },
   {
-   "bas": 264,
-   "son": 358,
+   "bas": 265,
+   "son": 353,
    "kelimeler": [
     {
      "w": "göğsüne",
-     "bas": 266,
-     "son": 280,
+     "bas": 267,
+     "son": 283,
      "satir": 0
     },
     {
      "w": "bir",
-     "bas": 282,
-     "son": 287,
+     "bas": 285,
+     "son": 290,
      "satir": 0
     },
     {
      "w": "karaltının",
-     "bas": 289,
-     "son": 305,
+     "bas": 292,
+     "son": 307,
      "satir": 0
     },
     {
      "w": "oturduğu",
-     "bas": 307,
-     "son": 321,
+     "bas": 309,
+     "son": 320,
      "satir": 1
     },
     {
      "w": "anlatılır.",
      "bas": 322,
-     "son": 347,
+     "son": 342,
      "satir": 1
     }
    ]
   },
   {
-   "bas": 358,
-   "son": 437,
+   "bas": 353,
+   "son": 429,
    "kelimeler": [
     {
      "w": "Bilim",
-     "bas": 360,
-     "son": 373,
+     "bas": 355,
+     "son": 366,
      "satir": 0
     },
     {
      "w": "buna",
-     "bas": 382,
-     "son": 392,
+     "bas": 377,
+     "son": 386,
      "satir": 0
     },
     {
      "w": "uyku",
-     "bas": 395,
-     "son": 403,
+     "bas": 388,
+     "son": 396,
      "satir": 0
     },
     {
      "w": "felci",
-     "bas": 404,
-     "son": 415,
+     "bas": 398,
+     "son": 407,
      "satir": 0
     },
     {
      "w": "der:",
-     "bas": 416,
-     "son": 430,
+     "bas": 409,
+     "son": 424,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 437,
-   "son": 473,
+   "bas": 429,
+   "son": 466,
    "kelimeler": [
     {
      "w": "beyin",
-     "bas": 439,
-     "son": 448,
+     "bas": 431,
+     "son": 441,
      "satir": 0
     },
     {
      "w": "uyanır,",
-     "bas": 449,
-     "son": 469,
+     "bas": 442,
+     "son": 461,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 473,
-   "son": 532,
+   "bas": 466,
+   "son": 520,
    "kelimeler": [
     {
      "w": "beden",
-     "bas": 475,
-     "son": 487,
+     "bas": 468,
+     "son": 478,
      "satir": 0
     },
     {
      "w": "rüyada",
-     "bas": 489,
-     "son": 502,
+     "bas": 481,
+     "son": 493,
      "satir": 0
     },
     {
      "w": "kalır.",
-     "bas": 503,
-     "son": 520,
+     "bas": 495,
+     "son": 510,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 532,
-   "son": 609,
+   "bas": 520,
+   "son": 595,
    "kelimeler": [
     {
      "w": "Yüz",
-     "bas": 534,
-     "son": 541,
+     "bas": 522,
+     "son": 528,
      "satir": 0
     },
     {
      "w": "kişiden",
-     "bas": 542,
-     "son": 555,
+     "bas": 531,
+     "son": 543,
      "satir": 0
     },
     {
      "w": "yaklaşık",
-     "bas": 558,
-     "son": 572,
+     "bas": 548,
+     "son": 563,
      "satir": 0
     },
     {
      "w": "sekizi",
-     "bas": 574,
-     "son": 590,
+     "bas": 565,
+     "son": 579,
      "satir": 1
     },
     {
      "w": "bunu",
-     "bas": 600,
-     "son": 609,
+     "bas": 586,
+     "son": 595,
      "satir": 1
     }
    ]
   },
   {
-   "bas": 609,
-   "son": 676,
+   "bas": 595,
+   "son": 656,
    "kelimeler": [
     {
      "w": "en",
-     "bas": 611,
-     "son": 615,
+     "bas": 597,
+     "son": 602,
      "satir": 0
     },
     {
      "w": "az",
-     "bas": 617,
-     "son": 621,
+     "bas": 604,
+     "son": 607,
      "satir": 0
     },
     {
      "w": "bir",
-     "bas": 623,
-     "son": 627,
+     "bas": 610,
+     "son": 614,
      "satir": 0
     },
     {
      "w": "kez",
-     "bas": 629,
-     "son": 634,
+     "bas": 617,
+     "son": 622,
      "satir": 0
     },
     {
      "w": "yaşar.",
-     "bas": 636,
-     "son": 665,
+     "bas": 625,
+     "son": 644,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 676,
-   "son": 726,
+   "bas": 656,
+   "son": 705,
    "kelimeler": [
     {
      "w": "Ama",
-     "bas": 678,
-     "son": 686,
+     "bas": 658,
+     "son": 665,
      "satir": 0
     },
     {
      "w": "tuhafı",
-     "bas": 687,
-     "son": 700,
+     "bas": 667,
+     "son": 680,
      "satir": 0
     },
     {
      "w": "şu:",
-     "bas": 701,
-     "son": 714,
+     "bas": 681,
+     "son": 693,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 726,
-   "son": 806,
+   "bas": 705,
+   "son": 785,
    "kelimeler": [
     {
      "w": "yaşayanların",
-     "bas": 728,
-     "son": 748,
+     "bas": 707,
+     "son": 727,
      "satir": 0
     },
     {
      "w": "yaklaşık",
-     "bas": 750,
-     "son": 763,
+     "bas": 729,
+     "son": 742,
      "satir": 0
     },
     {
      "w": "yarısı",
-     "bas": 766,
-     "son": 781,
+     "bas": 745,
+     "son": 760,
      "satir": 1
     },
     {
      "w": "odada",
-     "bas": 789,
-     "son": 799,
+     "bas": 768,
+     "son": 778,
      "satir": 1
     },
     {
      "w": "biri",
-     "bas": 801,
-     "son": 807,
+     "bas": 780,
+     "son": 786,
      "satir": 1
     }
    ]
   },
   {
-   "bas": 806,
-   "son": 862,
+   "bas": 785,
+   "son": 841,
    "kelimeler": [
     {
      "w": "varmış",
-     "bas": 808,
-     "son": 819,
+     "bas": 787,
+     "son": 798,
      "satir": 0
     },
     {
      "w": "gibi",
-     "bas": 821,
-     "son": 829,
+     "bas": 801,
+     "son": 808,
      "satir": 0
     },
     {
      "w": "hisseder.",
-     "bas": 829,
-     "son": 850,
+     "bas": 809,
+     "son": 830,
      "satir": 0
     }
    ]
   },
   {
-   "bas": 862,
-   "son": 942,
+   "bas": 841,
+   "son": 921,
    "kelimeler": [
     {
      "w": "Ve",
-     "bas": 864,
-     "son": 868,
+     "bas": 843,
+     "son": 847,
      "satir": 0
     },
     {
      "w": "bir",
-     "bas": 870,
-     "son": 875,
+     "bas": 849,
+     "son": 854,
      "satir": 0
     },
     {
      "w": "gece",
-     "bas": 877,
-     "son": 883,
+     "bas": 856,
+     "son": 862,
      "satir": 0
     },
     {
      "w": "gözlerini",
-     "bas": 884,
-     "son": 898,
+     "bas": 864,
+     "son": 877,
      "satir": 0
     },
     {
      "w": "açtığında...",
-     "bas": 899,
-     "son": 928,
+     "bas": 878,
+     "son": 907,
      "satir": 1
     }
    ]
@@ -650,227 +650,227 @@
   {
    "w": "Anadolu'da",
    "bas": 188,
-   "son": 207
+   "son": 209
   },
   {
    "w": "buna",
-   "bas": 209,
-   "son": 216
+   "bas": 215,
+   "son": 223
   },
   {
    "w": "karabasan",
-   "bas": 218,
-   "son": 236
+   "bas": 225,
+   "son": 241
   },
   {
    "w": "denir;",
-   "bas": 237,
-   "son": 253
+   "bas": 242,
+   "son": 255
   },
   {
    "w": "göğsüne",
-   "bas": 266,
-   "son": 280
+   "bas": 267,
+   "son": 283
   },
   {
    "w": "bir",
-   "bas": 282,
-   "son": 287
+   "bas": 285,
+   "son": 290
   },
   {
    "w": "karaltının",
-   "bas": 289,
-   "son": 305
+   "bas": 292,
+   "son": 307
   },
   {
    "w": "oturduğu",
-   "bas": 307,
-   "son": 321
+   "bas": 309,
+   "son": 320
   },
   {
    "w": "anlatılır.",
    "bas": 322,
-   "son": 347
+   "son": 342
   },
   {
    "w": "Bilim",
-   "bas": 360,
-   "son": 373
+   "bas": 355,
+   "son": 366
   },
   {
    "w": "buna",
-   "bas": 382,
-   "son": 392
+   "bas": 377,
+   "son": 386
   },
   {
    "w": "uyku",
-   "bas": 395,
-   "son": 403
+   "bas": 388,
+   "son": 396
   },
   {
    "w": "felci",
-   "bas": 404,
-   "son": 415
+   "bas": 398,
+   "son": 407
   },
   {
    "w": "der:",
-   "bas": 416,
-   "son": 430
+   "bas": 409,
+   "son": 424
   },
   {
    "w": "beyin",
-   "bas": 439,
-   "son": 448
+   "bas": 431,
+   "son": 441
   },
   {
    "w": "uyanır,",
-   "bas": 449,
-   "son": 469
+   "bas": 442,
+   "son": 461
   },
   {
    "w": "beden",
-   "bas": 475,
-   "son": 487
+   "bas": 468,
+   "son": 478
   },
   {
    "w": "rüyada",
-   "bas": 489,
-   "son": 502
+   "bas": 481,
+   "son": 493
   },
   {
    "w": "kalır.",
-   "bas": 503,
-   "son": 520
+   "bas": 495,
+   "son": 510
   },
   {
    "w": "Yüz",
-   "bas": 534,
-   "son": 541
+   "bas": 522,
+   "son": 528
   },
   {
    "w": "kişiden",
-   "bas": 542,
-   "son": 555
+   "bas": 531,
+   "son": 543
   },
   {
    "w": "yaklaşık",
-   "bas": 558,
-   "son": 572
+   "bas": 548,
+   "son": 563
   },
   {
    "w": "sekizi",
-   "bas": 574,
-   "son": 590
+   "bas": 565,
+   "son": 579
   },
   {
    "w": "bunu",
-   "bas": 600,
-   "son": 609
+   "bas": 586,
+   "son": 595
   },
   {
    "w": "en",
-   "bas": 611,
-   "son": 615
+   "bas": 597,
+   "son": 602
   },
   {
    "w": "az",
-   "bas": 617,
-   "son": 621
+   "bas": 604,
+   "son": 607
   },
   {
    "w": "bir",
-   "bas": 623,
-   "son": 627
+   "bas": 610,
+   "son": 614
   },
   {
    "w": "kez",
-   "bas": 629,
-   "son": 634
+   "bas": 617,
+   "son": 622
   },
   {
    "w": "yaşar.",
-   "bas": 636,
-   "son": 665
+   "bas": 625,
+   "son": 644
   },
   {
    "w": "Ama",
-   "bas": 678,
-   "son": 686
+   "bas": 658,
+   "son": 665
   },
   {
    "w": "tuhafı",
-   "bas": 687,
-   "son": 700
+   "bas": 667,
+   "son": 680
   },
   {
    "w": "şu:",
-   "bas": 701,
-   "son": 714
+   "bas": 681,
+   "son": 693
   },
   {
    "w": "yaşayanların",
-   "bas": 728,
-   "son": 748
+   "bas": 707,
+   "son": 727
   },
   {
    "w": "yaklaşık",
-   "bas": 750,
-   "son": 763
+   "bas": 729,
+   "son": 742
   },
   {
    "w": "yarısı",
-   "bas": 766,
-   "son": 781
+   "bas": 745,
+   "son": 760
   },
   {
    "w": "odada",
-   "bas": 789,
-   "son": 799
+   "bas": 768,
+   "son": 778
   },
   {
    "w": "biri",
-   "bas": 801,
-   "son": 807
+   "bas": 780,
+   "son": 786
   },
   {
    "w": "varmış",
-   "bas": 808,
-   "son": 819
+   "bas": 787,
+   "son": 798
   },
   {
    "w": "gibi",
-   "bas": 821,
-   "son": 829
+   "bas": 801,
+   "son": 808
   },
   {
    "w": "hisseder.",
-   "bas": 829,
-   "son": 850
+   "bas": 809,
+   "son": 830
   },
   {
    "w": "Ve",
-   "bas": 864,
-   "son": 868
+   "bas": 843,
+   "son": 847
   },
   {
    "w": "bir",
-   "bas": 870,
-   "son": 875
+   "bas": 849,
+   "son": 854
   },
   {
    "w": "gece",
-   "bas": 877,
-   "son": 883
+   "bas": 856,
+   "son": 862
   },
   {
    "w": "gözlerini",
-   "bas": 884,
-   "son": 898
+   "bas": 864,
+   "son": 877
   },
   {
    "w": "açtığında...",
-   "bas": 899,
-   "son": 928
+   "bas": 878,
+   "son": 907
   }
  ]
 }

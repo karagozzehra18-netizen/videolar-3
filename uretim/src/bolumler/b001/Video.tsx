@@ -12,7 +12,10 @@ import { GO, Kukla, golgeOyunu as M } from "../../stiller/golge-oyunu";
 import * as S from "./sekiller";
 
 const O = zaman.olaylar as Record<string, number>;
-const CX = 500, CY = 524;
+const CX = 500, CY = 559; // yerel sahnenin merkezi
+// Yerel sahne (x 0..1000, y -330..1448) tam ekrana: ölçek 1,08, y +330. Kamera ekran merkezinde (540, 960).
+const TABAN = 1.08, ODX = 0, ODY = 330;
+const ekran = (px: number, py: number) => ({ x: TABAN * (px + ODX), y: TABAN * (py + ODY) });
 
 type Kadraj = { k: number; s: number; px: number; py: number; uz: number; egri?: (t: number) => number };
 // Kamera planı: her satır bir olayda başlar, uz karede hedefe varır.
@@ -35,7 +38,8 @@ const kamera = (f: number) => {
     const t = ilerle(f, k.k, k.k + k.uz, k.egri ?? yumusak);
     s = s + (k.s - s) * t; px = px + (k.px - px) * t; py = py + (k.py - py) * t;
   }
-  return { olcek: s, x: s * (CX - px), y: s * (CY - py) };
+  const b = ekran(px, py);
+  return { olcek: s, x: s * (540 - b.x), y: s * (960 - b.y) };
 };
 
 export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
@@ -112,10 +116,14 @@ export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
   // --- alev
   const alevK = gurultu(f * 0.5, 5) + (f > lt && f < lt + 36 ? Math.sin(f * 1.3) * 0.8 : 0);
 
-  const bolumler = zaman.cumleler.map((c) => ({ bas: c.bas, son: c.son }));
-  return (
+    return (
     <AbsoluteFill>
       <M.Sahne f={f} isik={isik} kamera={kamera(f)} sarsinti={sar}>
+        <g transform={`scale(${TABAN}) translate(${ODX} ${ODY})`}>
+        {/* tavan kirişi, raf, ayna (tam ekranın üst kısmı) */}
+        <Kukla d={S.KIRIS} delik={S.KIRIS_OYUK} derinlik={0.2} ic={[{ d: S.KIRIS_OYUK, renk: GO.deri.hardal, opaklik: 0.5 }]} />
+        <Kukla d={[S.RAF, S.TESTI, S.KASE]} derinlik={0.25} ic={[{ d: S.KASE_DESEN, renk: GO.deri.turkuaz, opaklik: 0.85 }, { d: "M150,-28 C146,-8 176,-8 172,-28 Z", renk: GO.deri.kirmizi, opaklik: 0.8 }]} />
+        <Kukla d={S.AYNA} delik={S.AYNA_OYUK} derinlik={0.3} ic={[{ d: S.AYNA_OYUK, renk: GO.deri.gece, opaklik: 0.35 }]} tf={`rotate(${Math.sin(f * 0.04) * 1.5} 680 -236)`} />
         {/* arka katman (lambaya yakın, bulanık): pencere, kapı */}
         <Kukla d={S.PENCERE} delik={S.PENCERE_OYUK} derinlik={0.35} ic={[{ d: S.PENCERE_OYUK, renk: GO.deri.gece, opaklik: 0.55 }]} />
         <Kukla d={S.AY} derinlik={0.35} ic={[{ d: S.AY, renk: GO.deri.hardal, opaklik: 0.9 }]} tf={`translate(${Math.sin(f * 0.02) * 4} 0)`} />
@@ -203,10 +211,11 @@ export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
               })} pimler={[[20, 20], [680, 20], [20, 680], [680, 680]]} cubuk={[350, 700, 350, 1100]} />
           </g>
         ) : null}
+        </g>
       </M.Sahne>
       {temiz ? null : (
         <>
-          <UstBant f={f} bolumler={bolumler} baslik={bolum.bant_baslik} bitisKaresi={bitis} />
+          <UstBant f={f} baslik={bolum.bant_baslik} bitisKaresi={bitis} />
           <Filigran gorunur={f < bitis} />
           <Altyazi f={f} parcalar={zaman.altyazi as AltyaziParca[]} />
         </>

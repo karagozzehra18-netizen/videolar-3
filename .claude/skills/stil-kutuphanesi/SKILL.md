@@ -26,9 +26,9 @@ description: Duyma Sakın'ın animasyon stil kütüphanesi — animation-styles 
 
 ## Stil motoru (kodda)
 Sözleşme: `uretim/src/motor/tip.ts` → `StilMotoru`:
-`slug`, `ad`, `palet` (zemin katmanları, mürekkep, vurgular, ışık), `cizgi` (kalınlık, uç), `hareket` (adim 1/2/3, titreme, kamera kayması), `Sahne` (zemin + doku + ışık + kamera + **stile uyan çerçeve** — üst bant ve altyazı bandı çerçevenin üstünde durur), `gecis(f, bas, uz)`.
+`slug`, `ad`, `palet` (zemin katmanları, mürekkep, vurgular, ışık), `cizgi` (kalınlık, uç), `hareket` (adim 1/2/3, titreme, kamera kayması), `Sahne` (**tam ekran** zemin + doku + ışık + kamera + **stile uyan sabit ön katman** y ≥ 1392 — altyazı onun üstünde durur; çerçeve/kutu YOK), `gecis(f, bas, uz)`.
 Yazılmış motorlar: `uretim/src/stiller/golge-oyunu.tsx`. Yeni motor:
-1. Sayfayı ve kaynak kodu oku. 2. `uretim/src/stiller/<slug>.tsx` → `StilMotoru` + stilin primitifleri (ör. `Kukla`). 3. Yerleşim sabitleri `uretim/src/marka/yerlesim.ts` (SAHNE 40,292 → 1040,1340). 4. Sayfadaki "Motor" satırını "YAZILDI" yap. 5. Bitiş ekranı ve üst bant ortak bileşendir, stil başına yazılmaz.
+1. Sayfayı ve kaynak kodu oku. 2. `uretim/src/stiller/<slug>.tsx` → `StilMotoru` + stilin primitifleri (ör. `Kukla`). 3. Yerleşim sabitleri `uretim/src/marka/yerlesim.ts` (tam ekran; `ON_KATMAN_Y` = 1392; `KAPAK_KIRP`). 4. Sayfadaki "Motor" satırını "YAZILDI" yap. 5. Ön katman stile uygun olmalı (ör. piksel: taş zemin şeridi, suluboya: koyu çimen/ön plan, tahta baskı: oyma ön plan). Bitiş ekranı ve kısa başlık ortak bileşendir, stil başına yazılmaz.
 
 Bölümün şekilleri (`sekiller.ts`) stilden bağımsız yazılır; aynı hikâye başka motorla yeniden çizilebilir (animation-styles'ın "şekil dosyası + stil dosyası" kuralı).
 

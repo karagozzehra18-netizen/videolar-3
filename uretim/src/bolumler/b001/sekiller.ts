@@ -68,7 +68,7 @@ export const KB_SIRT_DIKEN = "M-40,-128 L-30,-170 L-14,-132 Z M10,-132 L26,-176 
 
 // Lamba (asılı yağ lambası, sağ üst)
 export const LAMBA = "M836,250 C836,226 900,226 900,250 L908,262 C908,290 828,290 828,262 Z M864,180 L872,180 L872,228 L864,228 Z M846,290 L890,290 L878,306 L858,306 Z";
-export const ZINCIR = "M866,0 L870,0 L870,182 L866,182 Z";
+export const ZINCIR = "M866,-300 L870,-300 L870,182 L866,182 Z";
 export const ALEV = (t: number, k: number) => {
   const h = 34 + k * 14;
   return `M868,${226} C${854 + t * 6},${216} ${860 + t * 4},${226 - h * 0.6} ${868 + t * 5},${226 - h} C${876 + t * 3},${226 - h * 0.6} ${882},${216} 868,226 Z`;
@@ -88,11 +88,11 @@ export const UZUN_GOLGE = "M-26,0 L-30,-120 C-50,-150 -54,-230 -36,-270 C-46,-30
 export const UZUN_GOLGE_KOL = "M-30,-250 C-60,-200 -72,-150 -80,-90 L-70,-88 C-58,-140 -44,-190 -22,-236 Z";
 
 // Zemin: döşeme + kilim (alt boşluk kalmasın)
-export const ZEMIN = "M0,860 L1000,860 L1000,1048 L0,1048 Z";
-export const KILIM = "M120,900 L880,900 L880,1000 L120,1000 Z";
+export const ZEMIN = "M-40,860 L1040,860 L1040,1460 L-40,1460 Z";
+export const KILIM = "M120,872 L880,872 L880,944 L120,944 Z";
 export const KILIM_DESEN = Array.from({ length: 9 }, (_, i) => {
   const x = 170 + i * 82;
-  return `M${x},920 L${x + 26},950 L${x},980 L${x - 26},950 Z`;
+  return `M${x},884 L${x + 22},908 L${x},932 L${x - 22},908 Z`;
 }).join(" ");
 
 // Rüya: ay ve yıldızlar
@@ -115,3 +115,15 @@ export const PANO_KISI = (i: number) => {
   return { cx: 62 + sx * 64, cy: 46 + sy * 66 };
 };
 export const SEKIZ = [12, 27, 35, 48, 53, 66, 79, 91]; // kırmızı yanan sekiz kişi (dağınık)
+
+// --- Tam ekran eki: tavan ve duvar (yerel y -330..0)
+export const KIRIS = "M-40,-330 L1040,-330 L1040,-262 L-40,-262 Z M120,-262 L150,-262 L150,-200 L120,-200 Z M850,-262 L880,-262 L880,-200 L850,-200 Z";
+export const KIRIS_OYUK = Array.from({ length: 9 }, (_, i) => `M${70 + i * 110},-306 L${110 + i * 110},-306 L${110 + i * 110},-288 L${70 + i * 110},-288 Z`).join(" ");
+// Raf (sol üst) ve üstünde testi + kâse
+export const RAF = "M90,32 L400,32 L400,48 L90,48 Z M110,48 L126,48 L126,78 L110,78 Z M364,48 L380,48 L380,78 L364,78 Z";
+export const TESTI = "M150,32 C130,12 128,-28 150,-48 C146,-58 146,-68 152,-74 L172,-74 C178,-68 178,-58 174,-48 C196,-28 194,12 174,32 Z M178,-44 C204,-44 206,-8 184,0 L182,-8 C196,-12 194,-34 178,-34 Z";
+export const KASE = "M250,32 C236,32 226,6 228,-8 L330,-8 C332,6 322,32 308,32 Z";
+export const KASE_DESEN = "M246,0 L312,0 L310,10 L248,10 Z";
+// Duvarda asılı küçük ayna (sağ üst, lambanın solunda): yansımada perde ışığı
+export const AYNA = "M640,-200 C640,-236 720,-236 720,-200 L720,-110 C720,-80 640,-80 640,-110 Z";
+export const AYNA_OYUK = "M654,-196 C654,-222 706,-222 706,-196 L706,-114 C706,-94 654,-94 654,-114 Z";

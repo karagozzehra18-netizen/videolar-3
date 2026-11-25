@@ -75,10 +75,10 @@ Kurallar:
 ## Açılış
 - **Logo ya da kanal adıyla açılış YOK.** İlk kare videonun en çarpıcı görüntüsüdür (bkz. `video-uretim`).
 
-## Üst bant (tüm videolarda sabit)
-- En üstte ince bölümlü ilerleme çubuğu: dolu bölüm `mercan`, boş bölüm `kâğıt` %35 opak, yükseklik 8 px (1080x1920).
-- Altında kısa başlık: Inter 700, 34 px, `kâğıt` rengi + koyu gölge (her sahnede okunsun), en fazla 24 karakter.
-- Üst bant platform üst simgelerinin altında başlar (y ≥ 190).
+## Ekran formatı (tüm videolarda sabit, kullanıcı kararı 25.11.2026)
+- **Tam ekran:** çizim 1080x1920'nin tamamını kaplar; ahşap çerçeve/kutu yok.
+- **Üst:** yalnız kısa başlık (Inter 700, 34 px, `kâğıt` + koyu gölge, x 60, y 200, en fazla 24 karakter). **Süre/ilerleme çubuğu YOK.**
+- **Alt:** her stil motoru ekranın altına (y ≥ 1392) kamerayla hareket etmeyen **sabit ön katman** çizer (gölge oyununda oymalı koyu sahne tahtası). Altyazı bunun üstünde, yatayda tam ortada durur (bkz. `altyazi`).
 
 ## Bitiş ekranı (2,5 sn, 1080x1920)
 1. 0,0 s: Hikâyenin son karesi 6 karede `kâğıt` zemine açılır (beyaz flaş değil, yumuşak geçiş); tek bir alçak "nefes" sesi.
