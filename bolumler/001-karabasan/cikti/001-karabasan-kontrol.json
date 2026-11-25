@@ -1,9 +1,9 @@
 {
  "ozet": {
-  "ilk_kare_parlaklik": 0.623,
-  "yuzdelik85": 0.618,
+  "ilk_kare_parlaklik": 0.616,
+  "yuzdelik85": 0.611,
   "ilk_kare_parlak_mi": true,
-  "ilk_05sn_hareket": 41.1,
+  "ilk_05sn_hareket": 41.3,
   "ilk_05sn_buyuk_hareket": true,
   "uyarili_kare": 0,
   "kare_sayisi": 24
@@ -11,102 +11,102 @@
  "kareler": [
   {
    "t": 0.0,
-   "parlaklik": 0.623,
+   "parlaklik": 0.616,
    "uyarilar": []
   },
   {
    "t": 0.5,
-   "parlaklik": 0.61,
+   "parlaklik": 0.603,
    "uyarilar": []
   },
   {
    "t": 1.77,
-   "parlaklik": 0.633,
+   "parlaklik": 0.626,
    "uyarilar": []
   },
   {
    "t": 3.54,
-   "parlaklik": 0.604,
+   "parlaklik": 0.597,
    "uyarilar": []
   },
   {
    "t": 5.31,
-   "parlaklik": 0.592,
+   "parlaklik": 0.586,
    "uyarilar": []
   },
   {
    "t": 7.07,
-   "parlaklik": 0.587,
+   "parlaklik": 0.581,
    "uyarilar": []
   },
   {
    "t": 8.84,
-   "parlaklik": 0.584,
+   "parlaklik": 0.579,
    "uyarilar": []
   },
   {
    "t": 10.61,
-   "parlaklik": 0.566,
+   "parlaklik": 0.56,
    "uyarilar": []
   },
   {
    "t": 12.38,
-   "parlaklik": 0.532,
+   "parlaklik": 0.526,
    "uyarilar": []
   },
   {
    "t": 14.15,
-   "parlaklik": 0.619,
+   "parlaklik": 0.613,
    "uyarilar": []
   },
   {
    "t": 15.92,
-   "parlaklik": 0.618,
+   "parlaklik": 0.611,
    "uyarilar": []
   },
   {
    "t": 17.68,
-   "parlaklik": 0.456,
+   "parlaklik": 0.449,
    "uyarilar": []
   },
   {
    "t": 19.45,
-   "parlaklik": 0.445,
+   "parlaklik": 0.438,
    "uyarilar": []
   },
   {
    "t": 21.22,
-   "parlaklik": 0.468,
+   "parlaklik": 0.461,
    "uyarilar": []
   },
   {
    "t": 22.99,
-   "parlaklik": 0.584,
+   "parlaklik": 0.577,
    "uyarilar": []
   },
   {
    "t": 24.76,
-   "parlaklik": 0.606,
+   "parlaklik": 0.599,
    "uyarilar": []
   },
   {
    "t": 26.53,
-   "parlaklik": 0.594,
+   "parlaklik": 0.586,
    "uyarilar": []
   },
   {
    "t": 28.29,
-   "parlaklik": 0.575,
+   "parlaklik": 0.568,
    "uyarilar": []
   },
   {
    "t": 30.06,
-   "parlaklik": 0.517,
+   "parlaklik": 0.512,
    "uyarilar": []
   },
   {
    "t": 30.6,
-   "parlaklik": 0.535,
+   "parlaklik": 0.53,
    "uyarilar": []
   },
   {

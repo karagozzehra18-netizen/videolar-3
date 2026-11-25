@@ -211,8 +211,8 @@ export const B001: React.FC<{ temiz?: boolean }> = ({ temiz = false }) => {
       </M.Sahne>
       {temiz ? null : (
         <>
-          <UstBant f={f} baslik={bolum.bant_baslik} bitisKaresi={bitis} />
-          <Filigran gorunur={f < bitis} />
+          <UstBant f={f} baslik={bolum.bant_baslik} kategori={bolum.kapak.etiket} bitisKaresi={bitis} />
+          <Filigran gorunur={f < bitis} f={f} />
           <Altyazi f={f} parcalar={zaman.altyazi as AltyaziParca[]} />
         </>
       )}

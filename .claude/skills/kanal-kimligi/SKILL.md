@@ -67,7 +67,7 @@ Kurallar:
 ## Filigran
 | Dosya | Nerede | Kural |
 |---|---|---|
-| `marka/secili/filigran-video.png` (550x124, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede yükseklik 64 px (genişlik ≈284), sağdan 60 px, üstten 290 px, opaklık %90. Sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) girmez. |
+| **Vektör rozet logo** (`uretim/src/marka/Filigran.tsx`, PNG değil) | **Her Shorts/Reels/TikTok videosuna gömülür** | 92 px, sağdan 56, üstten 196 (başlık kartıyla aynı hizada), opaklık %95, yumuşak gölge, çok yavaş nefes (±%1,5). Her videoda aynı, stilden bağımsız. (Eski `filigran-video.png` hapı 25.11.2026'da bırakıldı: küçükte ucuz duruyordu.) |
 | `marka/secili/filigran-youtube.png` (300x300, arka plan tamamen şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). |
 
 - Filigran kuralı: YouTube filigranı arka plansız (şeffaf) ve **açık renk** işaret olur; lacivert işaret koyu sahnede kaybolur (test edildi). Koyu gölge açık sahnede okunurluğu sağlar.
@@ -77,7 +77,8 @@ Kurallar:
 
 ## Ekran formatı (tüm videolarda sabit, kullanıcı kararı 25.11.2026)
 - **Tam ekran:** çizim 1080x1920'nin tamamını kaplar; ahşap çerçeve/kutu yok.
-- **Üst:** yalnız kısa başlık (Inter 700, 34 px, `kâğıt` + koyu gölge, x 60, y 200, en fazla 24 karakter). **Süre/ilerleme çubuğu YOK.**
+- **Üst sol — başlık kartı** (`UstBant.tsx`, her videoda aynı, stilden bağımsız): yarı saydam lacivert buzlu cam kart (%74, blur 10, ince krem kenar, köşe 18), solda 6 px mercan çizgi; üstte kategori (Inter 800, 19 px, harf aralığı 3,5, mercan, `bolum.json → kapak.etiket`), altında başlık (Fraunces 800, 44 px, kâğıt, `bant_baslik`, ≤24 karakter). x 56, y 192. **Süre/ilerleme çubuğu YOK.**
+- **Üst sağ — rozet filigran** (aynı hizada, bkz. Filigran).
 - **Alt:** her stil motoru ekranın altına (y ≥ 1392) kamerayla hareket etmeyen **sabit ön katman** çizer (gölge oyununda oymalı koyu sahne tahtası). Altyazı bunun üstünde, yatayda tam ortada durur (bkz. `altyazi`).
 
 ## Bitiş ekranı (3 sn, 90 kare, HAREKETLİ) — kullanıcı kararı 25.11.2026

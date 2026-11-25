@@ -9,13 +9,13 @@ description: Duyma Sakın altyazı kuralları — kelime kelime akan altyazı, �
 | Alan | Koordinat | Not |
 |---|---|---|
 | Platform üst simgeleri | y 0-170 | yazı yok |
-| Kısa başlık (süre çubuğu YOK) | x 60, y 200, Inter 700 34 px | çizimin üstünde ama küçük; arkasına önemli figür koyma |
+| Başlık kartı (süre çubuğu YOK) | x 56, y 192, ~300x100 | kategori + başlık; arkasına önemli figür koyma |
 | **Çizim** | tam ekran 0-1080 × 0-1920 | kamera hareket eder |
 | **Sabit ön katman** | y ≥ 1392 | stilin kendi ön katmanı (gölge oyununda sahne tahtası); kamerayla hareket etmez |
 | **Altyazı bandı** | x 140-940 (**merkez 540, tam ortada**), y 1412-1586 | ön katmanın üstünde → çizime (figürlere) asla binmez |
 | Platform sağ şerit (beğeni/yorum) | x ≥ 940, y 880-1740 | yazı yok |
 | Platform alt alan (açıklama/ses) | y ≥ 1590 | yazı yok; ön katmanın süsü burada olabilir |
-| Filigran | sağdan 60, üstten 290, yükseklik 64 | kanal-kimligi |
+| Rozet filigran | sağdan 56, üstten 196, 92 px | kanal-kimligi |
 
 ## Akış
 - Kelime kelime: söylenen kelime **mercan**, söylenmiş kelimeler kâğıt rengi, sıradakiler %30 soluk (satır kaymaz).

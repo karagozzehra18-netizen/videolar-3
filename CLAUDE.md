@@ -15,7 +15,7 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 1. **Kanca:** İlk cümle ≤7 kelime, şaşırtıcı iddia ya da soru, mümkünse "sen". Tarihle, yerle ya da "Bir zamanlar" ile başlama.
 2. **İlk kare:** En çarpıcı ve parlak kare; ilk 0,5 sn'de büyük hareket. Logo ile açılış yok.
 3. **Tempo:** Her ~2 sn'de yeni görsel olay; boş panel/köşe yok. Son cümle başa bağlanır (döngü), ardından 3 sn **hareketli** bitiş ekranı: soru + Beğen/Takip et/Paylaş + YouTube/Instagram/TikTok logoları + @duymasakin.
-4. **Ekran:** **Tam ekran** çizim (çerçeve yok). Üstte yalnız kısa başlık (süre/ilerleme çubuğu YOK). Kelime kelime altyazı **yatayda ortada**, stilin sabit ön katmanının üstünde; **çizimin üstüne binmez**; sayılar yazıyla.
+4. **Ekran:** **Tam ekran** çizim (çerçeve yok). Üst solda başlık kartı (kategori + başlık), üst sağda rozet filigran — ikisi her videoda aynı, stilden bağımsız; süre/ilerleme çubuğu YOK. Kelime kelime altyazı **yatayda ortada**, stilin sabit ön katmanının üstünde; **çizimin üstüne binmez**; sayılar yazıyla.
 5. **Ses:** 5-8 gerçekçi efekt (komik yok), her efekt olayla aynı karede (ölçerek). Müzik çok kısık. Son ses ≈ -14 LUFS, tepe ≤ -1 dBTP.
 6. **Doğruluk:** Her bilgiyi web'den doğrula; kesin değilse "anlatılır". Sayıların kaynağını kaydet. Gerçek kişiyi karalama, ölümü istismar etme, tehlikeye özendirme.
 7. **Kontrol:** "Bitti" demeden ≥15 kare çıkarıp bak (taşan yazı, boş alan, karanlık kare, üst üste binme); kapağı gör; sesi ölç. Ölçemediğini açıkça söyle.

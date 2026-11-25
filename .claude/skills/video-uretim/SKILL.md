@@ -70,5 +70,6 @@ python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 | Kullanıcı süre çubuğunu, çerçeveyi ve ikinci sesi istemedi | Tam ekran çizim + sabit ön katman (altyazı zemini), yalnız başlık, tek ses Emin. Eski Emin kaydı önbellekten kullanıldı (0 kredi) |
 | Tam ekranda başlık raftaki çizime biniyordu | Üst sol köşede (x 60-260, y 190-250) figür koyma |
 | Bitiş ekranının ilk karesi siyahtı (zemin opaklığı 0) | Son hikâye karesi donar, bitiş ekranı üstüne açılır (Video.tsx) |
+| Başlık (düz beyaz yazı) ve PNG filigran hapı amatör durdu | Buzlu cam başlık kartı + vektör rozet filigran (kanal-kimligi) |
 | Tam ekran yazılı kapak istenmedi | Sabit kapak şablonu: etiket · 2 satır · çerçeveli sahne kartı · logo şeridi (kanal-kimligi) |
 | Loudnorm sonrası sınırlayıcı sonucu -14,9 LUFS'a çekiyor | ±1 LU içinde; daha yakın istenirse loudnorm hedefini -13,5 yap |
