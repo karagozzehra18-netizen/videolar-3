@@ -65,5 +65,6 @@ python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 | Efekt dosyalarının başında 0,8-1 sn sessizlik vardı (kalp, yükselen) | `efekt_uret.py` kırpar; `ses_denetimi.py` ile ölç |
 | Tekrarlanan "tık" efektleri ses denetiminde birbirini ölçüyordu | Her yerleşim ayrı izde ölçülür |
 | Lamba geçişi kareyi karartıyordu (parlaklık 0,23) | Geçiş en fazla %45 karartır (ışık ≥0,55) |
+| Tek ses yerine iki ses istendi (gerilim/anlatıcı) | Mevcut kayıt hizalamayla kesilip önbelleğe kondu; yalnız yeni rolün cümleleri üretildi (190 karakter) |
 | Tam ekran yazılı kapak istenmedi | Sabit kapak şablonu: etiket · 2 satır · çerçeveli sahne kartı · logo şeridi (kanal-kimligi) |
 | Loudnorm sonrası sınırlayıcı sonucu -14,9 LUFS'a çekiyor | ±1 LU içinde; daha yakın istenirse loudnorm hedefini -13,5 yap |

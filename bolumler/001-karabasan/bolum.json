@@ -4,13 +4,34 @@
   "bant_baslik": "Karabasan",
   "stil": "golge-oyunu",
   "ses": {
-    "voice_id": "2olWvHmrPO1obgZX9ivZ",
-    "ses_adi": "Emin - Storyteller (ElevenLabs kütüphanesi, rate 1)",
     "model": "eleven_multilingual_v2",
-    "hiz": 1.05,
-    "stability": 0.5,
-    "similarity_boost": 0.75,
-    "style": 0.2
+    "sesler": {
+      "anlatici": {
+        "voice_id": "DpEiQMnL9WxMsymCsjPY",
+        "ad": "Emrullah Uzun - Storyteller (sakin bariton)",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      },
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller (korku)",
+        "hiz": 1.05,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "anlatici",
+      "anlatici",
+      "anlatici",
+      "gerilim",
+      "gerilim"
+    ]
   },
   "cumleler": [
     "Uyandın ama kımıldayamıyorsun.",

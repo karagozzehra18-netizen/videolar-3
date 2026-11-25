@@ -2,7 +2,7 @@
 """anlatim_duzenle.py — Seslendirmedeki uzun duraklamaları kısaltır, hizalamayı da aynı oranda kaydırır (ücretsiz).
 
 Kullanım:  python3 araclar/anlatim_duzenle.py bolumler/001-karabasan [--en-uzun 0.45]
-Girdi : ses/anlatim.mp3 + ses/anlatim.json (ElevenLabs karakter hizalaması)
+Girdi : ses/anlatim.wav (yoksa .mp3) + ses/anlatim.json (ElevenLabs karakter hizalaması)
 Çıktı : ses/anlatim-duzenli.wav + ses/anlatim-duzenli.json  (bolum_hazirla ve final_render bunları tercih eder)
 Yöntem: iki kelime arasındaki boşluk --en-uzun saniyeyi geçerse fazlası boşluğun ORTASINDAN kesilir
         (20 ms çapraz geçiş); kesimden sonraki bütün karakter zamanları aynı miktarda öne alınır.
@@ -16,7 +16,8 @@ def main():
     if len(sys.argv) < 2: print(__doc__); sys.exit(2)
     d = Path(sys.argv[1]); a = sys.argv
     sinir = float(a[a.index("--en-uzun") + 1]) if "--en-uzun" in a else 0.45
-    x = oku(d / "ses/anlatim.mp3"); j = json.loads((d / "ses/anlatim.json").read_text())
+    w = d / "ses/anlatim.wav"
+    x = oku(w if w.exists() else d / "ses/anlatim.mp3"); j = json.loads((d / "ses/anlatim.json").read_text())
     al = j["alignment"]; metin = "".join(al["characters"])
     bas, son = list(al["character_start_times_seconds"]), list(al["character_end_times_seconds"])
     kel = [(m.start(), m.end() - 1) for m in re.finditer(r"\S+", metin)]

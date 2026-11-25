@@ -1,6 +1,6 @@
 # 1. video — Karabasan (uyku felci)
 
-Durum: **yüklenmedi** · Takvime eklenmedi (tarih için kullanıcı onayı gerekir) · Stil: gölge oyunu · Süre 33,2 sn
+Durum: **yüklenmedi** · Takvime eklenmedi (tarih için kullanıcı onayı gerekir) · Stil: gölge oyunu · Süre 33,9 sn · Sesler: Emin (gerilim) + Emrullah (anlatıcı)
 
 ## YouTube
 **Başlık:** Uyandın ama kımıldayamıyorsun: Karabasan

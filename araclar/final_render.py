@@ -34,7 +34,7 @@ def miks(d, z):
     uz = int(z["toplam"] / FPS * SR)
     ses = np.zeros((uz, 2), np.float32)
     duz = d / "ses/anlatim-duzenli.wav"
-    v = oku(duz if duz.exists() else d / "ses/anlatim.mp3")[:uz]; ses[: len(v)] += v
+    v = oku(duz if duz.exists() else d / "ses/anlatim.wav")[:uz]; ses[: len(v)] += v
     ses += efekt_izi(d, z, uz)
     m_yol = d / "ses/muzik.wav"
     if m_yol.exists():

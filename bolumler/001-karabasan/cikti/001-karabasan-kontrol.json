@@ -1,7 +1,7 @@
 {
  "ozet": {
   "ilk_kare_parlaklik": 0.612,
-  "yuzdelik85": 0.542,
+  "yuzdelik85": 0.545,
   "ilk_kare_parlak_mi": true,
   "ilk_05sn_hareket": 30.0,
   "ilk_05sn_buyuk_hareket": true,
@@ -20,115 +20,115 @@
    "uyarilar": []
   },
   {
-   "t": 1.74,
+   "t": 1.78,
    "parlaklik": 0.561,
    "uyarilar": []
   },
   {
-   "t": 3.48,
-   "parlaklik": 0.527,
+   "t": 3.56,
+   "parlaklik": 0.514,
    "uyarilar": []
   },
   {
-   "t": 5.23,
-   "parlaklik": 0.495,
+   "t": 5.34,
+   "parlaklik": 0.521,
    "uyarilar": []
   },
   {
-   "t": 6.97,
-   "parlaklik": 0.474,
+   "t": 7.12,
+   "parlaklik": 0.479,
    "uyarilar": []
   },
   {
-   "t": 8.71,
-   "parlaklik": 0.49,
+   "t": 8.89,
+   "parlaklik": 0.503,
    "uyarilar": []
   },
   {
-   "t": 10.45,
-   "parlaklik": 0.491,
+   "t": 10.67,
+   "parlaklik": 0.485,
    "uyarilar": []
   },
   {
-   "t": 12.19,
-   "parlaklik": 0.374,
+   "t": 12.45,
+   "parlaklik": 0.407,
    "uyarilar": []
   },
   {
-   "t": 13.94,
-   "parlaklik": 0.529,
+   "t": 14.23,
+   "parlaklik": 0.533,
    "uyarilar": []
   },
   {
-   "t": 15.68,
-   "parlaklik": 0.517,
+   "t": 16.01,
+   "parlaklik": 0.53,
    "uyarilar": []
   },
   {
-   "t": 17.42,
-   "parlaklik": 0.362,
+   "t": 17.79,
+   "parlaklik": 0.361,
    "uyarilar": []
   },
   {
-   "t": 19.16,
-   "parlaklik": 0.364,
+   "t": 19.57,
+   "parlaklik": 0.366,
    "uyarilar": []
   },
   {
-   "t": 20.91,
+   "t": 21.35,
    "parlaklik": 0.369,
    "uyarilar": []
   },
   {
-   "t": 22.65,
-   "parlaklik": 0.517,
+   "t": 23.13,
+   "parlaklik": 0.5,
    "uyarilar": []
   },
   {
-   "t": 24.39,
-   "parlaklik": 0.542,
+   "t": 24.91,
+   "parlaklik": 0.527,
    "uyarilar": []
   },
   {
-   "t": 26.13,
-   "parlaklik": 0.526,
+   "t": 26.68,
+   "parlaklik": 0.557,
    "uyarilar": []
   },
   {
-   "t": 27.87,
-   "parlaklik": 0.515,
+   "t": 28.46,
+   "parlaklik": 0.512,
    "uyarilar": []
   },
   {
-   "t": 29.62,
-   "parlaklik": 0.522,
+   "t": 30.24,
+   "parlaklik": 0.507,
    "uyarilar": []
   },
   {
-   "t": 30.6,
-   "parlaklik": 0.519,
+   "t": 31.3,
+   "parlaklik": 0.498,
    "uyarilar": []
   },
   {
-   "t": 31.36,
-   "parlaklik": 0.907,
+   "t": 32.02,
+   "parlaklik": 0.908,
    "uyarilar": [],
    "bitis_ekrani": true
   },
   {
-   "t": 32.2,
+   "t": 32.9,
    "parlaklik": 0.893,
    "uyarilar": [],
    "bitis_ekrani": true
   },
   {
-   "t": 33.1,
+   "t": 33.8,
    "parlaklik": 0.893,
    "uyarilar": [],
    "bitis_ekrani": true
   },
   {
-   "t": 33.15,
+   "t": 33.85,
    "parlaklik": 0.893,
    "uyarilar": [],
    "bitis_ekrani": true

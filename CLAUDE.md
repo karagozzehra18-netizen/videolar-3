@@ -63,10 +63,10 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 
 ## Durum (son güncelleme: 25.11.2026)
 - ✅ Ortam, kanal kimliği, logo, banner, filigran, açıklamalar, 80 dış skill.
-- ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Kanal sesi **Emin – Storyteller** (`2olWvHmrPO1obgZX9ivZ`).
+- ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Kanal sesleri: gerilimli anlarda **Emin** (`2olWvHmrPO1obgZX9ivZ`), sakin anlatımda **Emrullah** (`DpEiQMnL9WxMsymCsjPY`) — `ses` skill'i.
 - ✅ 4. adım: 7 kendi skill'i + araçlar + Remotion üretim projesi + stil kütüphanesi (30 sayfa; motor: gölge oyunu).
 - ✅ Kapak formatı kullanıcıyla belirlendi: etiket hapı · 2 satır · çerçeveli sahne kartı · logo/numara/İZLE şeridi (`kanal-kimligi`).
-- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,2 sn, -14,9 LUFS, -1,1 dBTP, 24 kare kontrol temiz, 17 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
+- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,9 sn, iki ses, -14,4 LUFS, -1,3 dBTP, 24 kare kontrol temiz, 17 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
 - ⚠️ Depo herkese açık olabilir; kullanıcıdan Private yapması istendi — kontrol et.
 - ⏳ Sıradaki: kullanıcı geri bildirimi → yükleme tarihi (onayla) → 2. video (farklı stil, `stil-kutuphanesi/gecmis.csv`).
 - Git: bu oturumun dalı `ccr-cac89f1a-do5gc6` (önceki dal `claude/githupa-baglan-youtube-repo-6dwnvh`).
