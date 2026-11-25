@@ -88,11 +88,14 @@ Kurallar:
 5. Zeminde banner desenindeki şekiller (ses dalgası, dikiş, nokta) hafifçe süzülür.
 6. 2,5 s: Son kare; döngü başına sert kesme.
 
-## Kapak (1080x1920)
-- **2 satır, satır başına en fazla 10 karakter**, Fraunces 900, büyük harf.
-- Bir satır `kâğıt` (koyu gölgeyle), kilit kelime `mercan`; yazı alanı dikey ortanın biraz üstünde (y ≈ %35-55), kenarlardan en az 90 px içeride.
-- Kapak anlatımdan daha kesin bir iddia kurmaz.
-- Arka plan: videodaki en çarpıcı kare; köşede küçük rozet logo (120 px) isteğe bağlı.
+## Kapak (1080x1920) — SABİT ŞABLON (kullanıcı onaylı format, 25.11.2026)
+Kod: `uretim/src/marka/Kapak.tsx` (bölüm başına yalnız veri değişir: `bolum.json → kapak`). Örnek: `bolumler/001-karabasan/cikti/kapak.png`.
+1. **Zemin:** bölümün stil renginde radyal degrade (`kapak.renk`) + dağınık yumuşak kareler (`kapak.desen`, %18). Tam ekran yazı YOK.
+2. **Etiket hapı** (y 330): "KORKU · ANADOLU" gibi `kategori · alt konu`, Inter 800 30 px, mercan zemin, kâğıt yazı, lacivert alt gölge.
+3. **Başlık** (y 400): 2 satır, **satır başına ≤10 karakter**, Fraunces 900 (≤150 px, sığana kadar küçülür), kâğıt dolgu + lacivert kontur ve gölge. Normal yazım (büyük harfe çevrilmez).
+4. **Sahne kartı** (x 100-980, y 700): videonun **temiz** karesinden (üst bant/altyazı/filigran yok) yalnız çizim alanı; 12 px mercan çerçeve, yuvarlak köşe, lacivert alt gölge. Kare: hikâyenin en çarpıcı anı (`kapak.zemin_kare`).
+5. **Alt şerit** (kartın içinde, altta): rozet logo · "Duyma Sakın" · "KORKU #001" (kategori + üç haneli numara) · mercan "▶ İZLE" hapı.
+- Kapak anlatımdan daha kesin bir iddia kurmaz (soru biçimi tercih edilir).
 
 ## Kanal metinleri
 - Hazır açıklamalar: `marka/kanal-aciklamalari.md` (YouTube ≤1000, Instagram ≤150, TikTok ≤80 karakter; sınırlar ölçüldü).

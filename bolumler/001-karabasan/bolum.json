@@ -1,0 +1,232 @@
+{
+  "no": 1,
+  "slug": "001-karabasan",
+  "bant_baslik": "Karabasan",
+  "stil": "golge-oyunu",
+  "ses": {
+    "voice_id": "2olWvHmrPO1obgZX9ivZ",
+    "ses_adi": "Emin - Storyteller (ElevenLabs kütüphanesi, rate 1)",
+    "model": "eleven_multilingual_v2",
+    "hiz": 1.05,
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.2
+  },
+  "cumleler": [
+    "Uyandın ama kımıldayamıyorsun.",
+    "Göğsünde bir ağırlık var, nefes almak bile zor.",
+    "Anadolu'da buna karabasan denir; göğsüne bir karaltının oturduğu anlatılır.",
+    "Bilim buna uyku felci der: beyin uyanır, beden rüyada kalır.",
+    "Yüz kişiden yaklaşık sekizi bunu en az bir kez yaşar.",
+    "Ama tuhafı şu: yaşayanların yaklaşık yarısı odada biri varmış gibi hisseder.",
+    "Ve bir gece gözlerini açtığında..."
+  ],
+  "olaylar": [
+    {
+      "ad": "goz-acilir",
+      "cumle": 0,
+      "kelime": "uyandın",
+      "kayma": 0,
+      "not": "ilk kare: yakın plan, göz açılır, kamera hızla geri çekilir"
+    },
+    {
+      "ad": "el-titrer",
+      "cumle": 0,
+      "kelime": "kımıldayamıyorsun"
+    },
+    {
+      "ad": "agirlik-duser",
+      "cumle": 1,
+      "kelime": "ağırlık",
+      "kayma": -4
+    },
+    {
+      "ad": "nefes-daralir",
+      "cumle": 1,
+      "kelime": "nefes"
+    },
+    {
+      "ad": "lamba-titrer",
+      "cumle": 2,
+      "kelime": "anadolu'da"
+    },
+    {
+      "ad": "karabasan-acilir",
+      "cumle": 2,
+      "kelime": "karabasan"
+    },
+    {
+      "ad": "karabasan-tirmanir",
+      "cumle": 2,
+      "kelime": "göğsüne",
+      "not": "karabasan göğüsten yüze doğru kayar"
+    },
+    {
+      "ad": "karabasan-egilir",
+      "cumle": 2,
+      "kelime": "oturduğu"
+    },
+    {
+      "ad": "lamba-gecis",
+      "cumle": 3,
+      "kelime": "bilim",
+      "kayma": -6
+    },
+    {
+      "ad": "bedene-kayis",
+      "cumle": 3,
+      "kelime": "felci",
+      "not": "beden üstüne üç koyu kayış iner (felç mecazı)"
+    },
+    {
+      "ad": "beyin-yanar",
+      "cumle": 3,
+      "kelime": "beyin"
+    },
+    {
+      "ad": "ruya-yukselir",
+      "cumle": 3,
+      "kelime": "rüyada"
+    },
+    {
+      "ad": "pano-gelir",
+      "cumle": 4,
+      "kelime": "yüz",
+      "kayma": -4
+    },
+    {
+      "ad": "sekiz-yanar",
+      "cumle": 4,
+      "kelime": "sekizi"
+    },
+    {
+      "ad": "pano-sallanir",
+      "cumle": 4,
+      "kelime": "kez"
+    },
+    {
+      "ad": "pano-gider",
+      "cumle": 5,
+      "kelime": "ama",
+      "kayma": -2
+    },
+    {
+      "ad": "goz-kayar",
+      "cumle": 5,
+      "kelime": "yaşayanların",
+      "not": "uyuyanın gözbebeği kapıya kayar, kamera hafif sola"
+    },
+    {
+      "ad": "perde-dalgalanir",
+      "cumle": 5,
+      "kelime": "yarısı",
+      "not": "penceredeki perde içeri doğru savrulur"
+    },
+    {
+      "ad": "kapi-acilir",
+      "cumle": 5,
+      "kelime": "odada"
+    },
+    {
+      "ad": "golge-yaklasir",
+      "cumle": 5,
+      "kelime": "hisseder"
+    },
+    {
+      "ad": "kamera-yuze",
+      "cumle": 6,
+      "kelime": "ve"
+    },
+    {
+      "ad": "goz-acilir-son",
+      "cumle": 6,
+      "kelime": "açtığında"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "nefes-kesik",
+      "olay": "goz-acilir",
+      "sure": 1.2,
+      "db": -4,
+      "tarif": "a single sharp frightened gasp of a person waking up suddenly in a quiet bedroom, close microphone, realistic, no music"
+    },
+    {
+      "ad": "gup",
+      "olay": "agirlik-duser",
+      "kayma": 4,
+      "sure": 1.5,
+      "db": -3,
+      "tarif": "a heavy soft body dropping onto an old wooden bed with a mattress, low muffled thump and a short wooden creak, realistic foley, no music"
+    },
+    {
+      "ad": "alev",
+      "olay": "lamba-titrer",
+      "sure": 2.0,
+      "db": -10,
+      "tarif": "an oil lamp flame fluttering and sputtering in a draft, soft whoosh and crackle, quiet room, realistic, no music"
+    },
+    {
+      "ad": "kalp",
+      "olay": "beyin-yanar",
+      "sure": 2.5,
+      "db": -5,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music",
+      "tekrar": {
+        "adet": 3,
+        "aralik": 14
+      },
+      "not": "tek atış 0,78 sn; beyin ışığının üç atımıyla aynı karelerde"
+    },
+    {
+      "ad": "tik",
+      "olay": "sekiz-yanar",
+      "sure": 0.5,
+      "db": -12,
+      "tekrar": {
+        "adet": 8,
+        "aralik": 3
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb"
+    },
+    {
+      "ad": "kapi",
+      "olay": "kapi-acilir",
+      "sure": 2.5,
+      "db": -6,
+      "tarif": "an old wooden door slowly creaking open in a silent house at night, long low creak, realistic, no music"
+    },
+    {
+      "ad": "yukselen",
+      "olay": "kamera-yuze",
+      "sure": 2.5,
+      "db": -9,
+      "tarif": "a low dark rising breath-like whoosh swelling slowly, subtle tension riser, realistic, no music, no melody"
+    },
+    {
+      "ad": "bitis-nefes",
+      "olay": "bitis",
+      "sure": 1.5,
+      "db": -12,
+      "tarif": "one long calm low exhale breath, soft, close microphone, realistic, no music"
+    }
+  ],
+  "kapak": {
+    "satir1": "Göğsünde",
+    "satir2": "kim var?",
+    "etiket": "Korku · Anadolu",
+    "zemin_kare": 314,
+    "renk": [
+      "#8a4a1c",
+      "#2a160b"
+    ],
+    "desen": [
+      "#eab335",
+      "#2a9c8f",
+      "#d4432a"
+    ]
+  },
+  "yukleme": {
+    "dosya": "yukleme.md"
+  }
+}

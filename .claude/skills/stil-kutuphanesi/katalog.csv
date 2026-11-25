@@ -1,0 +1,31 @@
+slug,ad,aile,korku_uyumu,isik_riski,motor,animation_styles,lemo_opuscar
+golge-oyunu,Gölge oyunu (renkli deri),Kâğıt ve kukla,3,düşük (perde parlak),YAZILDI: uretim/src/stiller/golge-oyunu.tsx,27 shadow-puppet → toon-and-paper/paper.tsx (ShadowPuppet),shadow-puppet/STYLE.md
+tahta-baski,Tahta baskı (woodcut),Baskı,3,düşük,yazılmadı,28 woodcut → print-and-abstract/print.tsx (Woodcut),woodcut/STYLE.md
+piksel-sanat,Piksel sanat,Ekran,2,orta (gece sahnesi açık tutulmalı),yazılmadı,64 pixel-art-rpg → screens/pixel.tsx,pixel-rpg/STYLE.md · hd-2d/STYLE.md
+noir-cizgi-roman,Noir çizgi roman,Baskı,3,orta (siyah alan %40'ı geçmesin),yazılmadı,31 silkscreen-poster → print-and-abstract/print.tsx,halftone-dossier/STYLE.md
+otuzlar-cizgi-film,1930'lar çizgi filmi,Sinema,2,düşük,yazılmadı,70 silent-film → graphic-and-cinema/graphic-and-cinema.tsx,rubber-hose/STYLE.md · silent-film/STYLE.md
+oyuncak-tugla,Oyuncak tuğla,3D görünüm,1,düşük,yazılmadı,58 brick-toy → 3d/island-and-bricks.ts,brick-toy/STYLE.md
+kil-diorama,Kil diorama,3D görünüm,2,düşük,yazılmadı,62 claymation → 3d/clay-and-lidar.ts,crayon-world/STYLE.md (3D yaklaşım)
+crt-vektor,CRT vektör,Ekran,3,"YÜKSEK: koyu zemin — ilk karede çizgi patlaması, sahnenin ≥%35'i parlak",yazılmadı,84 hologram-hud → screens/hologram.tsx,ascii-crt/STYLE.md · oscilloscope-math/STYLE.md
+orgu-kukla,Örgü kukla,Zanaat,2,düşük,yazılmadı (kendi motoru gerekir),— (kaynak yok; nakis motoruyla ortak doku),—
+ps2-3d,PS2 dönemi 3D,3D görünüm,3,orta (sis açık tutulmalı),yazılmadı,57 low-poly-island → 3d/island-and-bricks.ts,lowpoly-island/STYLE.md
+sumi-murekkep,Sumi mürekkebi,Zanaat,3,düşük,yazılmadı,13 one-line → drawn/line.tsx (fırça mantığı),ink-wash/STYLE.md
+pop-art,Pop art,Baskı,1,düşük,yazılmadı,51 sticker-explainer → info/info.tsx (renk blokları),pop-art/STYLE.md
+voksel-3d,Voksel 3D,3D görünüm,2,düşük,yazılmadı,58 brick-toy → 3d/mesh.ts (küp örgü),isometric-picture-book/STYLE.md
+risograf,Risograf baskı,Baskı,2,düşük,yazılmadı,31 silkscreen-poster → print-and-abstract/print.tsx,risograph/STYLE.md
+masal-kitabi,Masal kitabı (suluboya),El çizimi,2,düşük,yazılmadı,11 watercolour → drawn/paint.tsx,watercolor/STYLE.md · crayon-book/STYLE.md
+rontgen,Röntgen (ışık kutusu),Araç ve kanıt,3,orta (koyu film yerine ışık kutusu kullan),yazılmadı,81 microscope → screens/microscope.tsx,security-xray/STYLE.md
+seker-dunyasi,Şeker dünyası,Grafik,1,düşük,yazılmadı,39 memphis-diorama → graphic-and-cinema/graphic-and-cinema.tsx,memphis-diorama/STYLE.md
+vhs-bozulmasi,VHS bozulması (liminal),Film ve bant,3,düşük (sarı-beyaz),yazılmadı,71 newsreel → graphic-and-cinema/graphic-and-cinema.tsx,backrooms/STYLE.md
+mozaik,Mozaik,Zanaat,2,düşük,yazılmadı,35 stained-glass → print-and-abstract/craft.tsx,stained-glass/STYLE.md · gilded-illumination/STYLE.md
+kara-tahta,Kara tahta,Tahta,2,"YÜKSEK: koyu zemin — tahtayı açık yeşil tut, ilk karede büyük parlak çizim",yazılmadı,02 chalkboard → drawn/boards.tsx,chalkboard/STYLE.md
+nakis,Nakış,Zanaat,2,düşük,yazılmadı (kendi motoru; logo dikiş diliyle uyumlu),— (kaynak yok),—
+parlayan-eskiz,Parlayan eskiz (siyah üstüne neon),Işık ve çizgi,3,YÜKSEK: koyu zemin — ilk karede ekranın büyük kısmını kaplayan parlak çizim,yazılmadı,85 circuit-board → screens/circuit.tsx,neon-tubes/STYLE.md · firefly-pointillism/STYLE.md
+duz-vektor,Düz vektör,Çizgi film,1,düşük,yazılmadı,17 flat-vector → toon-and-paper/toon.tsx,midcentury-toon/STYLE.md
+minimal-cizgi,Minimal çizgi (tek çizgi),El çizimi,2,düşük,yazılmadı,13 one-line → drawn/line.tsx,one-line/STYLE.md
+cgi-hareket,CGI hareket (cam ürün),3D görünüm,1,düşük,yazılmadı,59 glass-product → 3d/glass.ts,glass-product/STYLE.md
+anlatici-karakter,3D anlatım karakteri,3D görünüm,2,düşük,yazılmadı,62 claymation → 3d/clay-and-lidar.ts (yumuşak gövde),isometric-picture-book/STYLE.md
+kagit-isik-kutusu,Kâğıt kesik ışık kutusu,Kâğıt ve kukla,3,orta (arka katman parlak tutulur),yazılmadı,25 paper-pop-up → toon-and-paper/paper.tsx,paper-lantern/STYLE.md
+gravur,Bakır gravür,Baskı,3,düşük,yazılmadı,29 engraving → print-and-abstract/print.tsx,engraving/STYLE.md · vintage-collage/STYLE.md
+sessiz-film,Sessiz film (1920'ler),Sinema,2,orta (beyaz tonları baskın tut),yazılmadı,70 silent-film → graphic-and-cinema/graphic-and-cinema.tsx,silent-film/STYLE.md
+termal-kamera,Termal kamera,Araç ve kanıt,3,orta (sıcak alanlar büyük tutulur),yazılmadı,81 microscope → screens/microscope.tsx (ölçek),thermal-camera/STYLE.md

@@ -38,7 +38,13 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 | ffmpeg, kare çıkarma, loudness | `ffmpeg-skill`, `frame-capture` |
 | Senaryo/kanca, başlık-kapak, açıklama, plan, izleyici tutma | `yt-script`, `yt-package`, `yt-seo`, `yt-plan`, `yt-retention`, `yt-viral`, `yt-audit` |
 | Referans video çözümleme (yalnız teknik öğrenmek için) | `rea-video`, `reverse-any-video` |
-| **Henüz yazılmadı (4. adım):** `video-uretim`, `senaryo`, `stil-kutuphanesi`, `ses`, `altyazi`, `yukleme-ve-takvim`, `olcum` | ayrıntı `belgeler/ilk-istek.md` §4 |
+| **Bir videoyu baştan sona üretmek (önce bu)** | `video-uretim` |
+| Konu puanlama, kanca, senaryo, konu havuzu | `senaryo` |
+| Stil seçimi, stil sayfaları, stil motoru, stil geçmişi | `stil-kutuphanesi` |
+| Seslendirme (kanal sesi), efekt, müzik, miks, loudness | `ses` |
+| Altyazı ve ekran yerleşimi / güvenli alanlar | `altyazi` |
+| Başlık-açıklama-etiket, takvim | `yukleme-ve-takvim` |
+| 48 saat ölçümü ve ders | `olcum` |
 
 ## Klasörler
 | Yol | İçerik |
@@ -47,18 +53,23 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 | `marka/logo/v6/uret.py` | Seçili logonun tek kaynağı (v6 A). Eski turlar `marka/logo/eski, v2-v5` (arşiv) |
 | `marka/fontlar/` | Fraunces, Inter (+ eski Anton, Cormorant), OFL lisansları |
 | `marka/kanal-aciklamalari.md` | YouTube/Instagram/TikTok açıklamaları (sınırlar ölçüldü) |
-| `araclar/` | `marka_render.js` (SVG/HTML→PNG), `logo_kontrol.js`, `banner_kontrol.js`, `yazi_yola.py` (yazı→vektör yol) |
+| `araclar/` | Video: `bolum_hazirla.py` (zaman çizelgesi + senaryo kapıları), `seslendir.py`, `anlatim_duzenle.py`, `efekt_uret.py`, `muzik_uret.py`, `ses_denetimi.py`, `final_render.py`, `kontrol_panosu.py`, `takvim_denetle.py`. Marka: `marka_render.js`, `logo_kontrol.js`, `banner_kontrol.js`, `yazi_yola.py` |
+| `uretim/` | Remotion projesi: `src/marka/` (üst bant, altyazı, filigran, bitiş, **kapak şablonu**), `src/motor/` (stil motoru sözleşmesi), `src/stiller/` (motorlar), `src/bolumler/b<no>/` (sahne kodu) |
+| `bolumler/<no>-<konu>/` | Bölüm: `bolum.json`, `arastirma.md`, `zaman.json`, `yukleme.md`, `ses/`, `cikti/` (mp4/wav git'e girmez) |
+| `takvim/takvim.csv`, `olcum/tablo.csv` | Yayın planının asıl kaydı; 48 saat ölçüm tablosu |
 | `.mcp.json` | ElevenLabs resmî MCP (sürüm sabit 0.12.2), anahtarı `ELEVENLABS_API_KEY`'den okur |
-| `fikirler/`, `senaryolar/`, `aciklamalar/`, `yayinlanan/`, `ses/` | İlk taslak klasörler; 4. adımda yeniden düzenlenecek |
+| `fikirler/`, `senaryolar/`, `aciklamalar/`, `yayinlanan/` | Eski taslak klasörler (yerine `bolumler/`, `senaryo/konu-havuzu.md`). `ses/ses-denemeleri/` kanal sesi örnekleri |
 | `belgeler/ilk-istek.md` | Kullanıcının tam isteği |
 
 ## Durum (son güncelleme: 25.11.2026)
-- ✅ Ortam: render burada yapılır (ffmpeg, Node 22, Chromium; 4 çekirdek/15 GB). Bitmiş video kullanıcıya sohbetten dosya olarak gönderilir.
-- ✅ Kanal yönü (korku), ad, logo (v6 A), banner, filigranlar, açıklamalar.
-- ✅ Skill araştırması ve kurulumu (80 skill; envanter `KAYNAKLAR.md`).
-- ✅ GitHub push çalışıyor. ⚠️ Depo **herkese açık**; kullanıcıdan Private yapması istendi — kontrol et.
-- ✅ ElevenLabs anahtarı ortam değişkenine kaydedildi (yeni oturumda yüklenir). **İlk iş:** değeri basmadan test et (`/v1/user/subscription`), kalan krediyi ve planı kullanıcıya söyle; ücretsiz planın ticari kullanım koşulunu kontrol et.
-- ⏳ **Sıradaki: 4. adım** — kendi skill'leri (`video-uretim`, `senaryo`, `stil-kutuphanesi`, `ses`, `altyazi`, `yukleme-ve-takvim`, `olcum`) ve araçlar (kontrol panosu, ses denetimi, final render, takvim denetimi). Sonra 5. adım: deneme videosu.
+- ✅ Ortam, kanal kimliği, logo, banner, filigran, açıklamalar, 80 dış skill.
+- ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Kanal sesi **Emin – Storyteller** (`2olWvHmrPO1obgZX9ivZ`).
+- ✅ 4. adım: 7 kendi skill'i + araçlar + Remotion üretim projesi + stil kütüphanesi (30 sayfa; motor: gölge oyunu).
+- ✅ Kapak formatı kullanıcıyla belirlendi: etiket hapı · 2 satır · çerçeveli sahne kartı · logo/numara/İZLE şeridi (`kanal-kimligi`).
+- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,2 sn, -14,9 LUFS, -1,1 dBTP, 24 kare kontrol temiz, 17 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
+- ⚠️ Depo herkese açık olabilir; kullanıcıdan Private yapması istendi — kontrol et.
+- ⏳ Sıradaki: kullanıcı geri bildirimi → yükleme tarihi (onayla) → 2. video (farklı stil, `stil-kutuphanesi/gecmis.csv`).
+- Git: bu oturumun dalı `ccr-cac89f1a-do5gc6` (önceki dal `claude/githupa-baglan-youtube-repo-6dwnvh`).
 
 ## Bilinen tuzaklar (genel)
 | Sorun | Çözüm |

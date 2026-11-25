@@ -1,0 +1,144 @@
+{
+ "efekt_turu": 8,
+ "yerlesim": 17,
+ "tepe_db": -4.0,
+ "satirlar": [
+  {
+   "ad": "nefes-kesik",
+   "kare": 0,
+   "sn": 0.0,
+   "olculen_sn": 0.005,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "gup",
+   "kare": 104,
+   "sn": 3.467,
+   "olculen_sn": 3.467,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "alev",
+   "kare": 188,
+   "sn": 6.267,
+   "olculen_sn": 6.272,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 431,
+   "sn": 14.367,
+   "olculen_sn": 14.372,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 445,
+   "sn": 14.833,
+   "olculen_sn": 14.838,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 459,
+   "sn": 15.3,
+   "olculen_sn": 15.305,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 565,
+   "sn": 18.833,
+   "olculen_sn": 18.838,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 568,
+   "sn": 18.933,
+   "olculen_sn": 18.938,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 571,
+   "sn": 19.033,
+   "olculen_sn": 19.038,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 574,
+   "sn": 19.133,
+   "olculen_sn": 19.138,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 577,
+   "sn": 19.233,
+   "olculen_sn": 19.238,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 580,
+   "sn": 19.333,
+   "olculen_sn": 19.338,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 583,
+   "sn": 19.433,
+   "olculen_sn": 19.438,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 586,
+   "sn": 19.533,
+   "olculen_sn": 19.538,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kapi",
+   "kare": 768,
+   "sn": 25.6,
+   "olculen_sn": 25.605,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "yukselen",
+   "kare": 843,
+   "sn": 28.1,
+   "olculen_sn": 28.105,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "bitis-nefes",
+   "kare": 921,
+   "sn": 30.7,
+   "olculen_sn": 30.705,
+   "fark_kare": 0.15,
+   "gecti": true
+  }
+ ],
+ "kalan": 0
+}

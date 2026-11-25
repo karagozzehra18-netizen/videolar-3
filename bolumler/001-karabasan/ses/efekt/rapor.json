@@ -1,0 +1,58 @@
+{
+ "nefes-kesik": {
+  "kirpilan_ms": 75.0,
+  "sure_sn": 0.76,
+  "ham_tepe_db": -0.5,
+  "ham_rms_db": -16.8,
+  "sessiz": false
+ },
+ "gup": {
+  "kirpilan_ms": 0.0,
+  "sure_sn": 0.54,
+  "ham_tepe_db": -3.9,
+  "ham_rms_db": -27.9,
+  "sessiz": false
+ },
+ "alev": {
+  "kirpilan_ms": 45.0,
+  "sure_sn": 1.92,
+  "ham_tepe_db": -7.5,
+  "ham_rms_db": -25.7,
+  "sessiz": false
+ },
+ "kalp": {
+  "kirpilan_ms": 810.0,
+  "sure_sn": 0.78,
+  "ham_tepe_db": -0.4,
+  "ham_rms_db": -23.7,
+  "sessiz": false
+ },
+ "tik": {
+  "kirpilan_ms": 5.0,
+  "sure_sn": 0.21,
+  "ham_tepe_db": -1.6,
+  "ham_rms_db": -29.8,
+  "sessiz": false
+ },
+ "kapi": {
+  "kirpilan_ms": 145.0,
+  "sure_sn": 2.33,
+  "ham_tepe_db": 0.2,
+  "ham_rms_db": -20.9,
+  "sessiz": false
+ },
+ "yukselen": {
+  "kirpilan_ms": 1005.0,
+  "sure_sn": 1.42,
+  "ham_tepe_db": -2.2,
+  "ham_rms_db": -18.0,
+  "sessiz": false
+ },
+ "bitis-nefes": {
+  "kirpilan_ms": 10.0,
+  "sure_sn": 1.47,
+  "ham_tepe_db": -21.4,
+  "ham_rms_db": -33.4,
+  "sessiz": false
+ }
+}
