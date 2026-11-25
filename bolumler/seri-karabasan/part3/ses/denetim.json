@@ -1,0 +1,64 @@
+{
+ "efekt_turu": 7,
+ "yerlesim": 7,
+ "tepe_db": -7.0,
+ "satirlar": [
+  {
+   "ad": "kapi-gicirti",
+   "kare": 0,
+   "sn": 0.0,
+   "olculen_sn": 0.005,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "ayak-tahta",
+   "kare": 131,
+   "sn": 4.367,
+   "olculen_sn": 4.372,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "saat",
+   "kare": 265,
+   "sn": 8.833,
+   "olculen_sn": 8.838,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "nefes-uyku",
+   "kare": 531,
+   "sn": 17.7,
+   "olculen_sn": 17.7,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tahta-gicirti",
+   "kare": 1118,
+   "sn": 37.267,
+   "olculen_sn": 37.267,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 1018,
+   "sn": 33.933,
+   "olculen_sn": 33.938,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "yukselen",
+   "kare": 1182,
+   "sn": 39.4,
+   "olculen_sn": 39.405,
+   "fark_kare": 0.15,
+   "gecti": true
+  }
+ ],
+ "kalan": 0
+}

@@ -1,0 +1,128 @@
+{
+ "efekt_turu": 8,
+ "yerlesim": 15,
+ "tepe_db": -5.0,
+ "satirlar": [
+  {
+   "ad": "horoz",
+   "kare": 28,
+   "sn": 0.933,
+   "olculen_sn": 0.933,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "kapi-zil",
+   "kare": 238,
+   "sn": 7.933,
+   "olculen_sn": 7.933,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 458,
+   "sn": 15.267,
+   "olculen_sn": 15.272,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 806,
+   "sn": 26.867,
+   "olculen_sn": 26.867,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 809,
+   "sn": 26.967,
+   "olculen_sn": 26.967,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 812,
+   "sn": 27.067,
+   "olculen_sn": 27.067,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 815,
+   "sn": 27.167,
+   "olculen_sn": 27.167,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 818,
+   "sn": 27.267,
+   "olculen_sn": 27.267,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 821,
+   "sn": 27.367,
+   "olculen_sn": 27.367,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 824,
+   "sn": 27.467,
+   "olculen_sn": 27.467,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 827,
+   "sn": 27.567,
+   "olculen_sn": 27.567,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "cekmece",
+   "kare": 1240,
+   "sn": 41.333,
+   "olculen_sn": 41.338,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "lamba-dugme",
+   "kare": 1287,
+   "sn": 42.9,
+   "olculen_sn": 42.905,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "gup",
+   "kare": 1388,
+   "sn": 46.267,
+   "olculen_sn": 46.272,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "yukselen",
+   "kare": 1558,
+   "sn": 51.933,
+   "olculen_sn": 51.938,
+   "fark_kare": 0.15,
+   "gecti": true
+  }
+ ],
+ "kalan": 0
+}

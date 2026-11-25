@@ -1,4 +1,5 @@
-// Kelime kelime akan altyazı: söylenen kelime mercan, söylenmiş kâğıt, sıradakiler soluk (%30). Parçalar ve satır kırılımları araclar/altyazi_hazirla.py tarafından Inter ile
+// Kelime kelime akan altyazı (EKRAN ORTASI, çizimin üzerinde, kullanıcı kararı): söylenen kelime hardal, söylenmiş kâğıt,
+// parça birlikte belirir; hepsi koyu konturlu + gölgeli (her zeminde okunur). Parçalar ve satır kırılımları araclar/altyazi_hazirla.py tarafından Inter ile
 // ÖLÇÜLEREK hazırlanır (taşma kontrolü orada); burada yalnız gösterilir. Altyazı yalnız ALTYAZI bandında durur.
 import React from "react";
 import { interpolate } from "remotion";
@@ -9,8 +10,10 @@ import { kenet } from "../motor/yardimci";
 export type AltyaziKelime = { w: string; bas: number; son: number; satir: number };
 export type AltyaziParca = { bas: number; son: number; kelimeler: AltyaziKelime[] };
 
+const KONTUR = "#141833"; // çizimin üstünde okunurluk için koyu kontur (ekran ortası altyazı)
+
 export const Altyazi: React.FC<{ f: number; parcalar: AltyaziParca[]; renk?: string; golge?: string }> = ({
-  f, parcalar, renk = RENK.kagit, golge = "rgba(0,0,0,0.55)",
+  f, parcalar, renk = RENK.kagit, golge = "rgba(11,12,26,0.6)",
 }) => {
   const p = parcalar.find((x) => f >= x.bas && f < x.son);
   if (!p) return null;
@@ -22,14 +25,15 @@ export const Altyazi: React.FC<{ f: number; parcalar: AltyaziParca[]; renk?: str
       {satirlar.map((s, i) => (
         <div key={i} style={{ height: satirH, lineHeight: `${satirH}px`, whiteSpace: "nowrap" }}>
           {s.map((k, j) => {
-            const gorun = interpolate(f, [k.bas - 1, k.bas + 3], [0, 1], kenet);
-            const op = 0.3 + 0.7 * gorun; // henüz söylenmeyen kelime soluk durur (satır kaymaz)
+            const gorun = interpolate(f, [p.bas, p.bas + 4], [0, 1], kenet);
+            const op = 1; // parça tam görünür; söylenen kelime vurgulanır (konturla soluk kelime bulanık duruyordu)
             const etkin = f >= k.bas && f < Math.max(k.son, k.bas + 6);
             return (
               <span key={j} style={{ display: "inline-block", marginRight: j < s.length - 1 ? "0.26em" : 0,
-                fontFamily: FONT.metin, fontWeight: 800, fontSize: ALTYAZI.boyut, color: etkin ? RENK.mercan : renk,
-                opacity: op, transform: `translateY(${(1 - gorun) * 14}px) scale(${0.92 + 0.08 * gorun + (etkin ? 0.04 : 0)})`,
-                textShadow: `0 3px 0 ${golge}` }}>{k.w}</span>
+                fontFamily: FONT.metin, fontWeight: 800, fontSize: ALTYAZI.boyut, color: etkin ? RENK.hardal : renk,
+                opacity: op, transform: `translateY(${(1 - gorun) * 14}px) scale(${0.92 + 0.08 * gorun + (etkin ? 0.06 : 0)})`,
+                WebkitTextStroke: `9px ${KONTUR}`, paintOrder: "stroke fill",
+                textShadow: `0 4px 0 ${golge}, 0 0 18px rgba(11,12,26,0.55)` }}>{k.w}</span>
             );
           })}
         </div>

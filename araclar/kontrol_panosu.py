@@ -17,8 +17,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 KOK = Path(__file__).resolve().parent.parent
-SAHNE = (0, 170, 1080, 1392)       # tam ekran çizimin altyazı/ön katman üstü (uretim/src/marka/yerlesim.ts)
-ALTYAZI = (0, 1404, 1080, 1590)
+SAHNE = (0, 170, 1080, 1590)       # tam ekran çizim (üst platform ve alt platform alanı hariç)
+ALTYAZI = (0, 1030, 1080, 1196)    # ekran ortası altyazı bandı (uretim/src/marka/yerlesim.ts ALTYAZI)
 
 def kare_al(video, t):
     ham = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", str(video), "-frames:v", "1", "-f", "rawvideo",
@@ -56,7 +56,9 @@ def main():
         b = k[ALTYAZI[1]:ALTYAZI[3]].astype(int)
         acik = (b.min(axis=2) > 200) | ((b[..., 0] > 200) & (b[..., 1] < 120))
         xs = np.where(acik.any(axis=0))[0]
-        if len(xs) and (xs.min() < 120 or xs.max() > 960): uy.append("taşan yazı")
+        # Altyazı artık çizimin ÜZERİNDE: piksel tabanlı taşma kontrolü çizimle karışır; satır genişliği
+        # bolum_hazirla.py'de Inter ile ölçülür (orada HATA verir). Burada yalnız aşırı uç durum aranır.
+        # (taşan yazı: bolum_hazirla.py ölçer; piksel kontrolü altyazı çizim üstündeyken güvenilir değil)
         satirlar.append({"t": t, "parlaklik": round(L, 3), "uyarilar": uy})
     bitis_disi = [r["parlaklik"] for r in satirlar if not r.get("bitis_ekrani")]
     ilk = satirlar[0]["parlaklik"]

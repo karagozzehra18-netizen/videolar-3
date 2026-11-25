@@ -79,7 +79,7 @@ Kurallar:
 - **Tam ekran:** çizim 1080x1920'nin tamamını kaplar; ahşap çerçeve/kutu yok.
 - **Üst sol — başlık kartı** (`UstBant.tsx`, her videoda aynı, stilden bağımsız): yarı saydam lacivert buzlu cam kart (%74, blur 10, ince krem kenar, köşe 18), solda 6 px mercan çizgi; üstte kategori (Inter 800, 19 px, harf aralığı 3,5, mercan, `bolum.json → kapak.etiket`), altında başlık (Fraunces 800, 44 px, kâğıt, `bant_baslik`, ≤24 karakter). x 56, y 192. **Süre/ilerleme çubuğu YOK.**
 - **Üst sağ — rozet filigran** (aynı hizada, bkz. Filigran).
-- **Alt:** her stil motoru ekranın altına (y ≥ 1392) kamerayla hareket etmeyen **sabit ön katman** çizer (gölge oyununda oymalı koyu sahne tahtası). Altyazı bunun üstünde, yatayda tam ortada durur (bkz. `altyazi`).
+- **Altyazı (güncel, 25.11.2026):** ekranın ORTASINDA (y 1040-1186), orta büyüklük (Inter 800, 58 px), çizimin üzerinde, koyu kontur + gölge; söylenen kelime hardal. (Eski gölge oyunu denemesinde altta sabit tahta üstündeydi.)
 
 ## Bitiş ekranı (3 sn, 90 kare, HAREKETLİ) — kullanıcı kararı 25.11.2026
 Kod: `uretim/src/marka/BitisEkrani.tsx` (her videoda aynı; bölüm yalnız soruyu verir: `bolum.json → bitis {soru, vurgu}`).

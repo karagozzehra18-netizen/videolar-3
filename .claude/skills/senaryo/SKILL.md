@@ -40,6 +40,14 @@ Kurallar:
 - Her cümlede en az bir **çizilebilir olay** olmalı; `bolum.json → olaylar` bu kelimelere bağlanır (~2 sn'de bir).
 - Cümleler kısa; virgülde altyazı parçası biter.
 
+## 3b. Seri formatı (kullanıcı kararı 25.11.2026): ~5 dakika, 5 part × ~1 dakika
+- Her part 50-66 sn (konuşma ~50-58 sn ≈ 600-720 karakter, Emin hız 1,0) + 3 sn bitiş. `bolum.json → sure_araligi: [50, 66]`.
+- **Sen anlatımı**, sürükleyici hikâye: her partın kendi kancası (≤7 kelime), ortada en az bir tersine dönüş, **sonda merak (cliffhanger)**.
+- Son cümle izleyiciye soru: "Sen olsan … ? Yorumlara yaz." Aynı soru bitiş ekranında (`bitis.soru`), `bitis.devam` = "Part N+1 yakında".
+- Bilgi içeren her cümle kaynaklı (`arastirma.md`); halk inancı "anlatılır", bilimsel kısım bir karakterin (ör. doktor) ağzından.
+- Bir partta ~25-30 olay (tempo: 2,5 sn'den uzun boşluk `bolum_hazirla` uyarısı). Aynı kelime iki kez geçiyorsa olayda `"sira": 2`.
+- Örnek: `bolumler/seri-karabasan/senaryo_olustur.py` (5 partın senaryosu, olayları, efektleri tek dosyada).
+
 ## 4. bolum.json alanları
 `cumleler` (dizi), `olaylar` ({ad, cumle, kelime, kayma}), `efektler` ({ad, olay, sure, db, tarif, tekrar?}), `kapak` ({satir1, satir2 ≤10 karakter, etiket, zemin_kare, renk, desen}), `bitis` ({soru: izleyiciye yorum sorusu, vurgu: mercan kelime}), `bant_baslik` (≤24 karakter), `stil`, `ses` (kanal sesi Emin; `cumle_sesleri` hepsi `gerilim` — bkz. `ses`).
 Örnek: `bolumler/001-karabasan/bolum.json`.

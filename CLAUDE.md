@@ -6,7 +6,8 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 
 ## Kanal
 - **Ad:** Duyma Sakın · **Kullanıcı adı:** @duymasakin (YouTube açık; Instagram/TikTok aynı adla açılacak)
-- **Tür:** Yüzsüz, **tamamen kodla çizilmiş** animasyonlu kısa korku hikâyeleri (Shorts/Reels/TikTok), Türkçe, 25-35 sn.
+- **Tür:** Yüzsüz, **tamamen kodla çizilmiş** animasyonlu korku hikâyeleri (Shorts/Reels/TikTok), Türkçe.
+- **Format (kullanıcı kararı 25.11.2026):** Sürükleyici **hikâye serileri**: bir konu ~5 dakika, **her part ~1 dakika** (50-66 sn), "Part 1, Part 2…" diye paylaşılır. Her part merakta (cliffhanger) biter ve izleyiciye "Sen olsan ne yapardın? Yorumlara yaz" diye sorar. (Tek parçalık 25-35 sn video da yapılabilir.)
 - **Konular:** Şehir efsaneleri, Anadolu halk anlatıları, açıklanamayan olaylar.
 - **Görsel kimlik:** Açık renkli, sade, düz renk. Ayrıntı: `kanal-kimligi` skill'i. Seçili dosyalar: `marka/secili/`.
 - **Her video farklı bir animasyon stilinde;** art arda iki video aynı stilde olmaz.
@@ -14,8 +15,8 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 ## Değişmez kurallar
 1. **Kanca:** İlk cümle ≤7 kelime, şaşırtıcı iddia ya da soru, mümkünse "sen". Tarihle, yerle ya da "Bir zamanlar" ile başlama.
 2. **İlk kare:** En çarpıcı ve parlak kare; ilk 0,5 sn'de büyük hareket. Logo ile açılış yok.
-3. **Tempo:** Her ~2 sn'de yeni görsel olay; boş panel/köşe yok. Son cümle başa bağlanır (döngü), ardından 3 sn **hareketli** bitiş ekranı: soru + Beğen/Takip et/Paylaş + YouTube/Instagram/TikTok logoları + @duymasakin.
-4. **Ekran:** **Tam ekran** çizim (çerçeve yok). Üst solda başlık kartı (kategori + başlık), üst sağda rozet filigran — ikisi her videoda aynı, stilden bağımsız; süre/ilerleme çubuğu YOK. Kelime kelime altyazı **yatayda ortada**, stilin sabit ön katmanının üstünde; **çizimin üstüne binmez**; sayılar yazıyla.
+3. **Tempo:** Her ~2 sn'de yeni görsel olay; boş panel/köşe yok. Seri partı merakta biter + izleyiciye soru (tek video ise son cümle başa bağlanır). Ardından 3 sn **hareketli** bitiş ekranı: soru + Beğen/Takip et/Paylaş + YouTube/Instagram/TikTok logoları + @duymasakin (+ seride "Part N yakında").
+4. **Ekran:** **Tam ekran** çizim (çerçeve yok). Üst solda başlık kartı (kategori + başlık), üst sağda rozet filigran — ikisi her videoda aynı, stilden bağımsız; süre/ilerleme çubuğu YOK. Kelime kelime altyazı **ekranın ortasında, orta büyüklükte (58 px), çizimin üzerinde**, koyu konturlu (kullanıcı kararı; önemli figürü altyazı bandına koyma); sayılar yazıyla.
 5. **Ses:** 5-8 gerçekçi efekt (komik yok), her efekt olayla aynı karede (ölçerek). Müzik çok kısık. Son ses ≈ -14 LUFS, tepe ≤ -1 dBTP.
 6. **Doğruluk:** Her bilgiyi web'den doğrula; kesin değilse "anlatılır". Sayıların kaynağını kaydet. Gerçek kişiyi karalama, ölümü istismar etme, tehlikeye özendirme.
 7. **Kontrol:** "Bitti" demeden ≥15 kare çıkarıp bak (taşan yazı, boş alan, karanlık kare, üst üste binme); kapağı gör; sesi ölç. Ölçemediğini açıkça söyle.
@@ -54,8 +55,9 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 | `marka/fontlar/` | Fraunces, Inter (+ eski Anton, Cormorant), OFL lisansları |
 | `marka/kanal-aciklamalari.md` | YouTube/Instagram/TikTok açıklamaları (sınırlar ölçüldü) |
 | `araclar/` | Video: `bolum_hazirla.py` (zaman çizelgesi + senaryo kapıları), `seslendir.py`, `anlatim_duzenle.py`, `efekt_uret.py`, `muzik_uret.py`, `ses_denetimi.py`, `final_render.py`, `kontrol_panosu.py`, `takvim_denetle.py`. Marka: `marka_render.js`, `logo_kontrol.js`, `banner_kontrol.js`, `yazi_yola.py` |
-| `uretim/` | Remotion projesi: `src/marka/` (üst bant, altyazı, filigran, bitiş, **kapak şablonu**), `src/motor/` (stil motoru sözleşmesi), `src/stiller/` (motorlar), `src/bolumler/b<no>/` (sahne kodu) |
-| `bolumler/<no>-<konu>/` | Bölüm: `bolum.json`, `arastirma.md`, `zaman.json`, `yukleme.md`, `ses/`, `cikti/` (mp4/wav git'e girmez) |
+| `uretim/` | Remotion projesi: `src/marka/` (başlık kartı, altyazı, filigran, bitiş, **kapak şablonu**), `src/motor/` (stil motoru sözleşmesi, `cekim.tsx` çekim listesi), `src/stiller/` (motorlar: `golge-oyunu`, `duz-vektor/` + karakterler + mekânlar), `src/bolumler/` (`b001`, `seri/Part1-5`) |
+| `bolumler/seri-<konu>/part<N>/` | Seri partları (her biri tam bölüm klasörü); `ortak/efekt/` paylaşılan efektler; `senaryo_olustur.py` 5 partın kaynağı; `arastirma.md` |
+| `bolumler/<no>-<konu>/` | Tek bölüm: `bolum.json`, `arastirma.md`, `zaman.json`, `yukleme.md`, `ses/`, `cikti/` (mp4/wav git'e girmez) |
 | `takvim/takvim.csv`, `olcum/tablo.csv` | Yayın planının asıl kaydı; 48 saat ölçüm tablosu |
 | `.mcp.json` | ElevenLabs resmî MCP (sürüm sabit 0.12.2), anahtarı `ELEVENLABS_API_KEY`'den okur |
 | `fikirler/`, `senaryolar/`, `aciklamalar/`, `yayinlanan/` | Eski taslak klasörler (yerine `bolumler/`, `senaryo/konu-havuzu.md`). `ses/ses-denemeleri/` kanal sesi örnekleri |
@@ -66,7 +68,8 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 - ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Anlatıcı sesi: **Emin** (3 numara, `2olWvHmrPO1obgZX9ivZ`), bütün cümleler — `ses` skill'i.
 - ✅ 4. adım: 7 kendi skill'i + araçlar + Remotion üretim projesi + stil kütüphanesi (30 sayfa; motor: gölge oyunu).
 - ✅ Kapak formatı kullanıcıyla belirlendi: etiket hapı · 2 satır · çerçeveli sahne kartı · logo/numara/İZLE şeridi (`kanal-kimligi`).
-- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (33,7 sn, tam ekran, Emin, hareketli bitiş, -14,8 LUFS, -1,3 dBTP, 24 kare kontrol temiz, 20 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
+- ✅ **Karabasan serisi (5 part)** `bolumler/seri-karabasan/part1-5`: düz vektör gece masalı stili, Emin, hikâye formatı. Kontrollü final render'lar `cikti/`. **Yüklenmedi, takvime eklenmedi.**
+- ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (paylaşılmayacak, kullanıcı kararı) (33,7 sn, tam ekran, Emin, hareketli bitiş, -14,8 LUFS, -1,3 dBTP, 24 kare kontrol temiz, 20 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
 - ⚠️ Depo herkese açık olabilir; kullanıcıdan Private yapması istendi — kontrol et.
 - ⏳ Sıradaki: kullanıcı geri bildirimi → yükleme tarihi (onayla) → 2. video (farklı stil, `stil-kutuphanesi/gecmis.csv`).
 - Git: bu oturumun dalı `ccr-cac89f1a-do5gc6` (önceki dal `claude/githupa-baglan-youtube-repo-6dwnvh`).

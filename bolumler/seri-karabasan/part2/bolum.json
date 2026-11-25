@@ -1,0 +1,316 @@
+{
+  "no": 2,
+  "slug": "karabasan-part2",
+  "seri": {
+    "ad": "Karabasan",
+    "part": 2,
+    "toplam": 5
+  },
+  "kompozisyon": "karabasan-p2",
+  "kapak_kompozisyon": "karabasan-p2-kapak",
+  "bant_baslik": "Karabasan",
+  "kart_kategori": "Part 2 / 5",
+  "stil": "duz-vektor",
+  "sure_araligi": [
+    50,
+    66
+  ],
+  "efekt_klasoru": "../ortak/efekt",
+  "ses": {
+    "model": "eleven_multilingual_v2",
+    "sesler": {
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim"
+    ]
+  },
+  "cumleler": [
+    "Babaannen tek kelime söyledi: Karabasan.",
+    "Sabah mutfakta çay demleniyordu, ama babaannen gülmüyordu.",
+    "Anadolu'da anlatılır: Karabasan, uyuyanın göğsüne çöker ve bastırır.",
+    "Adı da buradan gelir: basan, bastıran.",
+    "Babaannen eski bir sandığı açtı. Bu gece yastığının altına bir muska koyacağım, dedi.",
+    "Sen gülümsedin. İnanmıyordun ama ses de çıkarmadın.",
+    "O gece ışığı açık bıraktın. Yastığını kaldırınca küçük, üçgen bir muska gördün.",
+    "Rahatladın ve uyudun.",
+    "Bir fısıltı seni uyandırdı. Koridordan biri, adını söylüyordu.",
+    "Babaannenin sesiydi bu.",
+    "Ama babaannen yan odada, derin derin uyuyordu. Nefesini duyabiliyordun.",
+    "Sen olsan o kapıyı açar mıydın? Yorumlara yaz."
+  ],
+  "olaylar": [
+    {
+      "ad": "babaanne-yakin",
+      "cumle": 0,
+      "kelime": "tek"
+    },
+    {
+      "ad": "kelime",
+      "cumle": 0,
+      "kelime": "karabasan"
+    },
+    {
+      "ad": "mutfak",
+      "cumle": 1,
+      "kelime": "sabah"
+    },
+    {
+      "ad": "cay",
+      "cumle": 1,
+      "kelime": "çay"
+    },
+    {
+      "ad": "yuz-ciddi",
+      "cumle": 1,
+      "kelime": "gülmüyordu"
+    },
+    {
+      "ad": "harita",
+      "cumle": 2,
+      "kelime": "anadolu'da"
+    },
+    {
+      "ad": "golge-coker",
+      "cumle": 2,
+      "kelime": "göğsüne"
+    },
+    {
+      "ad": "bastirir",
+      "cumle": 2,
+      "kelime": "bastırır"
+    },
+    {
+      "ad": "ad",
+      "cumle": 3,
+      "kelime": "adı"
+    },
+    {
+      "ad": "bastiran",
+      "cumle": 3,
+      "kelime": "bastıran"
+    },
+    {
+      "ad": "sandik",
+      "cumle": 4,
+      "kelime": "sandığı"
+    },
+    {
+      "ad": "muska-soz",
+      "cumle": 4,
+      "kelime": "muska"
+    },
+    {
+      "ad": "gulumse",
+      "cumle": 5,
+      "kelime": "gülümsedin"
+    },
+    {
+      "ad": "inanmama",
+      "cumle": 5,
+      "kelime": "inanmıyordun"
+    },
+    {
+      "ad": "isik-acik",
+      "cumle": 6,
+      "kelime": "ışığı"
+    },
+    {
+      "ad": "yastik",
+      "cumle": 6,
+      "kelime": "yastığını"
+    },
+    {
+      "ad": "muska-bul",
+      "cumle": 6,
+      "kelime": "muska"
+    },
+    {
+      "ad": "rahat",
+      "cumle": 7,
+      "kelime": "rahatladın"
+    },
+    {
+      "ad": "uyku",
+      "cumle": 7,
+      "kelime": "uyudun"
+    },
+    {
+      "ad": "fisilti",
+      "cumle": 8,
+      "kelime": "fısıltı"
+    },
+    {
+      "ad": "koridor-kapi",
+      "cumle": 8,
+      "kelime": "koridordan"
+    },
+    {
+      "ad": "ses-dalga",
+      "cumle": 9,
+      "kelime": "babaannenin"
+    },
+    {
+      "ad": "yan-oda",
+      "cumle": 10,
+      "kelime": "yan"
+    },
+    {
+      "ad": "nefes",
+      "cumle": 10,
+      "kelime": "nefesini"
+    },
+    {
+      "ad": "soru",
+      "cumle": 11,
+      "kelime": "sen"
+    },
+    {
+      "ad": "yorum",
+      "cumle": 11,
+      "kelime": "yorumlara"
+    },
+    {
+      "ad": "uyuyan",
+      "cumle": 2,
+      "kelime": "uyuyanın"
+    },
+    {
+      "ad": "bu-gece",
+      "cumle": 4,
+      "kelime": "bu"
+    },
+    {
+      "ad": "adini",
+      "cumle": 8,
+      "kelime": "adını"
+    },
+    {
+      "ad": "derin",
+      "cumle": 10,
+      "kelime": "derin"
+    },
+    {
+      "ad": "anlatilir",
+      "cumle": 2,
+      "kelime": "anlatılır"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "cay",
+      "olay": "cay",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -12,
+      "tarif": "close-up sound of hot tea being poured into a small glass, clear liquid pouring, then a small spoon clinking the glass twice, close microphone, realistic"
+    },
+    {
+      "ad": "sandik",
+      "olay": "sandik",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -8,
+      "tarif": "opening the heavy wooden lid of an old wooden chest with creaky hinges, realistic, no music"
+    },
+    {
+      "ad": "lamba-dugme",
+      "olay": "isik-acik",
+      "kayma": 0,
+      "sure": 1.0,
+      "db": -10,
+      "tarif": "a loud clear click of an old wall light switch being flipped, very close microphone, sharp and crisp, realistic"
+    },
+    {
+      "ad": "yastik",
+      "olay": "yastik",
+      "kayma": 0,
+      "sure": 1.2,
+      "db": -10,
+      "tarif": "lifting a soft cotton pillow, gentle fabric rustle, close, realistic"
+    },
+    {
+      "ad": "fisilti",
+      "olay": "fisilti",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -10,
+      "tarif": "a distant faint whisper calling from a dark hallway, unintelligible, breathy, realistic, eerie but subtle, no music"
+    },
+    {
+      "ad": "saat",
+      "olay": "koridor-kapi",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -16,
+      "tarif": "a slow old wall clock ticking in a silent house at night, realistic, no music"
+    },
+    {
+      "ad": "nefes-uyku",
+      "olay": "nefes",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -12,
+      "tarif": "an elderly woman breathing slowly and deeply in her sleep, heard through a wall, realistic, no music"
+    },
+    {
+      "ad": "kalp",
+      "olay": "soru",
+      "kayma": -10,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "sure": 0.5,
+      "db": -10,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "not": "bitiş ekranı dokunuşları (BitisEkrani.DOKUNMA)"
+    }
+  ],
+  "kapak": {
+    "satir1": "Adını kim",
+    "satir2": "fısıldadı?",
+    "etiket": "Karabasan · Part 2",
+    "zemin_kare": 367,
+    "renk": [
+      "#2E3C6E",
+      "#141a33"
+    ],
+    "desen": [
+      "#F4BE4F",
+      "#C9C2E6",
+      "#E8573F"
+    ]
+  },
+  "bitis": {
+    "soru": "Sen olsan o kapıyı açar mıydın?",
+    "vurgu": "açar",
+    "devam": "Part 3 yakında"
+  }
+}

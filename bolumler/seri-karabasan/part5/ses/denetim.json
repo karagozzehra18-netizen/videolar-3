@@ -1,0 +1,72 @@
+{
+ "efekt_turu": 7,
+ "yerlesim": 8,
+ "tepe_db": -7.0,
+ "satirlar": [
+  {
+   "ad": "yukselen",
+   "kare": 0,
+   "sn": 0.0,
+   "olculen_sn": 0.005,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 159,
+   "sn": 5.3,
+   "olculen_sn": 5.305,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "nefes-al",
+   "kare": 483,
+   "sn": 16.1,
+   "olculen_sn": 16.105,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "nefes-ver",
+   "kare": 553,
+   "sn": 18.433,
+   "olculen_sn": 18.433,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "ruzgar",
+   "kare": 765,
+   "sn": 25.5,
+   "olculen_sn": 25.505,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "horoz",
+   "kare": 866,
+   "sn": 28.867,
+   "olculen_sn": 28.867,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "bardak",
+   "kare": 1081,
+   "sn": 36.033,
+   "olculen_sn": 36.038,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 1429,
+   "sn": 47.633,
+   "olculen_sn": 47.638,
+   "fark_kare": 0.15,
+   "gecti": true
+  }
+ ],
+ "kalan": 0
+}

@@ -41,6 +41,16 @@ python3 araclar/final_render.py $B --kapak-kare 12
 python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 ```
 
+## Seri üretimi (5 part)
+```bash
+S=bolumler/seri-karabasan     # her part: $S/partN (bolum.json, zaman.json, ses/, cikti/), efektler $S/ortak/efekt
+for n in 1 2 3 4 5; do python3 araclar/seslendir.py $S/part$n --onay; python3 araclar/anlatim_duzenle.py $S/part$n --en-uzun 0.55; python3 araclar/bolum_hazirla.py $S/part$n; done
+for n in 1 2 3 4 5; do python3 araclar/efekt_uret.py $S/part$n --onay; python3 araclar/muzik_uret.py $S/part$n; python3 araclar/ses_denetimi.py $S/part$n; done
+(cd uretim && npx remotion render src/index.ts karabasan-p1 /tmp/p1.mp4 --scale=0.5 --muted)   # hızlı önizleme
+python3 araclar/final_render.py $S/part1        # bolum.json → kompozisyon / kapak_kompozisyon adları
+```
+Sahne kodu: `uretim/src/bolumler/seri/PartN.tsx` = çekim listesi (`motor/cekim.tsx`): her çekim bir olayda başlar, kamera k0→k1 sürekli kayar, geçiş kesme/cozul/flas/savur.
+
 ## Profesyonel standart (özet; ayrıntı CLAUDE.md)
 - Tam ekran çizim, üstte yalnız kısa başlık, altyazı ortada ve sabit ön katmanın üstünde.
 - Kanca ≤7 kelime, "sen"; ilk kare en parlak ve çarpıcı, 0,5 sn'de büyük hareket; logo ile açılış yok.
@@ -71,5 +81,11 @@ python3 araclar/kontrol_panosu.py $B/cikti/002-konu.mp4 --kare 20
 | Tam ekranda başlık raftaki çizime biniyordu | Üst sol köşede (x 60-260, y 190-250) figür koyma |
 | Bitiş ekranının ilk karesi siyahtı (zemin opaklığı 0) | Son hikâye karesi donar, bitiş ekranı üstüne açılır (Video.tsx) |
 | Başlık (düz beyaz yazı) ve PNG filigran hapı amatör durdu | Buzlu cam başlık kartı + vektör rozet filigran (kanal-kimligi) |
+| Altyazı kanca karesinde yüzün üstüne bindi | Çekimin kadrajını (`cy`) kaydır; yüz y < 1000'de kalsın |
+| Gece sahneleri "karanlık kare" sınırında (0,22-0,30) | Gece katmanı daha açık (multiply %40, mavi screen %16); kapı kanadı açık renk |
+| Aynı kelime cümlede iki kez ("aynalı… Ayna,", "Kıpırda… Kıpırda") ilk geçişe bağlandı | Olaya `"sira": 2` |
+| Işık düğmesi ve çay efekti neredeyse sessiz çıktı (-43 dB, düşük RMS) | Tarif "very close microphone, loud, crisp" + süre 1 sn; `--yeniden` ile yeniden üretildi |
+| Piksel tabanlı "taşan yazı" kontrolü altyazı çizim üstündeyken yanlış alarm verdi | Kaldırıldı; genişlik bolum_hazirla'da ölçülüyor |
+| Çekmece yakın planında üstte boş alan | Çerçeveli fotoğraf + vazo eklendi |
 | Tam ekran yazılı kapak istenmedi | Sabit kapak şablonu: etiket · 2 satır · çerçeveli sahne kartı · logo şeridi (kanal-kimligi) |
 | Loudnorm sonrası sınırlayıcı sonucu -14,9 LUFS'a çekiyor | ±1 LU içinde; daha yakın istenirse loudnorm hedefini -13,5 yap |

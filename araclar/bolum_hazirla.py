@@ -13,7 +13,7 @@ Kapılar (hata varsa çıkış kodu 1):
   - her olay bir kelimeye bağlanabildi mi
   - altyazı parçaları ölçülerek (Inter 800) bandın içine sığıyor mu
   - iki görsel olay arası en fazla 2,5 sn (tempo kuralı)
-  - toplam süre 25-35 sn
+  - toplam süre 25-35 sn (seri partlarında bolum.json → sure_araligi, ör. [50, 66])
 """
 import json, re, sys, unicodedata
 from pathlib import Path
@@ -22,7 +22,7 @@ from PIL import ImageFont
 FPS = 30
 KOK = Path(__file__).resolve().parent.parent
 FONT = KOK / "marka/fontlar/Inter[opsz,wght].ttf"
-ALTYAZI_BOYUT, ALTYAZI_GENISLIK, EN_FAZLA_SATIR, EN_FAZLA_KELIME = 66, 800, 2, 5
+ALTYAZI_BOYUT, ALTYAZI_GENISLIK, EN_FAZLA_SATIR, EN_FAZLA_KELIME = 58, 760, 2, 4  # uretim/src/marka/yerlesim.ts ALTYAZI ile aynı
 BITIS_SN, SON_BEKLEME_SN = 3.0, 0.45  # uretim/src/marka/yerlesim.ts BITIS_SN ile aynı
 
 def tr_kucuk(s):
@@ -100,10 +100,11 @@ def main():
     # --- olaylar
     olaylar = {}
     for o in b["olaylar"]:
-        hedef = norm(o["kelime"]); bulundu = None
+        hedef = norm(o["kelime"]); bulundu = None; sira = o.get("sira", 1)  # aynı kelimenin kaçıncı geçişi
         for k in cumle_kel[o["cumle"]]:
             if norm(k["w"]).startswith(hedef):
-                bulundu = k; break
+                sira -= 1
+                if sira == 0: bulundu = k; break
         if not bulundu:
             hatalar.append(f"Olay '{o['ad']}': '{o['kelime']}' kelimesi {o['cumle']}. cümlede yok."); continue
         olaylar[o["ad"]] = max(0, bulundu["bas_k"] + o.get("kayma", 0))
@@ -119,7 +120,7 @@ def main():
         k0 = olaylar[e["olay"]] + e.get("kayma", 0)
         tk = e.get("tekrar", {"adet": 1, "aralik": 0})
         for r in range(tk["adet"]):
-            efektler.append({"ad": e["ad"], "dosya": f"ses/efekt/{e['ad']}.wav", "kare": k0 + r * tk["aralik"], "db": e.get("db", -6)})
+            efektler.append({"ad": e["ad"], "dosya": f"{b.get('efekt_klasoru', 'ses/efekt')}/{e['ad']}.wav", "kare": k0 + r * tk["aralik"], "db": e.get("db", -6)})
     # --- altyazı parçaları (ölçerek)
     F = font(); parcalar = []
     for j, ck in enumerate(cumle_kel):
@@ -149,7 +150,8 @@ def main():
         cikti_parca.append({"bas": max(0, bas), "son": son, "kelimeler": [
             {"w": k["w"], "bas": k["bas_k"], "son": k["son_k"], "satir": si} for si, s in enumerate(satirlar) for k in s]})
     sure = toplam / FPS
-    if not 25 <= sure <= 35: (uyarilar if tah else hatalar).append(f"Toplam süre {sure:.1f} sn (25-35 olmalı).")
+    alt, ust = b.get("sure_araligi", [25, 35])
+    if not alt <= sure <= ust: (uyarilar if tah else hatalar).append(f"Toplam süre {sure:.1f} sn ({alt}-{ust} olmalı).")
     z = {"kaynak": kaynak, "fps": FPS, "toplam": toplam, "bitis": bitis, "cumleler": cum, "olaylar": olaylar,
          "efektler": efektler, "altyazi": cikti_parca, "kelimeler": [dict(w=k["w"], bas=k["bas_k"], son=k["son_k"]) for ck in cumle_kel for k in ck]}
     (d / "zaman.json").write_text(json.dumps(z, ensure_ascii=False, indent=1))

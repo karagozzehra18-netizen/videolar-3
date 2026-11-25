@@ -1,0 +1,302 @@
+{
+  "no": 1,
+  "slug": "karabasan-part1",
+  "seri": {
+    "ad": "Karabasan",
+    "part": 1,
+    "toplam": 5
+  },
+  "kompozisyon": "karabasan-p1",
+  "kapak_kompozisyon": "karabasan-p1-kapak",
+  "bant_baslik": "Karabasan",
+  "kart_kategori": "Part 1 / 5",
+  "stil": "duz-vektor",
+  "sure_araligi": [
+    50,
+    66
+  ],
+  "efekt_klasoru": "../ortak/efekt",
+  "ses": {
+    "model": "eleven_multilingual_v2",
+    "sesler": {
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim"
+    ]
+  },
+  "cumleler": [
+    "Gece uyandın ve kımıldayamıyorsun.",
+    "Üç gün önce, sınavlardan kaçıp köydeki babaannenin evine gelmiştin.",
+    "Babaannen sana sarıldı, önüne sıcak bir çorba koydu.",
+    "Sonra evin en eski odasını hazırladı.",
+    "Odada büyük, aynalı bir dolap vardı. Ayna, tam yatağa bakıyordu.",
+    "İlk gece her şey sessizdi. Fazla sessiz.",
+    "Şimdi ise göğsüne bir ağırlık çökmüş. Sanki biri üstüne oturmuş.",
+    "Bağırmak istiyorsun, sesin çıkmıyor. Parmağını bile oynatamıyorsun.",
+    "Gözlerin karanlıkta aynayı buluyor.",
+    "Aynada yatağın görünüyor. Sen yatıyorsun...",
+    "...ve göğsünün üstünde, kapkara bir şey oturmuş. Sana bakıyor.",
+    "Sen olsan o gece o odada kalır mıydın? Yorumlara yaz."
+  ],
+  "olaylar": [
+    {
+      "ad": "goz-acilir",
+      "cumle": 0,
+      "kelime": "uyandın"
+    },
+    {
+      "ad": "kimilda",
+      "cumle": 0,
+      "kelime": "kımıldayamıyorsun"
+    },
+    {
+      "ad": "gecmis",
+      "cumle": 1,
+      "kelime": "üç"
+    },
+    {
+      "ad": "dolmus",
+      "cumle": 1,
+      "kelime": "sınavlardan"
+    },
+    {
+      "ad": "ev",
+      "cumle": 1,
+      "kelime": "köydeki"
+    },
+    {
+      "ad": "kapi-babaanne",
+      "cumle": 1,
+      "kelime": "babaannenin"
+    },
+    {
+      "ad": "sarilma",
+      "cumle": 2,
+      "kelime": "sarıldı"
+    },
+    {
+      "ad": "corba",
+      "cumle": 2,
+      "kelime": "çorba"
+    },
+    {
+      "ad": "oda-kapi",
+      "cumle": 3,
+      "kelime": "eski"
+    },
+    {
+      "ad": "dolap",
+      "cumle": 4,
+      "kelime": "aynalı"
+    },
+    {
+      "ad": "ayna-yatak",
+      "cumle": 4,
+      "kelime": "tam"
+    },
+    {
+      "ad": "isik-sonar",
+      "cumle": 5,
+      "kelime": "ilk"
+    },
+    {
+      "ad": "saat",
+      "cumle": 5,
+      "kelime": "fazla"
+    },
+    {
+      "ad": "agirlik",
+      "cumle": 6,
+      "kelime": "ağırlık"
+    },
+    {
+      "ad": "oturmus",
+      "cumle": 6,
+      "kelime": "oturmuş"
+    },
+    {
+      "ad": "bagirma",
+      "cumle": 7,
+      "kelime": "bağırmak"
+    },
+    {
+      "ad": "parmak",
+      "cumle": 7,
+      "kelime": "parmağını"
+    },
+    {
+      "ad": "goz-kayar",
+      "cumle": 8,
+      "kelime": "aynayı"
+    },
+    {
+      "ad": "ayna-yakin",
+      "cumle": 9,
+      "kelime": "aynada"
+    },
+    {
+      "ad": "yatiyorsun",
+      "cumle": 9,
+      "kelime": "yatıyorsun"
+    },
+    {
+      "ad": "kara-sey",
+      "cumle": 10,
+      "kelime": "kapkara"
+    },
+    {
+      "ad": "bakiyor",
+      "cumle": 10,
+      "kelime": "bakıyor"
+    },
+    {
+      "ad": "soru",
+      "cumle": 11,
+      "kelime": "sen"
+    },
+    {
+      "ad": "yorum",
+      "cumle": 11,
+      "kelime": "yorumlara"
+    },
+    {
+      "ad": "ayna-parla",
+      "cumle": 4,
+      "kelime": "ayna",
+      "sira": 2
+    },
+    {
+      "ad": "ses-yok",
+      "cumle": 7,
+      "kelime": "sesin"
+    },
+    {
+      "ad": "gogus-ayna",
+      "cumle": 10,
+      "kelime": "göğsünün"
+    },
+    {
+      "ad": "oda-son",
+      "cumle": 11,
+      "kelime": "odada"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "nefes-kesik",
+      "olay": "goz-acilir",
+      "kayma": 0,
+      "sure": 1.2,
+      "db": -4,
+      "tarif": "a single sharp frightened gasp of a person waking up suddenly in a quiet bedroom, close microphone, realistic, no music"
+    },
+    {
+      "ad": "dolmus",
+      "olay": "dolmus",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -12,
+      "tarif": "an old minibus engine idling and driving away on a quiet village road at dusk, distant, realistic, no music"
+    },
+    {
+      "ad": "kapi-gicirti",
+      "olay": "oda-kapi",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -8,
+      "tarif": "an old wooden door slowly creaking open in a quiet house, realistic, no music"
+    },
+    {
+      "ad": "lamba-dugme",
+      "olay": "isik-sonar",
+      "kayma": 0,
+      "sure": 1.0,
+      "db": -10,
+      "tarif": "a loud clear click of an old wall light switch being flipped, very close microphone, sharp and crisp, realistic"
+    },
+    {
+      "ad": "saat",
+      "olay": "saat",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -14,
+      "tarif": "a slow old wall clock ticking in a silent house at night, realistic, no music"
+    },
+    {
+      "ad": "gup",
+      "olay": "agirlik",
+      "kayma": 4,
+      "sure": 1.5,
+      "db": -3,
+      "tarif": "a heavy soft body dropping onto an old wooden bed with a mattress, low muffled thump and a short wooden creak, realistic foley, no music"
+    },
+    {
+      "ad": "kalp",
+      "olay": "parmak",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -6,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "yukselen",
+      "olay": "kara-sey",
+      "kayma": -6,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "a low dark rising breath-like whoosh swelling slowly, subtle tension riser, realistic, no music, no melody"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "sure": 0.5,
+      "db": -10,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "not": "bitiş ekranı dokunuşları (BitisEkrani.DOKUNMA)"
+    }
+  ],
+  "kapak": {
+    "satir1": "Aynada",
+    "satir2": "ne vardı?",
+    "etiket": "Karabasan · Part 1",
+    "zemin_kare": 1337,
+    "renk": [
+      "#2E3C6E",
+      "#141a33"
+    ],
+    "desen": [
+      "#F4BE4F",
+      "#C9C2E6",
+      "#E8573F"
+    ]
+  },
+  "bitis": {
+    "soru": "Sen olsan o odada kalır mıydın?",
+    "vurgu": "kalır",
+    "devam": "Part 2 yakında"
+  }
+}

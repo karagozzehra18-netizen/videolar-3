@@ -21,7 +21,7 @@ mozaik,Mozaik,Zanaat,2,düşük,yazılmadı,35 stained-glass → print-and-abstr
 kara-tahta,Kara tahta,Tahta,2,"YÜKSEK: koyu zemin — tahtayı açık yeşil tut, ilk karede büyük parlak çizim",yazılmadı,02 chalkboard → drawn/boards.tsx,chalkboard/STYLE.md
 nakis,Nakış,Zanaat,2,düşük,yazılmadı (kendi motoru; logo dikiş diliyle uyumlu),— (kaynak yok),—
 parlayan-eskiz,Parlayan eskiz (siyah üstüne neon),Işık ve çizgi,3,YÜKSEK: koyu zemin — ilk karede ekranın büyük kısmını kaplayan parlak çizim,yazılmadı,85 circuit-board → screens/circuit.tsx,neon-tubes/STYLE.md · firefly-pointillism/STYLE.md
-duz-vektor,Düz vektör,Çizgi film,1,düşük,yazılmadı,17 flat-vector → toon-and-paper/toon.tsx,midcentury-toon/STYLE.md
+duz-vektor,Düz vektör gece masalı,Çizgi film,3,orta (gece sahneleri: ay ışığı ve lamba ile açık tut),"YAZILDI: uretim/src/stiller/duz-vektor/ (motor.tsx, karakterler.tsx: Kisi/Bas/Govde/Karabasan, gece.tsx, gunduz.tsx). Seri: Karabasan 5 part",17 flat-vector → toon-and-paper/toon.tsx,midcentury-toon/STYLE.md
 minimal-cizgi,Minimal çizgi (tek çizgi),El çizimi,2,düşük,yazılmadı,13 one-line → drawn/line.tsx,one-line/STYLE.md
 cgi-hareket,CGI hareket (cam ürün),3D görünüm,1,düşük,yazılmadı,59 glass-product → 3d/glass.ts,glass-product/STYLE.md
 anlatici-karakter,3D anlatım karakteri,3D görünüm,2,düşük,yazılmadı,62 claymation → 3d/clay-and-lidar.ts (yumuşak gövde),isometric-picture-book/STYLE.md

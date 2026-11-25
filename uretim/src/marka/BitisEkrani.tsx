@@ -86,12 +86,13 @@ const Dugme: React.FC<{ f: number; bas: number; dokun: number; renk: string; yaz
 };
 
 /** f: bitiş ekranının kendi karesi (0'dan başlar). */
-export const BitisEkrani: React.FC<{ f: number; soru?: string; vurgu?: string }> = ({ f, soru, vurgu }) => {
+export const BitisEkrani: React.FC<{ f: number; soru?: string; vurgu?: string; devam?: string }> = ({ f, soru, vurgu, devam }) => {
   const zemin = interpolate(f, [0, 6], [0, 1], kenet);
   const logo = ilerle(f, 0, 14, firla);
   const dikis = ilerle(f, 10, 30);
   const ad = ilerle(f, 10, 22);
   const kelimeler = (soru ?? "Beğen, takip et, paylaş!").split(" ");
+  const soruBoyut = kelimeler.join(" ").length > 24 ? 74 : 92;
   const alt = ilerle(f, 28, 40);
   const handle = ilerle(f, 62, 72);
   return (
@@ -114,8 +115,8 @@ export const BitisEkrani: React.FC<{ f: number; soru?: string; vurgu?: string }>
         <span style={{ color: RENK.lacivert }}>Duyma </span><span style={{ color: RENK.mercan }}>Sakın</span>
       </div>
       {/* soru */}
-      <div style={{ position: "absolute", left: 120, right: 120, top: 660, textAlign: "center", fontFamily: FONT.baslik, fontWeight: 800,
-        fontSize: 92, lineHeight: 1.1, color: RENK.lacivert }}>
+      <div style={{ position: "absolute", left: 120, right: 120, top: 650, textAlign: "center", fontFamily: FONT.baslik, fontWeight: 800,
+        fontSize: soruBoyut, lineHeight: 1.1, color: RENK.lacivert }}>
         {kelimeler.map((k, i) => {
           const t = ilerle(f, 16 + i * 3, 24 + i * 3, firla);
           const v = vurgu && k.toLocaleLowerCase("tr-TR").startsWith(vurgu.toLocaleLowerCase("tr-TR"));
@@ -168,6 +169,14 @@ export const BitisEkrani: React.FC<{ f: number; soru?: string; vurgu?: string }>
         fontSize: 56, letterSpacing: 1, color: RENK.lacivert, opacity: handle, transform: `translateY(${(1 - handle) * 16}px)` }}>
         @duymasakin
       </div>
+      {/* seri: "Part N yakında" rozeti (yanıp söner gibi nabız) */}
+      {devam ? (
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1500, display: "flex", justifyContent: "center",
+          opacity: ilerle(f, 66, 76), transform: `scale(${0.85 + 0.15 * ilerle(f, 66, 76, firla) + Math.sin(f * 0.3) * 0.015})` }}>
+          <div style={{ background: RENK.lacivert, color: RENK.kagit, fontFamily: FONT.metin, fontWeight: 800, fontSize: 38, letterSpacing: 3,
+            padding: "14px 34px", borderRadius: 40, boxShadow: `0 6px 0 ${RENK.mercan}` }}>{devam.toLocaleUpperCase("tr-TR")} →</div>
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -1,0 +1,72 @@
+{
+ "efekt_turu": 8,
+ "yerlesim": 8,
+ "tepe_db": -4.0,
+ "satirlar": [
+  {
+   "ad": "nefes-kesik",
+   "kare": 11,
+   "sn": 0.367,
+   "olculen_sn": 0.37,
+   "fark_kare": 0.1,
+   "gecti": true
+  },
+  {
+   "ad": "dolmus",
+   "kare": 116,
+   "sn": 3.867,
+   "olculen_sn": 3.867,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "kapi-gicirti",
+   "kare": 386,
+   "sn": 12.867,
+   "olculen_sn": 12.872,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "lamba-dugme",
+   "kare": 595,
+   "sn": 19.833,
+   "olculen_sn": 19.838,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "saat",
+   "kare": 660,
+   "sn": 22.0,
+   "olculen_sn": 22.005,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "gup",
+   "kare": 750,
+   "sn": 25.0,
+   "olculen_sn": 25.005,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "kalp",
+   "kare": 948,
+   "sn": 31.6,
+   "olculen_sn": 31.605,
+   "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "yukselen",
+   "kare": 1257,
+   "sn": 41.9,
+   "olculen_sn": 41.905,
+   "fark_kare": 0.15,
+   "gecti": true
+  }
+ ],
+ "kalan": 0
+}

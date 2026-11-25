@@ -19,8 +19,9 @@ export const ON_KATMAN_Y = 1392;
 /** Üst başlık kilidi: sol üstte yarı saydam kart (kategori + başlık). Süre/ilerleme çubuğu YOK (kullanıcı kararı). */
 export const UST_BANT = { x: 56, y: 192, baslikBoyut: 44 };
 
-/** Altyazı bandı: yatayda tam ortada (merkez x=540), ön katmanın üstünde, alt platform alanının üstünde. */
-export const ALTYAZI = { y1: 1412, y2: 1586, x1: 140, x2: 940, boyut: 66, satirAraligi: 1.12, enFazlaSatir: 2 };
+/** Altyazı: ekranın ORTASINDA, çizimin üzerinde (kullanıcı kararı 25.11.2026, seri formatı), orta büyüklük.
+ *  Okunurluk için koyu kontur + gölge. Merkez x=540, y≈1113 (%58). Genişlik 760 (sağ platform şeridinden uzak). */
+export const ALTYAZI = { y1: 1040, y2: 1186, x1: 160, x2: 920, boyut: 58, satirAraligi: 1.15, enFazlaSatir: 2 };
 
 /** Kapak kartına konacak kırpım (videonun temiz karesinden). */
 export const KAPAK_KIRP = { x: 0, y: 300, w: 1080, h: 1130 };

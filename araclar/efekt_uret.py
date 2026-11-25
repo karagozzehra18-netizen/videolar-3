@@ -6,7 +6,8 @@ Kullanım:
   python3 araclar/efekt_uret.py bolumler/001-karabasan --onay           # eksik efektleri üret
   python3 araclar/efekt_uret.py bolumler/001-karabasan --onay --yeniden kapi   # tek efekti yeniden üret
   python3 araclar/efekt_uret.py bolumler/001-karabasan --kirp           # yalnız ham dosyaları yeniden kırp (ücretsiz)
-Çıktı : ses/efekt/ham/<ad>.mp3 (ham), ses/efekt/<ad>.wav (kırpılmış, tepe -1 dBFS), ses/efekt/rapor.json
+Çıktı : <efekt_klasoru>/ham/<ad>.mp3, <efekt_klasoru>/<ad>.wav (kırpılmış, tepe -1 dBFS), rapor.json
+        efekt_klasoru varsayılan ses/efekt; seride bolum.json → "efekt_klasoru": "../ortak/efekt" (paylaşılan, aynı ad bir kez üretilir)
 Kurallar: başlangıç = ilk 5 ms pencerenin tepe zarfın %10'unu (-20 dB) aştığı an, 5 ms önü bırakılır.
           Tepe < -35 dBFS ya da RMS < -45 dBFS → "neredeyse sessiz": tarifi değiştirip yeniden üret.
 """
@@ -39,7 +40,11 @@ def kirp(ham, hedef):
 def main():
     if len(sys.argv) < 2: print(__doc__); sys.exit(2)
     d = Path(sys.argv[1]); b = json.loads((d / "bolum.json").read_text())
-    ham_k = d / "ses/efekt/ham"; ham_k.mkdir(parents=True, exist_ok=True)
+    ek = d / b.get("efekt_klasoru", "ses/efekt")  # seride ortak klasör: aynı efekt bir kez üretilir
+    ham_k = ek / "ham"; ham_k.mkdir(parents=True, exist_ok=True)
+    tekil = {}
+    for e in b["efektler"]: tekil.setdefault(e["ad"], e)
+    b["efektler"] = list(tekil.values())
     yeniden = sys.argv[sys.argv.index("--yeniden") + 1:] if "--yeniden" in sys.argv else []
     eksik = [e for e in b["efektler"] if e["ad"] in yeniden or not (ham_k / f"{e['ad']}.mp3").exists()]
     tahmin = sum(e.get("sure", 2) for e in eksik) * KREDI_SN
@@ -58,10 +63,10 @@ def main():
     for e in b["efektler"]:
         h = ham_k / f"{e['ad']}.mp3"
         if h.exists():
-            rapor[e["ad"]] = kirp(h, d / f"ses/efekt/{e['ad']}.wav")
+            rapor[e["ad"]] = kirp(h, ek / f"{e['ad']}.wav")
             r = rapor[e["ad"]]
             print(f"  {e['ad']:12s} kırpılan {r['kirpilan_ms']:6.1f} ms · {r['sure_sn']:.2f} sn · ham tepe {r['ham_tepe_db']} dB" + ("  ⚠ NEREDEYSE SESSİZ: tarifi değiştir" if r["sessiz"] else ""))
-    (d / "ses/efekt/rapor.json").write_text(json.dumps(rapor, ensure_ascii=False, indent=1))
+    (ek / "rapor.json").write_text(json.dumps(rapor, ensure_ascii=False, indent=1))
     if any(r["sessiz"] for r in rapor.values()): sys.exit(1)
 
 if __name__ == "__main__":

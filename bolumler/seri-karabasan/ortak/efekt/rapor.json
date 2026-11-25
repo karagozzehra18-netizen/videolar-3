@@ -1,0 +1,51 @@
+{
+ "yukselen": {
+  "kirpilan_ms": 915.0,
+  "sure_sn": 1.46,
+  "ham_tepe_db": -0.3,
+  "ham_rms_db": -15.3,
+  "sessiz": false
+ },
+ "kalp": {
+  "kirpilan_ms": 1135.0,
+  "sure_sn": 0.86,
+  "ham_tepe_db": -2.5,
+  "ham_rms_db": -25.3,
+  "sessiz": false
+ },
+ "nefes-al": {
+  "kirpilan_ms": 285.0,
+  "sure_sn": 1.64,
+  "ham_tepe_db": -18.0,
+  "ham_rms_db": -35.4,
+  "sessiz": false
+ },
+ "nefes-ver": {
+  "kirpilan_ms": 0.0,
+  "sure_sn": 2.0,
+  "ham_tepe_db": -19.7,
+  "ham_rms_db": -37.2,
+  "sessiz": false
+ },
+ "ruzgar": {
+  "kirpilan_ms": 380.0,
+  "sure_sn": 1.79,
+  "ham_tepe_db": -1.1,
+  "ham_rms_db": -19.5,
+  "sessiz": false
+ },
+ "horoz": {
+  "kirpilan_ms": 0.0,
+  "sure_sn": 2.02,
+  "ham_tepe_db": 0.7,
+  "ham_rms_db": -12.5,
+  "sessiz": false
+ },
+ "bardak": {
+  "kirpilan_ms": 20.0,
+  "sure_sn": 0.91,
+  "ham_tepe_db": -12.9,
+  "ham_rms_db": -40.5,
+  "sessiz": false
+ }
+}

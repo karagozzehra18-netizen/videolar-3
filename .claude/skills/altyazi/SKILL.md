@@ -5,26 +5,27 @@ description: Duyma Sakın altyazı kuralları — kelime kelime akan altyazı, �
 
 # Altyazı
 
-## Yerleşim (1080x1920, TAM EKRAN) — `uretim/src/marka/yerlesim.ts`
+## Yerleşim (1080x1920, TAM EKRAN) — `uretim/src/marka/yerlesim.ts` (kullanıcı kararı 25.11.2026)
 | Alan | Koordinat | Not |
 |---|---|---|
 | Platform üst simgeleri | y 0-170 | yazı yok |
-| Başlık kartı (süre çubuğu YOK) | x 56, y 192, ~300x100 | kategori + başlık; arkasına önemli figür koyma |
-| **Çizim** | tam ekran 0-1080 × 0-1920 | kamera hareket eder |
-| **Sabit ön katman** | y ≥ 1392 | stilin kendi ön katmanı (gölge oyununda sahne tahtası); kamerayla hareket etmez |
-| **Altyazı bandı** | x 140-940 (**merkez 540, tam ortada**), y 1412-1586 | ön katmanın üstünde → çizime (figürlere) asla binmez |
-| Platform sağ şerit (beğeni/yorum) | x ≥ 940, y 880-1740 | yazı yok |
-| Platform alt alan (açıklama/ses) | y ≥ 1590 | yazı yok; ön katmanın süsü burada olabilir |
-| Rozet filigran | sağdan 56, üstten 196, 92 px | kanal-kimligi |
+| Başlık kartı | x 56, y 192 | kategori ("Part 1 / 5") + başlık |
+| Rozet filigran | sağdan 56, üstten 196, 92 px | |
+| **Altyazı** | **ekranın ortası**: x 160-920 (merkez 540), y 1040-1186 | çizimin ÜZERİNDE; koyu kontur (9 px) + gölge → her zeminde okunur |
+| Platform sağ şerit | x ≥ 940, y 880-1740 | yazı yok |
+| Platform alt alan | y ≥ 1590 | yazı yok |
+
+- Sahne kurarken yüzleri/önemli figürü altyazı bandına (y 1040-1186) **koyma**: kadrajı (Cekim k0/k1 `cy`) ayarla.
+- Boyut: Inter 800, **58 px** (orta büyüklük), en fazla 4 kelime / 2 satır / 760 px (bolum_hazirla ölçer).
 
 ## Akış
-- Kelime kelime: söylenen kelime **mercan**, söylenmiş kelimeler kâğıt rengi, sıradakiler %30 soluk (satır kaymaz).
-- Parça: en fazla 5 kelime, en fazla 2 satır, virgül/noktalı virgül/iki nokta parçayı bitirir.
-- Inter 800, 66 px, satır aralığı 1,12; 3 px koyu gölge.
+- Kelime kelime: parça birlikte belirir, söylenen kelime **hardal** ve hafif büyür; diğerleri kâğıt rengi (konturla soluk kelime bulanık durduğu için soluk gösterim bırakıldı).
+- Parça: en fazla 4 kelime, en fazla 2 satır, virgül/noktalı virgül/iki nokta parçayı bitirir.
+- Inter 800, 58 px, satır aralığı 1,15; 9 px koyu kontur (#141833) + gölge.
 - Zaman: `zaman.json → altyazi` (ElevenLabs kelime zamanından). Parça bir sonraki parçanın 2 kare öncesine kadar kalır.
 
 ## Ölçerek kırma
-`araclar/bolum_hazirla.py`, Inter 800 66 px ile her satırın genişliğini **Pillow ile ölçer**; 800 px'i geçen satır ya da 2'den fazla satır **HATA** verir. Kontrol panosu ayrıca bantta x<70 / x>930 yazı pikseli arar ("taşan yazı").
+`araclar/bolum_hazirla.py`, Inter 800 58 px ile her satırın genişliğini **Pillow ile ölçer**; 760 px'i geçen satır ya da 2'den fazla satır **HATA** verir. (Kontrol panosu artık piksel tabanlı taşma aramaz: altyazı çizimin üstünde olduğundan yanlış alarm veriyordu.)
 
 ## Sayılar
 - Senaryoda ve ekranda sayılar **yazıyla**: "yüz kişiden yaklaşık sekizi" (rakam = HATA).
@@ -32,6 +33,6 @@ description: Duyma Sakın altyazı kuralları — kelime kelime akan altyazı, �
 - İstisna: kapak şablonundaki "1. VİDEO" numarası (kullanıcı isteği).
 
 ## Yapma
-- Altyazıyı sahnenin içine koyma, sahneyi altyazı için karartma.
+- Sahneyi altyazı için karartma; okunurluğu kontur sağlar.
 - Ekranda anlatımla aynı yazıyı ikinci kez gösterme.
 - Büyük harfe çevirirken `toLocaleUpperCase('tr-TR')` (i → İ).

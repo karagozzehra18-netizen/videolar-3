@@ -1,0 +1,308 @@
+{
+  "no": 3,
+  "slug": "karabasan-part3",
+  "seri": {
+    "ad": "Karabasan",
+    "part": 3,
+    "toplam": 5
+  },
+  "kompozisyon": "karabasan-p3",
+  "kapak_kompozisyon": "karabasan-p3-kapak",
+  "bant_baslik": "Karabasan",
+  "kart_kategori": "Part 3 / 5",
+  "stil": "duz-vektor",
+  "sure_araligi": [
+    50,
+    66
+  ],
+  "efekt_klasoru": "../ortak/efekt",
+  "ses": {
+    "model": "eleven_multilingual_v2",
+    "sesler": {
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim"
+    ]
+  },
+  "cumleler": [
+    "Kapıyı açtın. Koridor bomboştu.",
+    "Çıplak ayakların buz gibi tahtaya değdi.",
+    "Fısıltı kesilmişti. Yalnızca duvar saatinin tıkırtısı vardı.",
+    "Babaannenin kapısı aralıktı. İçeriden sarı bir gece lambası ışığı sızıyordu.",
+    "İçeri baktın. Babaannen yorganına sarılmış, uyuyordu.",
+    "Tam dönecekken gözün duvara takıldı.",
+    "Lambanın vurduğu duvarda, babaannenin gölgesi vardı.",
+    "Ama gölge yatmıyordu. Ayaktaydı.",
+    "Uzun, ince kolları neredeyse yere değiyordu.",
+    "Nefesini tuttun, geri bir adım attın. Tahta gıcırdadı.",
+    "Gölge, yavaşça başını sana çevirdi.",
+    "Sen olsan kaçar mıydın, yoksa babaanneni mi uyandırırdın? Yorumlara yaz."
+  ],
+  "olaylar": [
+    {
+      "ad": "kapi-acilir",
+      "cumle": 0,
+      "kelime": "kapıyı"
+    },
+    {
+      "ad": "koridor",
+      "cumle": 0,
+      "kelime": "koridor"
+    },
+    {
+      "ad": "ayak",
+      "cumle": 1,
+      "kelime": "çıplak"
+    },
+    {
+      "ad": "tahta",
+      "cumle": 1,
+      "kelime": "tahtaya"
+    },
+    {
+      "ad": "sessiz",
+      "cumle": 2,
+      "kelime": "fısıltı"
+    },
+    {
+      "ad": "saat",
+      "cumle": 2,
+      "kelime": "saatinin"
+    },
+    {
+      "ad": "aralik",
+      "cumle": 3,
+      "kelime": "kapısı"
+    },
+    {
+      "ad": "isik-sizar",
+      "cumle": 3,
+      "kelime": "sarı"
+    },
+    {
+      "ad": "iceri",
+      "cumle": 4,
+      "kelime": "içeri"
+    },
+    {
+      "ad": "babaanne-uyku",
+      "cumle": 4,
+      "kelime": "babaannen"
+    },
+    {
+      "ad": "donus",
+      "cumle": 5,
+      "kelime": "dönecekken"
+    },
+    {
+      "ad": "duvar",
+      "cumle": 5,
+      "kelime": "duvara"
+    },
+    {
+      "ad": "lamba",
+      "cumle": 6,
+      "kelime": "lambanın"
+    },
+    {
+      "ad": "golge",
+      "cumle": 6,
+      "kelime": "gölgesi"
+    },
+    {
+      "ad": "yatmiyor",
+      "cumle": 7,
+      "kelime": "yatmıyordu"
+    },
+    {
+      "ad": "ayakta",
+      "cumle": 7,
+      "kelime": "ayaktaydı"
+    },
+    {
+      "ad": "kollar",
+      "cumle": 8,
+      "kelime": "uzun"
+    },
+    {
+      "ad": "yere",
+      "cumle": 8,
+      "kelime": "yere"
+    },
+    {
+      "ad": "nefes-tut",
+      "cumle": 9,
+      "kelime": "nefesini"
+    },
+    {
+      "ad": "adim",
+      "cumle": 9,
+      "kelime": "adım"
+    },
+    {
+      "ad": "gicirti",
+      "cumle": 9,
+      "kelime": "gıcırdadı"
+    },
+    {
+      "ad": "bas-doner",
+      "cumle": 10,
+      "kelime": "yavaşça"
+    },
+    {
+      "ad": "cevirdi",
+      "cumle": 10,
+      "kelime": "çevirdi"
+    },
+    {
+      "ad": "soru",
+      "cumle": 11,
+      "kelime": "sen"
+    },
+    {
+      "ad": "yorum",
+      "cumle": 11,
+      "kelime": "yorumlara"
+    },
+    {
+      "ad": "kesildi",
+      "cumle": 2,
+      "kelime": "kesilmişti"
+    },
+    {
+      "ad": "gece-lambasi",
+      "cumle": 3,
+      "kelime": "gece"
+    },
+    {
+      "ad": "sarilmis",
+      "cumle": 4,
+      "kelime": "sarılmış"
+    },
+    {
+      "ad": "uyuyordu",
+      "cumle": 4,
+      "kelime": "uyuyordu"
+    },
+    {
+      "ad": "yoksa",
+      "cumle": 11,
+      "kelime": "yoksa"
+    },
+    {
+      "ad": "uyandir",
+      "cumle": 11,
+      "kelime": "uyandırırdın"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "kapi-gicirti",
+      "olay": "kapi-acilir",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -8,
+      "tarif": "an old wooden door slowly creaking open in a quiet house, realistic, no music"
+    },
+    {
+      "ad": "ayak-tahta",
+      "olay": "tahta",
+      "kayma": 0,
+      "sure": 1.5,
+      "db": -10,
+      "tarif": "bare feet stepping softly on cold old wooden floorboards, close, realistic, no music"
+    },
+    {
+      "ad": "saat",
+      "olay": "saat",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -12,
+      "tarif": "a slow old wall clock ticking in a silent house at night, realistic, no music"
+    },
+    {
+      "ad": "nefes-uyku",
+      "olay": "babaanne-uyku",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -14,
+      "tarif": "an elderly woman breathing slowly and deeply in her sleep, heard through a wall, realistic, no music"
+    },
+    {
+      "ad": "tahta-gicirti",
+      "olay": "gicirti",
+      "kayma": 0,
+      "sure": 1.2,
+      "db": -6,
+      "tarif": "a single loud creak of an old wooden floorboard under a foot in a silent house, realistic"
+    },
+    {
+      "ad": "kalp",
+      "olay": "nefes-tut",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -7,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "yukselen",
+      "olay": "bas-doner",
+      "kayma": -4,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "a low dark rising breath-like whoosh swelling slowly, subtle tension riser, realistic, no music, no melody"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "sure": 0.5,
+      "db": -10,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "not": "bitiş ekranı dokunuşları (BitisEkrani.DOKUNMA)"
+    }
+  ],
+  "kapak": {
+    "satir1": "Gölgesi",
+    "satir2": "ayaktaydı",
+    "etiket": "Karabasan · Part 3",
+    "zemin_kare": 1236,
+    "renk": [
+      "#2E3C6E",
+      "#141a33"
+    ],
+    "desen": [
+      "#F4BE4F",
+      "#C9C2E6",
+      "#E8573F"
+    ]
+  },
+  "bitis": {
+    "soru": "Sen olsan kaçar mıydın?",
+    "vurgu": "kaçar",
+    "devam": "Part 4 yakında"
+  }
+}

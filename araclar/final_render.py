@@ -61,10 +61,11 @@ def main():
     a = sys.argv
     b = json.loads((d / "bolum.json").read_text()); z = json.loads((d / "zaman.json").read_text())
     kimlik = f"{b['no']:03d}"; c = d / "cikti"; c.mkdir(exist_ok=True)
+    komp = b.get("kompozisyon", f"b{kimlik}"); kkomp = b.get("kapak_kompozisyon", f"k{kimlik}")
     yalniz_kapak = "--yalniz-kapak" in a
     if not yalniz_kapak:
         if "--yalniz-ses" not in a:
-            calis(["npx", "remotion", "render", "src/index.ts", f"b{kimlik}", str(c / "goruntu.mp4"), "--codec=h264", "--crf=17",
+            calis(["npx", "remotion", "render", "src/index.ts", komp, str(c / "goruntu.mp4"), "--codec=h264", "--crf=17",
                    "--muted", "--log=error"], cwd=KOK / "uretim")
         yaz(c / "miks-ham.wav", miks(d, z))
         normalize(c / "miks-ham.wav", c / "miks.wav")
@@ -82,8 +83,8 @@ def main():
     k = b["kapak"]; kk = int(a[a.index("--kapak-kare") + 1]) if "--kapak-kare" in a else (k.get("zemin_kare") or 12)
     for s in (k["satir1"], k["satir2"]):
         if len(s) > 10: sys.exit(f"KAPAK HATASI: '{s}' {len(s)} karakter (en fazla 10)")
-    calis(["npx", "remotion", "still", "src/index.ts", f"b{kimlik}", str(c / "kapak-zemin.png"), f"--frame={kk}", "--props={\"temiz\":true}", "--log=error"], cwd=KOK / "uretim")
-    calis(["npx", "remotion", "still", "src/index.ts", f"k{kimlik}", str(c / "kapak.png"), "--log=error"], cwd=KOK / "uretim")
+    calis(["npx", "remotion", "still", "src/index.ts", komp, str(c / "kapak-zemin.png"), f"--frame={kk}", "--props={\"temiz\":true}", "--log=error"], cwd=KOK / "uretim")
+    calis(["npx", "remotion", "still", "src/index.ts", kkomp, str(c / "kapak.png"), "--log=error"], cwd=KOK / "uretim")
     print("Kapak:", c / "kapak.png")
 
 if __name__ == "__main__":

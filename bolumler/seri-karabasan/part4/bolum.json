@@ -1,0 +1,352 @@
+{
+  "no": 4,
+  "slug": "karabasan-part4",
+  "seri": {
+    "ad": "Karabasan",
+    "part": 4,
+    "toplam": 5
+  },
+  "kompozisyon": "karabasan-p4",
+  "kapak_kompozisyon": "karabasan-p4-kapak",
+  "bant_baslik": "Karabasan",
+  "kart_kategori": "Part 4 / 5",
+  "stil": "duz-vektor",
+  "sure_araligi": [
+    50,
+    66
+  ],
+  "efekt_klasoru": "../ortak/efekt",
+  "ses": {
+    "model": "eleven_multilingual_v2",
+    "sesler": {
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim"
+    ]
+  },
+  "cumleler": [
+    "Gözünü açtığında sabah olmuştu.",
+    "Koridora hiç çıkmamışsın gibi, yatağındaydın.",
+    "Babaannen seni kasabadaki doktora götürdü.",
+    "Doktor dinledi, gülümsedi: Buna uyku felci diyoruz, dedi.",
+    "Uyanırken beynin uyanır, ama beden bir süre daha rüyadaki gibi kımıldamaz.",
+    "Göğüste ağırlık, odada biri varmış hissi... Bunlar çok sık anlatılır.",
+    "Yüz kişiden yaklaşık sekizi, hayatında en az bir kez yaşar.",
+    "Stres ve uykusuzluk bu ihtimali artırabilir.",
+    "Sınav haftası aklına geldi. Kendini biraz aptal hissettin.",
+    "O gece muskayı yastığının altından alıp çekmeceye koydun. Işığı kapattın.",
+    "Gece yarısı, aynı ağırlıkla uyandın.",
+    "Ama bu sefer gözlerin karanlığa alışmıştı. Onu, açıkça görüyordun.",
+    "Sen olsan muskayı geri koyar mıydın? Yorumlara yaz."
+  ],
+  "olaylar": [
+    {
+      "ad": "goz-acilir",
+      "cumle": 0,
+      "kelime": "gözünü"
+    },
+    {
+      "ad": "sabah",
+      "cumle": 0,
+      "kelime": "sabah"
+    },
+    {
+      "ad": "koridor-hatira",
+      "cumle": 1,
+      "kelime": "koridora"
+    },
+    {
+      "ad": "yatak",
+      "cumle": 1,
+      "kelime": "yatağındaydın"
+    },
+    {
+      "ad": "kasaba",
+      "cumle": 2,
+      "kelime": "kasabadaki"
+    },
+    {
+      "ad": "doktor-kapi",
+      "cumle": 2,
+      "kelime": "doktora"
+    },
+    {
+      "ad": "dinledi",
+      "cumle": 3,
+      "kelime": "dinledi"
+    },
+    {
+      "ad": "gulumsedi",
+      "cumle": 3,
+      "kelime": "gülümsedi"
+    },
+    {
+      "ad": "uyku-felci",
+      "cumle": 3,
+      "kelime": "uyku"
+    },
+    {
+      "ad": "beyin",
+      "cumle": 4,
+      "kelime": "beynin"
+    },
+    {
+      "ad": "beden",
+      "cumle": 4,
+      "kelime": "beden"
+    },
+    {
+      "ad": "kimildamaz",
+      "cumle": 4,
+      "kelime": "kımıldamaz"
+    },
+    {
+      "ad": "gogus",
+      "cumle": 5,
+      "kelime": "göğüste"
+    },
+    {
+      "ad": "oda-biri",
+      "cumle": 5,
+      "kelime": "odada"
+    },
+    {
+      "ad": "anlatilir",
+      "cumle": 5,
+      "kelime": "anlatılır"
+    },
+    {
+      "ad": "yuz-kisi",
+      "cumle": 6,
+      "kelime": "yüz"
+    },
+    {
+      "ad": "sekiz",
+      "cumle": 6,
+      "kelime": "sekizi"
+    },
+    {
+      "ad": "stres",
+      "cumle": 7,
+      "kelime": "stres"
+    },
+    {
+      "ad": "uykusuz",
+      "cumle": 7,
+      "kelime": "uykusuzluk"
+    },
+    {
+      "ad": "sinav",
+      "cumle": 8,
+      "kelime": "sınav"
+    },
+    {
+      "ad": "aptal",
+      "cumle": 8,
+      "kelime": "aptal"
+    },
+    {
+      "ad": "muska-al",
+      "cumle": 9,
+      "kelime": "muskayı"
+    },
+    {
+      "ad": "cekmece",
+      "cumle": 9,
+      "kelime": "çekmeceye"
+    },
+    {
+      "ad": "isik-sonar",
+      "cumle": 9,
+      "kelime": "ışığı"
+    },
+    {
+      "ad": "gece-yarisi",
+      "cumle": 10,
+      "kelime": "gece"
+    },
+    {
+      "ad": "agirlik",
+      "cumle": 10,
+      "kelime": "ağırlıkla"
+    },
+    {
+      "ad": "bu-sefer",
+      "cumle": 11,
+      "kelime": "bu"
+    },
+    {
+      "ad": "acikca",
+      "cumle": 11,
+      "kelime": "açıkça"
+    },
+    {
+      "ad": "soru",
+      "cumle": 12,
+      "kelime": "sen"
+    },
+    {
+      "ad": "yorum",
+      "cumle": 12,
+      "kelime": "yorumlara"
+    },
+    {
+      "ad": "his",
+      "cumle": 5,
+      "kelime": "hissi"
+    },
+    {
+      "ad": "hayat",
+      "cumle": 6,
+      "kelime": "hayatında"
+    },
+    {
+      "ad": "ihtimal",
+      "cumle": 7,
+      "kelime": "ihtimali"
+    },
+    {
+      "ad": "gozler",
+      "cumle": 11,
+      "kelime": "gözlerin"
+    },
+    {
+      "ad": "alisti",
+      "cumle": 11,
+      "kelime": "alışmıştı"
+    },
+    {
+      "ad": "muska-soru",
+      "cumle": 12,
+      "kelime": "muskayı"
+    },
+    {
+      "ad": "akil",
+      "cumle": 8,
+      "kelime": "aklına"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "horoz",
+      "olay": "sabah",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -14,
+      "tarif": "a rooster crowing far away in a village at dawn, realistic, distant, no music"
+    },
+    {
+      "ad": "kapi-zil",
+      "olay": "doktor-kapi",
+      "kayma": 0,
+      "sure": 1.5,
+      "db": -12,
+      "tarif": "a small shop door bell jingling once as a door opens, realistic, no music"
+    },
+    {
+      "ad": "kalp",
+      "olay": "beyin",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -10,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "tik",
+      "olay": "sekiz",
+      "kayma": 0,
+      "sure": 0.5,
+      "db": -12,
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "tekrar": {
+        "adet": 8,
+        "aralik": 3
+      }
+    },
+    {
+      "ad": "cekmece",
+      "olay": "cekmece",
+      "kayma": 0,
+      "sure": 1.2,
+      "db": -8,
+      "tarif": "closing an old wooden drawer, short wooden slide and knock, realistic"
+    },
+    {
+      "ad": "lamba-dugme",
+      "olay": "isik-sonar",
+      "kayma": 0,
+      "sure": 1.0,
+      "db": -10,
+      "tarif": "a loud clear click of an old wall light switch being flipped, very close microphone, sharp and crisp, realistic"
+    },
+    {
+      "ad": "gup",
+      "olay": "agirlik",
+      "kayma": 2,
+      "sure": 1.5,
+      "db": -4,
+      "tarif": "a heavy soft body dropping onto an old wooden bed with a mattress, low muffled thump and a short wooden creak, realistic foley, no music"
+    },
+    {
+      "ad": "yukselen",
+      "olay": "acikca",
+      "kayma": -6,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "a low dark rising breath-like whoosh swelling slowly, subtle tension riser, realistic, no music, no melody"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "sure": 0.5,
+      "db": -10,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "not": "bitiş ekranı dokunuşları (BitisEkrani.DOKUNMA)"
+    }
+  ],
+  "kapak": {
+    "satir1": "Bu sefer",
+    "satir2": "net gördün",
+    "etiket": "Karabasan · Part 4",
+    "zemin_kare": 1574,
+    "renk": [
+      "#2E3C6E",
+      "#141a33"
+    ],
+    "desen": [
+      "#F4BE4F",
+      "#C9C2E6",
+      "#E8573F"
+    ]
+  },
+  "bitis": {
+    "soru": "Sen olsan muskayı geri koyar mıydın?",
+    "vurgu": "geri",
+    "devam": "Part 5 yakında"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "no": 5,
+  "slug": "karabasan-part5",
+  "seri": {
+    "ad": "Karabasan",
+    "part": 5,
+    "toplam": 5
+  },
+  "kompozisyon": "karabasan-p5",
+  "kapak_kompozisyon": "karabasan-p5-kapak",
+  "bant_baslik": "Karabasan",
+  "kart_kategori": "Part 5 / 5",
+  "stil": "duz-vektor",
+  "sure_araligi": [
+    50,
+    66
+  ],
+  "efekt_klasoru": "../ortak/efekt",
+  "ses": {
+    "model": "eleven_multilingual_v2",
+    "sesler": {
+      "gerilim": {
+        "voice_id": "2olWvHmrPO1obgZX9ivZ",
+        "ad": "Emin - Storyteller",
+        "hiz": 1.0,
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.2
+      }
+    },
+    "cumle_sesleri": [
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim",
+      "gerilim"
+    ]
+  },
+  "cumleler": [
+    "Tam yüzünün üstündeydi.",
+    "Dumandan bir beden. Kor gibi iki göz.",
+    "Göğsün sıkıştı, panik büyüdü.",
+    "Sonra doktorun sözü aklına geldi: Önce küçük bir şeyi oynatmayı dene. Bir parmağını. Ve yavaş nefes al.",
+    "Nefes aldın. Dörde kadar saydın. Verdin.",
+    "Bütün aklını serçe parmağına verdin. Kıpırda, dedin. Kıpırda.",
+    "Parmağın oynadı.",
+    "Ve karaltı, rüzgârdaki duman gibi dağıldı. Pencereden ilk ışık süzüldü.",
+    "Kahvaltıda babaannene her şeyi anlattın. Muskayı da.",
+    "Babaannen çay bardağını bıraktı. Sana uzun uzun baktı.",
+    "O gece seni uyandırmaya kıyamadım, dedi. Muskayı koyamadım ki.",
+    "Peki yastığının altına onu kim koydu?",
+    "Sen olsan bu soruyu sorar mıydın? Yorumlara yaz."
+  ],
+  "olaylar": [
+    {
+      "ad": "yuz-ustu",
+      "cumle": 0,
+      "kelime": "tam"
+    },
+    {
+      "ad": "duman",
+      "cumle": 1,
+      "kelime": "dumandan"
+    },
+    {
+      "ad": "gozler",
+      "cumle": 1,
+      "kelime": "kor"
+    },
+    {
+      "ad": "sikisti",
+      "cumle": 2,
+      "kelime": "göğsün"
+    },
+    {
+      "ad": "panik",
+      "cumle": 2,
+      "kelime": "panik"
+    },
+    {
+      "ad": "doktor-ses",
+      "cumle": 3,
+      "kelime": "doktorun"
+    },
+    {
+      "ad": "kucuk",
+      "cumle": 3,
+      "kelime": "küçük"
+    },
+    {
+      "ad": "parmak-goster",
+      "cumle": 3,
+      "kelime": "parmağını"
+    },
+    {
+      "ad": "nefes-al",
+      "cumle": 3,
+      "kelime": "nefes"
+    },
+    {
+      "ad": "al",
+      "cumle": 4,
+      "kelime": "aldın"
+    },
+    {
+      "ad": "say",
+      "cumle": 4,
+      "kelime": "dörde"
+    },
+    {
+      "ad": "ver",
+      "cumle": 4,
+      "kelime": "verdin"
+    },
+    {
+      "ad": "serce",
+      "cumle": 5,
+      "kelime": "serçe"
+    },
+    {
+      "ad": "kipirda1",
+      "cumle": 5,
+      "kelime": "kıpırda,"
+    },
+    {
+      "ad": "kipirda2",
+      "cumle": 5,
+      "kelime": "kıpırda.",
+      "sira": 2
+    },
+    {
+      "ad": "oynadi",
+      "cumle": 6,
+      "kelime": "parmağın"
+    },
+    {
+      "ad": "dagil",
+      "cumle": 7,
+      "kelime": "karaltı"
+    },
+    {
+      "ad": "safak",
+      "cumle": 7,
+      "kelime": "pencereden"
+    },
+    {
+      "ad": "kahvalti",
+      "cumle": 8,
+      "kelime": "kahvaltıda"
+    },
+    {
+      "ad": "muska",
+      "cumle": 8,
+      "kelime": "muskayı"
+    },
+    {
+      "ad": "bardak",
+      "cumle": 9,
+      "kelime": "bardağını"
+    },
+    {
+      "ad": "bakis",
+      "cumle": 9,
+      "kelime": "uzun"
+    },
+    {
+      "ad": "kiyamadim",
+      "cumle": 10,
+      "kelime": "kıyamadım"
+    },
+    {
+      "ad": "koyamadim",
+      "cumle": 10,
+      "kelime": "koyamadım"
+    },
+    {
+      "ad": "yastik",
+      "cumle": 11,
+      "kelime": "yastığının"
+    },
+    {
+      "ad": "kim",
+      "cumle": 11,
+      "kelime": "kim"
+    },
+    {
+      "ad": "soru",
+      "cumle": 12,
+      "kelime": "sen"
+    },
+    {
+      "ad": "yorum",
+      "cumle": 12,
+      "kelime": "yorumlara"
+    },
+    {
+      "ad": "ruzgar",
+      "cumle": 7,
+      "kelime": "rüzgârdaki"
+    },
+    {
+      "ad": "dagildi",
+      "cumle": 7,
+      "kelime": "dağıldı"
+    },
+    {
+      "ad": "dedi",
+      "cumle": 10,
+      "kelime": "dedi"
+    }
+  ],
+  "efektler": [
+    {
+      "ad": "yukselen",
+      "olay": "yuz-ustu",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "a low dark rising breath-like whoosh swelling slowly, subtle tension riser, realistic, no music, no melody"
+    },
+    {
+      "ad": "kalp",
+      "olay": "sikisti",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -6,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "nefes-al",
+      "olay": "al",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -10,
+      "tarif": "one slow deep calm inhale through the nose, close microphone, realistic, no music"
+    },
+    {
+      "ad": "nefes-ver",
+      "olay": "ver",
+      "kayma": 0,
+      "sure": 2.0,
+      "db": -10,
+      "tarif": "one long slow calm exhale, close microphone, realistic, no music"
+    },
+    {
+      "ad": "ruzgar",
+      "olay": "dagil",
+      "kayma": 0,
+      "sure": 3.0,
+      "db": -10,
+      "tarif": "a soft gust of wind blowing smoke away, airy whoosh fading out, realistic, no music"
+    },
+    {
+      "ad": "horoz",
+      "olay": "safak",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -14,
+      "tarif": "a rooster crowing far away in a village at dawn, realistic, distant, no music"
+    },
+    {
+      "ad": "bardak",
+      "olay": "bardak",
+      "kayma": 0,
+      "sure": 1.0,
+      "db": -10,
+      "tarif": "setting down a small glass tea cup on a glass saucer with a soft clink, realistic"
+    },
+    {
+      "ad": "kalp",
+      "olay": "kim",
+      "kayma": 0,
+      "sure": 2.5,
+      "db": -8,
+      "tarif": "slow heavy human heartbeat, three deep thumps, close and muffled, realistic, no music"
+    },
+    {
+      "ad": "tik",
+      "olay": "bitis",
+      "kayma": 44,
+      "sure": 0.5,
+      "db": -10,
+      "tekrar": {
+        "adet": 3,
+        "aralik": 8
+      },
+      "tarif": "a single tiny soft wooden click, dry, realistic, very short, no reverb",
+      "not": "bitiş ekranı dokunuşları (BitisEkrani.DOKUNMA)"
+    }
+  ],
+  "kapak": {
+    "satir1": "Muskayı",
+    "satir2": "kim koydu?",
+    "etiket": "Karabasan · Part 5",
+    "zemin_kare": 1459,
+    "renk": [
+      "#2E3C6E",
+      "#141a33"
+    ],
+    "desen": [
+      "#F4BE4F",
+      "#C9C2E6",
+      "#E8573F"
+    ]
+  },
+  "bitis": {
+    "soru": "Sen olsan bu soruyu sorar mıydın?",
+    "vurgu": "sorar",
+    "devam": "Tüm partler profilde"
+  }
+}
