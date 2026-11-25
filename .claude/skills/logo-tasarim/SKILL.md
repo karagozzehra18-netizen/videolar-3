@@ -17,10 +17,11 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | `--seffaf` (marka_render.js) | Şeffaf zeminli PNG (filigran); SVG'de zemin rect'i olmamalı |
 
 ## Mevcut durum
-Seçili logo: **v4 Dikişli Kulak (neon)**. Tek kaynak `marka/logo/v4/uret.py`; değişiklik orada yapılır, sonra render edilip `marka/secili/` güncellenir.
-Kullanıcı kendi görselini getirirse: görseli `kaynak/` altına koy, olduğu gibi kullanılacak yerde (profil) doğrudan kullan, geri kalanı için vektör sürümü çiz ve **orijinalle yan yana ve üst üste bindirerek** karşılaştır.
+**SEÇİLDİ: v6 A — açık, sade "Dikişli Kulak"** (mercan disk, lacivert kulak, krem dikiş). Tek kaynak `marka/logo/v6/uret.py`; değişiklik orada yapılır, render edilir, `marka/secili/` güncellenir (dosya listesi `kanal-kimligi`'nde).
+Kullanıcı tercihi (öğrenildi): **açık renkli, sade, profesyonel**; karanlık/neon ve manzara/illüstrasyon istemiyor; "tek renk banner olmaz" → banner'da çok renkli marka deseni + kart.
+Kullanıcı kendi görselini getirirse: `kaynak/` altına koy, olduğu gibi kullanılacak yerde doğrudan kullan, gerisini vektör çiz ve orijinalle yan yana/üst üste karşılaştır.
 
-## v6 — SADE, açık renkli, düz renk (güncel aday seti)
+## v6 — SADE, açık renkli, düz renk (SEÇİLEN SET; A seçildi)
 - Kullanıcı geri bildirimi: "çimenlik kulak demedim" → manzara/illüstrasyon istenmiyor; **sade, profesyonel, Duyma Sakın'a özgü** semboller.
 - Kaynak: `python3 marka/logo/v6/uret.py` → logo-a (mercan disk + lacivert kulak + krem dikiş), logo-b (hardal disk + mercan dudak + lacivert "şşş" parmağı), logo-c (krem disk + lacivert kulak + mercan dalga ve dikiş); banner-a/b/c (marka şekillerinden desen + kart); filigran-video-a/b/c.
 - Desen kuralı: yalnız markanın şekilleri (2 yaylı ses dalgası, dikiş şeridi, nokta, yumuşak daire). Yaylar yukarı bakmaz (Wi-Fi'ye benzer).

@@ -139,10 +139,20 @@ def filigran(logo_ic):
                f'<g transform="translate(134 80)"><path d="{d1}" fill="{R["lacivert"]}"/><g transform="translate({g1:.1f} 0)"><path d="{d2}" fill="{R["mercan"]}"/></g></g>',
                hw + 12, 124), hw + 12
 
+def yatay(logo_ic, acik=True):
+    """Yatay kilit: rozet (256) + Duyma (lacivert) Sakın (mercan), Fraunces 800."""
+    d1, g1, _ = yola(FRAUNCES, "Duyma ", 150, 0, 0, 0, 800); d2, g2, _ = yola(FRAUNCES, "Sakın", 150, 0, 0, 0, 800)
+    w = int(256 + 50 + g1 + g2 + 20)
+    yazi_renk = R["lacivert"] if acik else R["kagit"]
+    return svg(f'<g transform="scale(.5)">{logo_ic}</g>'
+               f'<g transform="translate(306 180)"><path d="{d1}" fill="{yazi_renk}"/><g transform="translate({g1:.1f} 0)"><path d="{d2}" fill="{R["mercan"]}"/></g></g>', w, 256), w
+
 if __name__ == "__main__":
     for k, f in LOGOLAR.items():
         ic = f()
         open(f"{KOK}/logo-{k}.svg", "w").write(svg(ic))
         b, sag, sinir, o_ = banner(ic); open(f"{KOK}/banner-{k}.svg", "w").write(b)
         fs, fw = filigran(ic); open(f"{KOK}/filigran-video-{k}.svg", "w").write(fs); open(f"{KOK}/filigran-video-{k}.boyut", "w").write(f"{fw} 124\n")
+        ys, yw = yatay(ic); open(f"{KOK}/yatay-{k}.svg", "w").write(ys); open(f"{KOK}/yatay-{k}.boyut", "w").write(f"{yw} 256\n")
+        ys2, _ = yatay(ic, acik=False); open(f"{KOK}/yatay-{k}-koyu.svg", "w").write(ys2)
         print(f"{k}: banner içerik sağ ucu {sag:.0f} / sınır {sinir} (ölçek {o_:.2f}) · filigran {fw}x124")

@@ -33,13 +33,13 @@ Kulaklığını tak. Işığı kapatma.
 Yarım dakikalık korku hikâyeleri. Kulaklığını tak, ışığı kapatma.
 ```
 
-## Dosyalar (seçili logo: Dikişli Kulak — hepsi `marka/secili/`)
+## Dosyalar (seçili logo: v6 A — hepsi `marka/secili/`)
 
 | Kullanım | Dosya | Boyut |
 |---|---|---|
-| Profil fotoğrafı (üç platform) | `profil-800.png` | 800x800 |
-| Instagram / TikTok (isteğe bağlı küçük) | `profil-320.png`, `profil-200.png` | 320 / 200 |
-| YouTube banner | `banner-youtube.png` | 2560x1440, 1,5 MB |
+| Profil fotoğrafı (üç platform) | `profil-800.png` (ayrıca 1024, 320, 200) | 800x800 |
+| YouTube banner | `banner-youtube.png` | 2560x1440, 265 KB |
 | YouTube kanal filigranı (Studio → Özelleştirme → Filigran → "Videonun tamamı") | `filigran-youtube.png` | 300x300 |
-| Video içi filigran (videolara otomatik gömülür) | `filigran-video.png` | 632x128 |
-| Yatay logo (yazılı) | `yatay-logo.png` | 1232x256 |
+| Video içi filigran (videolara otomatik gömülür) | `filigran-video.png` | 550x124 |
+| Yatay logo | `yatay-logo.png` (koyu zemin için `yatay-logo-koyu-zemin.png`) | 1344x256 |
+| Vektör kaynaklar | `logo.svg`, `yatay-logo.svg`, `banner-youtube.svg` | — |

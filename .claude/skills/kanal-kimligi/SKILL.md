@@ -1,6 +1,6 @@
 ---
 name: kanal-kimligi
-description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tipleri, logo, bitiş ekranı ve kapak düzeni. Bir video sahnesi, kapak, bitiş ekranı, banner, profil görseli ya da kanal metni yazmadan veya çizmeden ÖNCE oku; markaya ait bir renk, font ya da ifade seçerken buradaki değerleri kullan.
+description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tipleri, logo, filigran, üst bant, bitiş ekranı ve kapak düzeni. Bir video sahnesi, kapak, bitiş ekranı, banner, profil görseli ya da kanal metni yazmadan veya çizmeden ÖNCE oku; markaya ait bir renk, font, dosya ya da ifade seçerken buradaki değerleri kullan.
 ---
 
 # Kanal Kimliği — Duyma Sakın
@@ -13,6 +13,7 @@ description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tiple
 | Tür | Yüzsüz, kodla çizilmiş animasyonlu kısa korku hikâyeleri (25-35 sn) |
 | Konular | Şehir efsaneleri, Anadolu halk anlatıları (karabasan, al karısı, gulyabani…), açıklanamayan olaylar |
 | Slogan | "Kulaklığını tak. Işığı kapatma." |
+| Görsel kimlik | **Açık renkli, sade, düz renk** (kullanıcı kararı). Karanlık/neon marka dili kullanılmaz; korku hissi videonun içindeki sahnelerden gelir. |
 
 ## Ton
 - İzleyiciye **"sen"** diye fısıldayan, sakin ama tedirgin edici anlatıcı. Bağırmaz, abartmaz.
@@ -20,72 +21,76 @@ description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tiple
 - Kesin olmayan her şey "anlatılır", "söylenir", "kayıtlara göre" ile verilir.
 - **Asla:** kan/vahşet tasviri, gerçek kişiyi karalama, ölümü istismar etme, tehlikeli bir şeyi denemeye özendirme ("sen de dene" yok), çizgi film/komik ses.
 
-## Renkler (seçilen neon logodan ölçüldü)
+## Logo — SEÇİLDİ: v6 A "Dikişli Kulak" (açık, sade)
+- Krem rozet, ince lacivert dış çizgi, **mercan disk**, üstünde **lacivert kulak**, kulak kanalı **krem dikişle** kapatılmış.
+- Kaynak: `python3 marka/logo/v6/uret.py` → `logo-a.svg` (tek doğru kaynak; değişiklik orada yapılır).
+- 32 px'te kulak ve dikiş okunuyor (ölçüldü, kontrol panosu `marka/logo/v6/render/kontrol-panosu.png`).
+- Eski turlar yalnız arşiv: `marka/logo/eski`, `v2`, `v3`, `v4` (koyu neon; yedeği `v4/secili-yedek/`), `v5` (manzaralı, reddedildi).
+
+### Seçili dosyalar (`marka/secili/`)
+| Dosya | Kullanım |
+|---|---|
+| `profil-1024.png`, `profil-800.png`, `profil-320.png`, `profil-200.png` | Profil fotoğrafı (üç platform) |
+| `logo.svg` | Rozet logo kaynağı (vektör) |
+| `yatay-logo.png` / `.svg`, `yatay-logo-koyu-zemin.png` | Rozet + "Duyma Sakın" yazısı |
+| `banner-youtube.png` / `.svg` | YouTube banner 2560x1440 |
+| `filigran-video.png` | Shorts/Reels/TikTok'a gömülen filigran |
+| `filigran-youtube.png` | YouTube Studio kanal filigranı (300x300) |
+
+## Renkler (v6)
 | Ad | Hex | Kullanım |
 |---|---|---|
-| gece | `#050506` | Ana zemin, logo zemini |
-| beyaz | `#F2F2F2` | Logodaki kulak, ana metin |
-| neon | `#FF2A2A` | Tek vurgu: dikiş, ses dalgaları, "SAKIN", ilerleme çubuğu |
-| kor | `#B00008` | Neon ışıltısının koyu halesi, duman |
-| kül | `#6B6A72` | İkincil öğeler, pasif çubuk bölümleri |
-| sis | `#B4B0B8` | Koyu zeminde ikincil metin |
+| kâğıt | `#FBF6EC` | Ana açık zemin (banner, kart, filigran hapı) |
+| krem | `#F7EEDC` | Rozet çerçevesi, ikincil açık zemin |
+| lacivert | `#22264A` | Ana metin, logo çizgileri, kart çerçevesi |
+| mercan | `#E8573F` | Ana vurgu: logo diski, "Sakın", ilerleme çubuğu, ikonlar |
+| hardal | `#F4BE4F` | İkincil vurgu (desen, küçük işaretler) |
+| lavanta | `#C9C2E6` | Desen, yumuşak alanlar |
+| şeftali | `#F6C2A2` | Desen, yumuşak alanlar |
+| teal | `#3F8077` | Desen (az) |
 
 Kurallar:
-- Kırmızı bir karede **tek bir** öğe grubunda kullanılır; yayılmaz.
-- Videolarda her videonun kendi stil paleti vardır (bkz. `stil-kutuphanesi`); marka renkleri yalnız **üst bant, altyazı vurgusu ve bitiş ekranında** sabittir.
-- İlk kare korku konusunda bile parlak ve yüksek kontrastlı olur; "gece" zemini ilk karenin tamamını kaplamaz.
+- Bir karede **tek ana vurgu** mercan; hardal/lavanta/şeftali/teal yalnız desen ve küçük işaretlerde.
+- Videolarda her videonun kendi stil paleti vardır (bkz. `stil-kutuphanesi`); marka renkleri yalnız **üst bant, altyazı vurgusu, filigran ve bitiş ekranında** sabittir.
+- İlk kare korku konusunda bile parlak ve yüksek kontrastlı olur.
 
-## Yazı tipleri (`marka/fontlar/`, OFL lisanslı)
+## Yazı tipleri (`marka/fontlar/`, hepsi OFL)
 | Font | Dosya | Kullanım |
 |---|---|---|
-| Cormorant Garamond 700 | `CormorantGaramond[wght].ttf` | **Yalnız logo yazısı** (DUYMA SAKIN, harf aralığı 0,2 em), vektör yola çevrilmiş halde (`araclar/yazi_yola.py`) |
-| Anton | `Anton-Regular.ttf` | Kapak yazısı, bitiş ekranı alt başlığı. Hep BÜYÜK HARF. |
-| Inter (değişken) | `Inter[opsz,wght].ttf` | Altyazı (600-800), alt metin (500-600) |
+| Fraunces 800-900 | `Fraunces[SOFT,WONK,opsz,wght].ttf` | Logo yazısı, banner başlığı, kapak yazısı, bitiş ekranı adı |
+| Inter 600-800 | `Inter[opsz,wght].ttf` | Altyazı, üst bant başlığı, küçük metin |
+| Anton, Cormorant | — | Eski turlardan; yeni işte kullanılmaz |
 
-Türkçe: Üç font da ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
-
-## Logo — YENİ YÖN: açık renkli, sade, düz renk (v6), seçim bekleniyor
-- Adaylar: A Dikişli kulak (mercan) · B Şşş (hardal) · C Duyma (krem, dalga+dikiş). Dosyalar `marka/logo/v6/`. v5 (manzaralı) reddedildi. Seçilince renkler bölümü v5 paletine güncellenecek (bkz. `logo-tasarim` → v6).
-
-## Önceki seçim (koyu neon, v4) — yeni yön seçilene kadar geçerli
-### Dikişli Kulak (neon)
-- Kulak kırmızı dikişle kapatılmış; soldan gelen kesik kırmızı ses dalgaları içeri giremiyor.
-- **Profil fotoğrafı:** kullanıcının gönderdiği görsel (halka + duman) → `marka/secili/profil-800.png` (320, 200 de var). Kaynak: `marka/logo/v4/kaynak/`.
-- **Vektör sürüm (kodla çizildi):** `marka/logo/v4/uret.py` → sembol-neon / sembol-duz / sembol-siyah / sembol-beyaz / profil-vektor / yatay / filigran / banner.
-- Tek renk sürümde kulak çizgileri dikişin çevresinde boşluk bırakır (yoksa küçük boyutta birleşir).
-- Seçili tüm dosyalar: `marka/secili/`. Eski turlar: `marka/logo/eski`, `v2`, `v3` (yalnız arşiv).
-- Logoyu değiştirmek ya da yeni marka görseli yapmak için `logo-tasarim` skill'ini oku.
+- Logo ve banner'da yazılar **vektör yola çevrilir** (`araclar/yazi_yola.py`); canlı `<text>` yok.
+- Türkçe: Fraunces ve Inter ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü, â glifine sahip (ölçüldü). Büyük harfe çevirirken `toLocaleUpperCase('tr-TR')`.
 
 ## Filigran
 | Dosya | Nerede | Kural |
 |---|---|---|
-| `marka/secili/filigran-video.png` (632x128, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede yükseklik 64 px (genişlik orantılı ≈316), sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
-| `marka/secili/filigran-youtube.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
-
-- Yerleşim kontrolü: `marka/filigran/yerlesim-onizleme.html` render edilip bakılır.
-- Üretici: `python3 marka/logo/v4/uret.py` (filigran-video.svg, filigran-youtube.svg).
-- Filigran yazısı her zaman koyu hap zemin üstünde (parlak karede kırmızı "SAKIN" kaybolmasın).
+| `marka/secili/filigran-video.png` (550x124, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede yükseklik 64 px (genişlik ≈284), sağdan 60 px, üstten 290 px, opaklık %90. Sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) girmez. |
+| `marka/secili/filigran-youtube.png` (300x300) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). |
 
 ## Açılış
 - **Logo ya da kanal adıyla açılış YOK.** İlk kare videonun en çarpıcı görüntüsüdür (bkz. `video-uretim`).
 
 ## Üst bant (tüm videolarda sabit)
-- En üstte ince bölümlü ilerleme çubuğu: dolu bölüm `sinyal`, boş bölüm `kül` %40 opak, yükseklik 8 px (1080x1920 kare).
-- Altında kısa başlık: Inter 700, 34 px, `kemik`, en fazla 24 karakter.
-- Platform güvenli alanı: üstten ilk 180 px'e yalnız bu bant girer.
+- En üstte ince bölümlü ilerleme çubuğu: dolu bölüm `mercan`, boş bölüm `kâğıt` %35 opak, yükseklik 8 px (1080x1920).
+- Altında kısa başlık: Inter 700, 34 px, `kâğıt` rengi + koyu gölge (her sahnede okunsun), en fazla 24 karakter.
+- Üst bant platform üst simgelerinin altında başlar (y ≥ 190).
 
 ## Bitiş ekranı (2,5 sn, 1080x1920)
-1. 0,0 s: Hikâyenin son karesi 6 karede `gece`ye kararır; tek bir alçak "nefes" sesi.
-2. 0,2 s: Neon sembol (`sembol-neon`) 0,8→1,0 ölçekle belirir (merkez, 420 px); ses dalgaları dıştan içe yanıp dikişte söner.
-3. 0,6 s: Altında logo yazısı "DUYMA SAKIN" (vektör, Cormorant 700, beyaz).
-4. 1,0 s: Altında "Takip et — bir sonrakini kaçırma" (Inter 600, 44 px, `sis`).
-5. 2,5 s: Son kare; döngü başına dönerken sert kesme (yumuşak geçiş yok).
+1. 0,0 s: Hikâyenin son karesi 6 karede `kâğıt` zemine açılır (beyaz flaş değil, yumuşak geçiş); tek bir alçak "nefes" sesi.
+2. 0,2 s: Rozet logo 0,8→1,0 ölçekle belirir (merkez, 420 px); krem dikiş çizgileri sırayla "dikilir".
+3. 0,6 s: Altında "Duyma" (lacivert) "Sakın" (mercan), Fraunces 800, 110 px.
+4. 1,0 s: Altında "Takip et — bir sonrakini kaçırma" (Inter 600, 42 px, lacivert %70).
+5. Zeminde banner desenindeki şekiller (ses dalgası, dikiş, nokta) hafifçe süzülür.
+6. 2,5 s: Son kare; döngü başına sert kesme.
 
 ## Kapak (1080x1920)
-- **2 satır, satır başına en fazla 10 karakter**, Anton, büyük harf.
-- Bir satır `kemik`, kilit kelime `sinyal`. Yazı alanı dikey ortanın biraz üstünde (y ≈ %35-55), kenarlardan en az 90 px içeride.
-- Kapak anlatımdan daha kesin bir iddia kurmaz ("GERÇEK OLDU" değil, "KİMSE AÇIKLAYAMADI" gibi anlatılanla tutarlı).
-- Arka plan: videodaki en çarpıcı kare, %30 koyulaştırılmış.
+- **2 satır, satır başına en fazla 10 karakter**, Fraunces 900, büyük harf.
+- Bir satır `kâğıt` (koyu gölgeyle), kilit kelime `mercan`; yazı alanı dikey ortanın biraz üstünde (y ≈ %35-55), kenarlardan en az 90 px içeride.
+- Kapak anlatımdan daha kesin bir iddia kurmaz.
+- Arka plan: videodaki en çarpıcı kare; köşede küçük rozet logo (120 px) isteğe bağlı.
 
 ## Kanal metinleri
 - Hazır açıklamalar: `marka/kanal-aciklamalari.md` (YouTube ≤1000, Instagram ≤150, TikTok ≤80 karakter; sınırlar ölçüldü).
