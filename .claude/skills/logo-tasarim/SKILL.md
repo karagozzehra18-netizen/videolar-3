@@ -16,6 +16,10 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | `marka/secenek-panosu.html` | Tüm seçenekleri logo + küçük boyut + filigran (parlak/koyu kare) + YouTube filigranı olarak tek panoda gösterir |
 | `--seffaf` (marka_render.js) | Şeffaf zeminli PNG (filigran); SVG'de zemin rect'i olmamalı |
 
+## Mevcut durum
+Seçili logo: **v4 Dikişli Kulak (neon)**. Tek kaynak `marka/logo/v4/uret.py`; değişiklik orada yapılır, sonra render edilip `marka/secili/` güncellenir.
+Kullanıcı kendi görselini getirirse: görseli `kaynak/` altına koy, olduğu gibi kullanılacak yerde (profil) doğrudan kullan, geri kalanı için vektör sürümü çiz ve **orijinalle yan yana ve üst üste bindirerek** karşılaştır.
+
 ## Akış (her adımda ölçmeden geçme)
 1. **Fikir:** En az 3, tercihen 5 seçenek. Her biri tek bir fikir anlatır. Kanal adıyla **duygusal** bağ kursun, yalnız konu bağı yetmez: ilk set (ses dalgası, soru işareti, göz) "genel" bulunup reddedildi. Tutan yönler: beden + yasak (şşş parmağı, dikişli kulak), slogan nesnesi (kulaklık), tipografi (rozet).
 2. **Çizim:** Elle SVG yaz (`marka/logo/logo-<harf>-<ad>.svg`), 800x800 viewBox, tam kare `gece` zemin (platform yuvarlağı kendisi kırpar).
@@ -36,6 +40,8 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 - Arka plan parıltısı: `radialGradient`, sinyal kırmızısı en fazla %28 opak; sert kenarlı daire kullanma (halka gibi görünür).
 
 ## Banner (YouTube 2560x1440)
+- Seçili banner `marka/logo/v4/banner.svg`'den üretilir. SVG banner'da ölçüm: PNG'de eşik üstü piksellerin kutusu **sıkı alan 1235x338 (x 662-1897, y 551-889)** içinde olmalı (v4: x 714-1842, y 551-871 → GEÇTİ).
+- Aşağıdaki HTML yöntemi eski banner içindir (`marka/banner/eski/`).
 - Kaynak: `marka/banner/banner-youtube.html`. Render: `marka_render.js … 2560 1440`.
 - **Güvenli alan:** YouTube Yardım: 2048x1152'de 1235x338 → 2560x1440'ta 1546x423 (sol 507, üst 508). Tüm yazı ve logo bunun **60 px içinde** (bazı kaynaklar alanı ölçeklemeden 1235x338 veriyor; 60 px pay ikisini de karşılar).
 - Kontrol: `node araclar/banner_kontrol.js marka/banner/banner-youtube.html marka/banner/banner-cihaz-onizleme.png --pay 60` → GEÇTİ olmalı, sonra önizlemeye Read ile bak.
@@ -67,4 +73,11 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 | Ses dalgası / soru işareti / göz gibi genel semboller "sıradan" bulundu | Kanal adındaki yasağı bedene bağlayan, biraz rahatsız edici semboller ara |
 | Spiral gibi hesaplanan şekiller 0,85 yarıçapı aşabiliyor | Noktaların merkeze en uzak mesafesini hesapla, 340'ı geçmesin |
 | Yazılı filigranda dekor çizgisi harflerin üstünden geçince okunmuyor | Çizgiyi yazının altına al (alt çizgi) |
+| SVG'de `width/height` sabit sayı olunca büyük ekranda yalnız sol üst köşe çiziliyor | `width="100%" height="100%"` + viewBox kullan |
+| Kesik yaylarda yuvarlak uçlar boşlukları kapatıyor | Boşluk açısı = (çizgi kalınlığı + ~22 px) / yarıçap |
+| feTurbulence dumanı benekli bulut ya da pembe leke oluyor | fractalNoise → alfa kanalında `feFuncA table` ile **ince bant** (tek değer ~.55, gerisi 0) + ikinci gürültüyle displacement + 1,4 blur |
+| Tek renk sürümde dikiş kulak çizgileriyle birleşiyor | Kulak çizgilerine dikiş şeklinde maske (2,1 kat kalın) ile boşluk aç |
+| Yazılı filigranın sağ ucu kırpılıyor | SVG genişliğini yazı genişliğinden hesapla; render sonrası sağ 3 px şeffaf mı ölç |
+| Kafatası, kan damlası, Wi-Fi'ye benzeyen yaylar, uyarı levhası üçgeni | Türün kalıpları ya da yanlış okumalar; kullanma |
+| `read W H < dosya` satır sonu yoksa hata kodu döndürüp && zincirini kırıyor | Boyut dosyalarını `\n` ile bitir |
 | Font yüklenmeden ekran görüntüsü alınması (yedek fontla render) | `marka_render.js` `document.fonts.ready` bekler; yeni araç yazarsan aynısını yap |

@@ -20,43 +20,46 @@ description: Duyma Sakın kanalının kimliği — ad, ton, renkler, yazı tiple
 - Kesin olmayan her şey "anlatılır", "söylenir", "kayıtlara göre" ile verilir.
 - **Asla:** kan/vahşet tasviri, gerçek kişiyi karalama, ölümü istismar etme, tehlikeli bir şeyi denemeye özendirme ("sen de dene" yok), çizgi film/komik ses.
 
-## Renkler
+## Renkler (seçilen neon logodan ölçüldü)
 | Ad | Hex | Kullanım |
 |---|---|---|
-| gece | `#0A0A0D` | Ana zemin, logo zemini |
-| kemik | `#EDE6D6` | Ana metin, logo çizgileri |
-| sinyal | `#FF2E3B` | Tek vurgu: logodaki ses, "SAKIN", kapakta kilit kelime, ilerleme çubuğu |
+| gece | `#050506` | Ana zemin, logo zemini |
+| beyaz | `#F2F2F2` | Logodaki kulak, ana metin |
+| neon | `#FF2A2A` | Tek vurgu: dikiş, ses dalgaları, "SAKIN", ilerleme çubuğu |
+| kor | `#B00008` | Neon ışıltısının koyu halesi, duman |
 | kül | `#6B6A72` | İkincil öğeler, pasif çubuk bölümleri |
 | sis | `#B4B0B8` | Koyu zeminde ikincil metin |
 
 Kurallar:
-- Kırmızı bir karede **tek bir** öğede kullanılır; yayılmaz.
+- Kırmızı bir karede **tek bir** öğe grubunda kullanılır; yayılmaz.
 - Videolarda her videonun kendi stil paleti vardır (bkz. `stil-kutuphanesi`); marka renkleri yalnız **üst bant, altyazı vurgusu ve bitiş ekranında** sabittir.
 - İlk kare korku konusunda bile parlak ve yüksek kontrastlı olur; "gece" zemini ilk karenin tamamını kaplamaz.
 
 ## Yazı tipleri (`marka/fontlar/`, OFL lisanslı)
 | Font | Dosya | Kullanım |
 |---|---|---|
-| Anton | `Anton-Regular.ttf` | Başlık, kapak, bitiş ekranı adı. Hep BÜYÜK HARF. |
+| Cormorant Garamond 700 | `CormorantGaramond[wght].ttf` | **Yalnız logo yazısı** (DUYMA SAKIN, harf aralığı 0,2 em), vektör yola çevrilmiş halde (`araclar/yazi_yola.py`) |
+| Anton | `Anton-Regular.ttf` | Kapak yazısı, bitiş ekranı alt başlığı. Hep BÜYÜK HARF. |
 | Inter (değişken) | `Inter[opsz,wght].ttf` | Altyazı (600-800), alt metin (500-600) |
 
-Türkçe: Her iki font ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
+Türkçe: Üç font da ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
 
-## Logo
-- **Durum: SEÇİM BEKLENİYOR** (ilk set A/B/C beğenilmedi, `marka/logo/eski/`).
-- Yeni seçenekler `marka/logo/v2/`: 1 Şşş (parmak+dudak) · 2 Dikişli kulak · 3 Kanayan kulaklık · 4 Girdap · 5 Rozet (sansür bandı).
-- Karşılaştırma: `marka/secenek-panosu.png`; banner'lar `marka/banner/v2/`.
-- Seçim yapılınca: buraya "Seçili logo: N" yaz, `profil-800/320/200.png` dışa aktar, banner'ı `?logo=` ile render et, filigranları `marka/filigran/` köküne kopyala.
+## Logo — SEÇİLDİ: Dikişli Kulak (neon)
+- Kulak kırmızı dikişle kapatılmış; soldan gelen kesik kırmızı ses dalgaları içeri giremiyor.
+- **Profil fotoğrafı:** kullanıcının gönderdiği görsel (halka + duman) → `marka/secili/profil-800.png` (320, 200 de var). Kaynak: `marka/logo/v4/kaynak/`.
+- **Vektör sürüm (kodla çizildi):** `marka/logo/v4/uret.py` → sembol-neon / sembol-duz / sembol-siyah / sembol-beyaz / profil-vektor / yatay / filigran / banner.
+- Tek renk sürümde kulak çizgileri dikişin çevresinde boşluk bırakır (yoksa küçük boyutta birleşir).
+- Seçili tüm dosyalar: `marka/secili/`. Eski turlar: `marka/logo/eski`, `v2`, `v3` (yalnız arşiv).
 - Logoyu değiştirmek ya da yeni marka görseli yapmak için `logo-tasarim` skill'ini oku.
 
 ## Filigran
 | Dosya | Nerede | Kural |
 |---|---|---|
-| `marka/filigran/v2/filigran-video-N.png` (600x128, şeffaf; N = seçili logo) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede 300x64, sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
-| `marka/filigran/v2/filigran-youtube-N.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
+| `marka/secili/filigran-video.png` (632x128, şeffaf) | **Her Shorts/Reels/TikTok videosuna gömülür** | 1080x1920 karede yükseklik 64 px (genişlik orantılı ≈316), sağdan 60 px, üstten 290 px, opaklık %85. Videonun tamamında sabit, hareket etmez. Platform düğme alanlarına (üst 170 px, sağ şerit y 880-1740, alt 330 px) asla girmez. |
+| `marka/secili/filigran-youtube.png` (300x300, şeffaf) | YouTube Studio → Özelleştirme → Filigran, "Videonun tamamı" | YouTube bunu **yalnız yatay videolarda** gösterir; Shorts'ta görünmez (YouTube Yardım, 2026). Bu yüzden Shorts'ta gömülü filigran şart. |
 
 - Yerleşim kontrolü: `marka/filigran/yerlesim-onizleme.html` render edilip bakılır.
-- Şablonlar: `marka/filigran/sablon-video.html?logo=…` ve `sablon-youtube.html?logo=…` (bkz. `logo-tasarim`).
+- Üretici: `python3 marka/logo/v4/uret.py` (filigran-video.svg, filigran-youtube.svg).
 - Filigran yazısı her zaman koyu hap zemin üstünde (parlak karede kırmızı "SAKIN" kaybolmasın).
 
 ## Açılış
@@ -69,8 +72,8 @@ Türkçe: Her iki font ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük
 
 ## Bitiş ekranı (2,5 sn, 1080x1920)
 1. 0,0 s: Hikâyenin son karesi 6 karede `gece`ye kararır; tek bir alçak "nefes" sesi.
-2. 0,2 s: Logo 0,8→1,0 ölçekle belirir (merkez, 360 px), kırmızı çubuk bir kez "titrer".
-3. 0,6 s: Logonun altında "DUYMA SAKIN" (Anton 120 px, "SAKIN" kırmızı).
+2. 0,2 s: Neon sembol (`sembol-neon`) 0,8→1,0 ölçekle belirir (merkez, 420 px); ses dalgaları dıştan içe yanıp dikişte söner.
+3. 0,6 s: Altında logo yazısı "DUYMA SAKIN" (vektör, Cormorant 700, beyaz).
 4. 1,0 s: Altında "Takip et — bir sonrakini kaçırma" (Inter 600, 44 px, `sis`).
 5. 2,5 s: Son kare; döngü başına dönerken sert kesme (yumuşak geçiş yok).
 

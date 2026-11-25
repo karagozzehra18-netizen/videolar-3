@@ -1,0 +1,70 @@
+<!doctype html>
+<!--
+  sunum.html — Seçilen logonun (v4 Dikişli Kulak, neon) sunum panosu (1600x2060).
+  Render: node araclar/marka_render.js "marka/logo/v4/sunum.html" marka/logo/v4/render/sunum.png 1600 2060
+  Önce: python3 marka/logo/v3/uret.py ve render/ altındaki PNG'ler (profil, filigran, banner) üretilmiş olmalı.
+-->
+<html lang="tr"><head><meta charset="utf-8"><style>
+  @font-face{font-family:'Inter';src:url('../../fontlar/Inter[opsz,wght].ttf');font-weight:100 900}
+  @font-face{font-family:'Cormorant';src:url('../../fontlar/CormorantGaramond[wght].ttf');font-weight:300 700}
+  :root{--gece:#0A0A0D;--kemik:#EDE6D6;--sinyal:#E8252E;--sis:#B4B0B8;--kul:#6B6A72}
+  body{margin:0;width:1600px;background:#111114;color:var(--kemik);font:500 20px Inter}
+  .bas{padding:46px 60px 26px;display:flex;align-items:baseline;gap:26px;border-bottom:1px solid #26262c}
+  .bas .no{font:700 54px Inter;color:var(--sinyal)} .bas h1{margin:0;font:600 50px Cormorant;letter-spacing:2px}
+  .bas p{margin:0 0 0 auto;max-width:620px;color:var(--sis);font-size:19px;line-height:1.45}
+  .izgara{display:grid;gap:22px;padding:26px 60px}
+  .k{border-radius:14px;overflow:hidden;position:relative}
+  .et{position:absolute;left:16px;bottom:12px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--kul)}
+  .r1{grid-template-columns:1fr 1fr 1fr}
+  .r1 .k{height:400px;display:flex;align-items:center;justify-content:center}
+  .r1 img{width:300px;height:300px}
+  .boyut{grid-template-columns:1fr 1fr}.boyut .k{height:170px;display:flex;align-items:center;gap:40px;padding:0 40px}
+  .boyut img{border-radius:50%}
+  .kilit .k{height:200px;display:flex;align-items:center;justify-content:center}
+  .kilit img{height:118px}
+  .mock{grid-template-columns:1.25fr .75fr}
+  .kanal{background:#0f0f12;height:540px;border:1px solid #26262c}
+  .kanal .ban{width:100%;height:232px;background-size:cover;background-position:center}
+  .kanal .bilgi{display:flex;gap:26px;align-items:center;padding:26px 34px}
+  .kanal .bilgi img{width:130px;height:130px;border-radius:50%}
+  .kanal b{display:block;font:700 34px Inter}.kanal span{color:var(--sis);font-size:19px}
+  .kanal .dugme{margin-top:14px;display:inline-block;background:var(--kemik);color:#111;border-radius:22px;padding:9px 22px;font-weight:700;font-size:17px}
+  .kanal .sekme{display:flex;gap:36px;padding:0 34px;color:var(--sis);font-weight:600;border-bottom:1px solid #26262c}.kanal .sekme i{font-style:normal;padding:12px 0}.kanal .sekme i.a{color:var(--kemik);border-bottom:3px solid var(--kemik)}
+  .short{height:540px;background:linear-gradient(170deg,#f2d79c 0%,#de7a45 45%,#3b2240 75%,#0b0b10);border:1px solid #26262c}
+  .short .fil{position:absolute;right:18px;top:96px;height:38px}
+  .short .bnt{position:absolute;left:22px;right:22px;top:62px;display:flex;gap:5px}.short .bnt i{flex:1;height:4px;border-radius:2px;background:rgba(237,230,214,.35)}.short .bnt i.d{background:var(--sinyal)}
+  .short .alt{position:absolute;left:0;right:0;top:360px;text-align:center;font:800 34px Inter;color:#fff;text-shadow:0 2px 8px #000}
+  .yatay{height:280px;background:linear-gradient(90deg,#141a28,#4a5266 55%,#cbc4b2);border:1px solid #26262c}
+  .yatay img{position:absolute;right:22px;bottom:22px;width:84px}
+  .ban2{grid-template-columns:1fr}.ban2 .k{height:300px;background-size:cover;background-position:center;border:1px solid #26262c}
+</style></head><body>
+<script>
+const k = '✓';
+const bilgi = ['Dikişli Kulak', 'Seçilen logo. Kırmızı dikişle kapatılmış kulak; sesler dışarıda kalıyor. Profil fotoğrafı senin gönderdiğin görsel; filigran, banner ve yatay logo aynı tasarımın kodla çizilmiş vektör sürümünden.'];
+const R = 'render/';
+document.write(`
+<div class="bas"><div class="no">${k}</div><h1>${bilgi[0]}</h1><p>${bilgi[1]}</p></div>
+<div class="izgara r1">
+  <div class="k" style="background:var(--gece)"><img src="profil-orijinal-800.png" style="border-radius:50%"><span class="et">Ana · gece zemin</span></div>
+  <div class="k" style="background:#fff"><img src="sembol-siyah.svg"><span class="et">Tek renk · siyah</span></div>
+  <div class="k" style="background:var(--sinyal)"><img src="sembol-beyaz.svg"><span class="et" style="color:#fff">Ters · beyaz</span></div>
+</div>
+<div class="izgara boyut">
+  <div class="k" style="background:var(--gece)">${[112,64,48,32,16].map(s=>`<img src="profil-orijinal-800.png" width="${s}" height="${s}">`).join('')}<span class="et">112 · 64 · 48 · 32 · 16 px</span></div>
+  <div class="k" style="background:#f3f1ec">${[112,64,48,32,16].map(s=>`<img src="profil-orijinal-800.png" width="${s}" height="${s}">`).join('')}<span class="et">açık zeminde</span></div>
+</div>
+<div class="izgara kilit" style="grid-template-columns:1fr 1fr">
+  <div class="k" style="background:var(--gece)"><img src="${R}yatay.png"><span class="et">Yatay kilit</span></div>
+  <div class="k" style="background:#f3f1ec"><img src="yatay-acik.svg"><span class="et">Açık zemin</span></div>
+</div>
+<div class="izgara mock">
+  <div class="k kanal"><div class="ban" style="background-image:url(${R}banner.png)"></div>
+    <div class="bilgi"><img src="profil-orijinal-800.png"><div><b>Duyma Sakın</b><span>@duymasakin · Kısa korku hikâyeleri</span><br><span class="dugme">Abone ol</span></div></div>
+    <div class="sekme"><i>Ana sayfa</i><i class="a">Shorts</i><i>Oynatma listeleri</i></div><span class="et">YouTube kanal sayfası (telefon)</span></div>
+  <div class="k short"><div class="bnt"><i class="d"></i><i class="d"></i><i></i><i></i></div><img class="fil" src="${R}filigran-video.png"><div class="alt">Gece uyandın…</div><span class="et" style="color:#ddd">Shorts karesi · gömülü filigran</span></div>
+</div>
+<div class="izgara" style="grid-template-columns:.8fr 1.2fr">
+  <div class="k yatay"><img src="${R}filigran-youtube.png"><span class="et" style="color:#ddd">YouTube filigranı · yatay video</span></div>
+  <div class="k" style="height:280px;background:url(${R}banner.png) center/cover;border:1px solid #26262c"><span class="et">Banner · masaüstü</span></div>
+</div>`);
+</script></body></html>
