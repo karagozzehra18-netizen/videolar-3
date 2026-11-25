@@ -1,0 +1,137 @@
+{
+ "ozet": {
+  "ilk_kare_parlaklik": 0.758,
+  "yuzdelik85": 0.657,
+  "ilk_kare_parlak_mi": true,
+  "ilk_05sn_hareket": 63.0,
+  "ilk_05sn_buyuk_hareket": true,
+  "uyarili_kare": 0,
+  "kare_sayisi": 24
+ },
+ "kareler": [
+  {
+   "t": 0.0,
+   "parlaklik": 0.758,
+   "uyarilar": []
+  },
+  {
+   "t": 0.5,
+   "parlaklik": 0.574,
+   "uyarilar": []
+  },
+  {
+   "t": 2.79,
+   "parlaklik": 0.796,
+   "uyarilar": []
+  },
+  {
+   "t": 5.58,
+   "parlaklik": 0.511,
+   "uyarilar": []
+  },
+  {
+   "t": 8.36,
+   "parlaklik": 0.63,
+   "uyarilar": []
+  },
+  {
+   "t": 11.15,
+   "parlaklik": 0.613,
+   "uyarilar": []
+  },
+  {
+   "t": 13.94,
+   "parlaklik": 0.603,
+   "uyarilar": []
+  },
+  {
+   "t": 16.73,
+   "parlaklik": 0.682,
+   "uyarilar": []
+  },
+  {
+   "t": 19.51,
+   "parlaklik": 0.653,
+   "uyarilar": []
+  },
+  {
+   "t": 22.3,
+   "parlaklik": 0.481,
+   "uyarilar": []
+  },
+  {
+   "t": 25.09,
+   "parlaklik": 0.363,
+   "uyarilar": []
+  },
+  {
+   "t": 27.88,
+   "parlaklik": 0.362,
+   "uyarilar": []
+  },
+  {
+   "t": 30.66,
+   "parlaklik": 0.402,
+   "uyarilar": []
+  },
+  {
+   "t": 33.45,
+   "parlaklik": 0.411,
+   "uyarilar": []
+  },
+  {
+   "t": 36.24,
+   "parlaklik": 0.411,
+   "uyarilar": []
+  },
+  {
+   "t": 39.03,
+   "parlaklik": 0.384,
+   "uyarilar": []
+  },
+  {
+   "t": 41.82,
+   "parlaklik": 0.419,
+   "uyarilar": []
+  },
+  {
+   "t": 44.6,
+   "parlaklik": 0.378,
+   "uyarilar": []
+  },
+  {
+   "t": 47.39,
+   "parlaklik": 0.347,
+   "uyarilar": []
+  },
+  {
+   "t": 49.97,
+   "parlaklik": 0.361,
+   "uyarilar": []
+  },
+  {
+   "t": 50.18,
+   "parlaklik": 0.751,
+   "uyarilar": [],
+   "bitis_ekrani": true
+  },
+  {
+   "t": 51.57,
+   "parlaklik": 0.883,
+   "uyarilar": [],
+   "bitis_ekrani": true
+  },
+  {
+   "t": 52.97,
+   "parlaklik": 0.837,
+   "uyarilar": [],
+   "bitis_ekrani": true
+  },
+  {
+   "t": 53.02,
+   "parlaklik": 0.836,
+   "uyarilar": [],
+   "bitis_ekrani": true
+  }
+ ]
+}
