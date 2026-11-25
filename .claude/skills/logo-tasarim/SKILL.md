@@ -20,7 +20,12 @@ description: Duyma Sakın için logo, profil fotoğrafı, banner ve diğer marka
 Seçili logo: **v4 Dikişli Kulak (neon)**. Tek kaynak `marka/logo/v4/uret.py`; değişiklik orada yapılır, sonra render edilip `marka/secili/` güncellenir.
 Kullanıcı kendi görselini getirirse: görseli `kaynak/` altına koy, olduğu gibi kullanılacak yerde (profil) doğrudan kullan, geri kalanı için vektör sürümü çiz ve **orijinalle yan yana ve üst üste bindirerek** karşılaştır.
 
-## v5 — açık renkli illüstrasyonlu set (kullanıcı isteği: "açık renkli, Kurgalia tarzı, tek renk banner olmaz")
+## v6 — SADE, açık renkli, düz renk (güncel aday seti)
+- Kullanıcı geri bildirimi: "çimenlik kulak demedim" → manzara/illüstrasyon istenmiyor; **sade, profesyonel, Duyma Sakın'a özgü** semboller.
+- Kaynak: `python3 marka/logo/v6/uret.py` → logo-a (mercan disk + lacivert kulak + krem dikiş), logo-b (hardal disk + mercan dudak + lacivert "şşş" parmağı), logo-c (krem disk + lacivert kulak + mercan dalga ve dikiş); banner-a/b/c (marka şekillerinden desen + kart); filigran-video-a/b/c.
+- Desen kuralı: yalnız markanın şekilleri (2 yaylı ses dalgası, dikiş şeridi, nokta, yumuşak daire). Yaylar yukarı bakmaz (Wi-Fi'ye benzer).
+
+## v5 — açık renkli illüstrasyonlu set (REDDEDİLDİ: manzara istenmedi) (kullanıcı isteği: "açık renkli, Kurgalia tarzı, tek renk banner olmaz")
 - Kaynak: `python3 marka/logo/v5/uret.py` → `logo-a/b/c.svg` (rozet), `banner-a/b/c.svg` (kolaj + kart), `filigran-video-a/b/c.svg`.
 - Palet: krem `#F7EEDC`, kâğıt `#FBF5EA`, lacivert `#23284A`, mercan `#E5533C`, hardal `#F2B134`, şeftali `#F7B98B`, lavanta `#C9C0E8`, ay `#FCE6B0`, teal `#3E7C74` / açık `#86B5A6` / koyu `#24524D`.
 - Yazı: Fraunces 800 (başlık, slogan, hesap adı), Inter 600 (platform satırı); hepsi vektör yola çevrilir.

@@ -44,8 +44,8 @@ Kurallar:
 
 Türkçe: Üç font da ı, İ, ş, Ş, ğ, Ğ, ç, ö, ü glifine sahip. Büyük harfe çevirirken JS'de `toLocaleUpperCase('tr-TR')` kullan ("sakın" → "SAKIN", "i" → "İ").
 
-## Logo — YENİ YÖN: açık renkli illüstrasyonlu rozet (v5), seçim bekleniyor
-- Adaylar: A Alacakaranlıkta dikişli kulak · B Tepedeki yalnız ev · C Amblem (A + çember yazı). Dosyalar `marka/logo/v5/`. Seçilince renkler bölümü v5 paletine güncellenecek (bkz. `logo-tasarim` → v5).
+## Logo — YENİ YÖN: açık renkli, sade, düz renk (v6), seçim bekleniyor
+- Adaylar: A Dikişli kulak (mercan) · B Şşş (hardal) · C Duyma (krem, dalga+dikiş). Dosyalar `marka/logo/v6/`. v5 (manzaralı) reddedildi. Seçilince renkler bölümü v5 paletine güncellenecek (bkz. `logo-tasarim` → v6).
 
 ## Önceki seçim (koyu neon, v4) — yeni yön seçilene kadar geçerli
 ### Dikişli Kulak (neon)
