@@ -70,8 +70,9 @@ export const cekimler4 = (O: Record<string, number>): Cekim[] => [
     ciz: (lf, f) => <YatakUst f={f} lamba={0} ay={1} ifade="dehset" basinc={1} kb={{ gor: 1, netlik: 1, goz: ilerle(f, O.acikca - 4, O.acikca + 6), y: 820 }} /> },
   { bas: O.soru, gecis: "cozul", k0: { s: 1.0, cx: 540, cy: 1150 }, k1: { s: 1.4, cx: 540, cy: 1250 },
     ciz: (lf, f) => (
-      <g><Cekmece f={f} kapan={1} lamba={0} />
-        <rect x={120} y={992} width={840} height={14} fill={DV.mercan} opacity={0.5 + 0.4 * Math.sin(f * 0.2)} filter="url(#dv-parilti)" /></g>
+      <g><Cekmece f={f} kapan={1} lamba={0.45} />
+        <rect x={120} y={986} width={840} height={26} fill={DV.mercan} opacity={0.6 + 0.35 * Math.sin(f * 0.2)} filter="url(#dv-parilti)" />
+        <ellipse cx={540} cy={1000} rx={520} ry={120} fill={DV.mercan} opacity={0.18 + 0.1 * Math.sin(f * 0.2)} filter="url(#dv-yumusak)" /></g>
     ) },
 ];
 
