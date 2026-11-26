@@ -5,7 +5,7 @@
   "ilk_kare_parlak_mi": true,
   "ilk_05sn_hareket": 57.0,
   "ilk_05sn_buyuk_hareket": true,
-  "uyarili_kare": 3,
+  "uyarili_kare": 0,
   "kare_sayisi": 24
  },
  "kareler": [
@@ -101,24 +101,18 @@
   },
   {
    "t": 55.26,
-   "parlaklik": 0.293,
-   "uyarilar": [
-    "karanlık"
-   ]
+   "parlaklik": 0.401,
+   "uyarilar": []
   },
   {
    "t": 58.52,
-   "parlaklik": 0.28,
-   "uyarilar": [
-    "karanlık"
-   ]
+   "parlaklik": 0.376,
+   "uyarilar": []
   },
   {
    "t": 58.77,
-   "parlaklik": 0.281,
-   "uyarilar": [
-    "karanlık"
-   ]
+   "parlaklik": 0.379,
+   "uyarilar": []
   },
   {
    "t": 60.37,
