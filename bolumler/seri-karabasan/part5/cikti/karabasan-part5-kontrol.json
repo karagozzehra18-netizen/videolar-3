@@ -1,7 +1,7 @@
 {
  "ozet": {
   "ilk_kare_parlaklik": 0.672,
-  "yuzdelik85": 0.819,
+  "yuzdelik85": 0.817,
   "ilk_kare_parlak_mi": false,
   "ilk_05sn_hareket": 68.4,
   "ilk_05sn_buyuk_hareket": true,
@@ -46,7 +46,7 @@
   },
   {
    "t": 17.72,
-   "parlaklik": 0.45,
+   "parlaklik": 0.454,
    "uyarilar": []
   },
   {
@@ -96,22 +96,22 @@
   },
   {
    "t": 47.24,
-   "parlaklik": 0.831,
+   "parlaklik": 0.83,
    "uyarilar": []
   },
   {
    "t": 50.19,
-   "parlaklik": 0.822,
-   "uyarilar": []
-  },
-  {
-   "t": 53.1,
    "parlaklik": 0.82,
    "uyarilar": []
   },
   {
+   "t": 53.1,
+   "parlaklik": 0.817,
+   "uyarilar": []
+  },
+  {
    "t": 53.15,
-   "parlaklik": 0.819,
+   "parlaklik": 0.817,
    "uyarilar": []
   },
   {
