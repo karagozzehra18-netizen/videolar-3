@@ -361,7 +361,8 @@ export const BabaanneOda: React.FC<{ f: number; golge?: number; kol?: number; ba
 /** Çekmece yakın: muska konur, çekmece kapanır (kapan 0→1). */
 export const Cekmece: React.FC<{ f: number; kapan: number; lamba?: number }> = ({ f, kapan, lamba = 1 }) => (
   <g>
-    <rect width={1080} height={1920} fill={DV.sicak.duvar} />
+    <rect y={-500} width={1080} height={2920} fill={DV.sicak.duvar} />
+    <rect y={1500} width={1080} height={920} fill={DV.ahsap.orta} />
     {/* üstte: babaannenin gençlik fotoğrafı (çerçeveli) ve küçük vazo */}
     <rect x={150} y={90} width={300} height={380} rx={14} fill={DV.ahsap.koyu} />
     <rect x={172} y={112} width={256} height={336} fill="#E9D8B4" />
@@ -370,13 +371,19 @@ export const Cekmece: React.FC<{ f: number; kapan: number; lamba?: number }> = (
     <path d="M720 470 C680 380 700 300 740 260 L800 260 C840 300 860 380 820 470 Z" fill={DV.lavanta} />
     {[0, 1, 2].map((i) => <circle key={i} cx={740 + i * 30} cy={200 - (i % 2) * 30} r={26} fill={[DV.mercan, DV.hardal, DV.mercan][i]} />)}
     <rect x={60} y={500} width={960} height={1000} rx={30} fill={DV.ahsap.orta} />
-    <g transform={`translate(0 ${-(1 - kapan) * 420})`}>
-      <rect x={120} y={1000} width={840} height={420} rx={20} fill={DV.ahsap.koyu} />
-      <rect x={150} y={1020} width={780} height={330} fill="#2A1C15" />
-      <g transform={`translate(540 ${1180}) rotate(12)`}><path d="M-110 -90 L110 -90 L0 120 Z" fill={DV.mercan} /><path d="M-80 -70 L80 -70 L0 90 Z" fill="none" stroke={DV.hardal} strokeWidth={6} strokeDasharray="16 10" /></g>
-      <rect x={120} y={1350} width={840} height={150} rx={20} fill={DV.ahsap.orta} />
-      <rect x={470} y={1400} width={140} height={34} rx={17} fill={DV.hardal} />
-    </g>
+    {/* açıkken çekmecenin içi ön yüzün üstünde görünür; kapandıkça (kapan→1) iç kısım kaybolur */}
+    {kapan < 1 ? (
+      <g>
+        <clipPath id="cekmece-ic"><rect x={120} y={1000 - (1 - kapan) * 330} width={840} height={(1 - kapan) * 330} /></clipPath>
+        <rect x={120} y={1000 - (1 - kapan) * 330} width={840} height={(1 - kapan) * 330} fill="#2A1C15" />
+        <g clipPath="url(#cekmece-ic)">
+          <g transform={`translate(540 ${1000 - (1 - kapan) * 170}) rotate(12)`}><path d="M-110 -90 L110 -90 L0 120 Z" fill={DV.mercan} /><path d="M-80 -70 L80 -70 L0 90 Z" fill="none" stroke={DV.hardal} strokeWidth={6} strokeDasharray="16 10" /></g>
+        </g>
+      </g>
+    ) : null}
+    <rect x={120} y={1000} width={840} height={420} rx={20} fill={DV.ahsap.koyu} />
+    <rect x={150} y={1030} width={780} height={360} rx={14} fill={DV.ahsap.orta} />
+    <rect x={470} y={1180} width={140} height={34} rx={17} fill={DV.hardal} />
     <Isik lamba={lamba} ay={1 - lamba} lx={540} ly={300} r={1400} />
   </g>
 );

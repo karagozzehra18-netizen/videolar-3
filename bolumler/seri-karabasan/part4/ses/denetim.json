@@ -1,6 +1,6 @@
 {
  "efekt_turu": 8,
- "yerlesim": 15,
+ "yerlesim": 18,
  "tepe_db": -5.0,
  "satirlar": [
   {
@@ -121,6 +121,30 @@
    "sn": 51.933,
    "olculen_sn": 51.938,
    "fark_kare": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 1810,
+   "sn": 60.333,
+   "olculen_sn": 60.333,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 1818,
+   "sn": 60.6,
+   "olculen_sn": 60.6,
+   "fark_kare": 0.0,
+   "gecti": true
+  },
+  {
+   "ad": "tik",
+   "kare": 1826,
+   "sn": 60.867,
+   "olculen_sn": 60.867,
+   "fark_kare": 0.0,
    "gecti": true
   }
  ],

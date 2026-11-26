@@ -71,7 +71,7 @@ export const cekimler4 = (O: Record<string, number>): Cekim[] => [
   { bas: O.soru, gecis: "cozul", k0: { s: 1.0, cx: 540, cy: 1150 }, k1: { s: 1.4, cx: 540, cy: 1250 },
     ciz: (lf, f) => (
       <g><Cekmece f={f} kapan={1} lamba={0} />
-        <rect x={120} y={1340} width={840} height={14} fill={DV.mercan} opacity={0.5 + 0.4 * Math.sin(f * 0.2)} filter="url(#dv-parilti)" /></g>
+        <rect x={120} y={992} width={840} height={14} fill={DV.mercan} opacity={0.5 + 0.4 * Math.sin(f * 0.2)} filter="url(#dv-parilti)" /></g>
     ) },
 ];
 
