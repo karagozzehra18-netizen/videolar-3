@@ -12,17 +12,17 @@ import { Logo } from "./Logo";
 import { KAPAK_KIRP, RENK } from "./yerlesim";
 import { hash } from "../motor/yardimci";
 
-export type KapakProps = { zemin: string; satir1: string; satir2: string; no: number; etiket: string; renk: string[]; desen: string[] };
+export type KapakProps = { zemin: string; satir1: string; satir2: string; no: number; etiket: string; renk: string[]; desen: string[]; alt?: string };
 
 const KART = { x: 100, y: 700, w: 880, cerceve: 12 };
 
-export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket, renk, desen }) => {
+export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket, renk, desen, alt }) => {
   const boyut = Math.min(150, Math.floor(900 / (Math.max(satir1.length, satir2.length) * 0.68)));
   const ic = KART.w - KART.cerceve * 2;
   const olcek = ic / KAPAK_KIRP.w;
   const icH = Math.round(KAPAK_KIRP.h * olcek);
   const baslik: React.CSSProperties = {
-    fontFamily: FONT.baslik, fontWeight: 900, fontSize: boyut, lineHeight: 1.0, color: RENK.kagit,
+    fontFamily: FONT.baslik, fontWeight: 900, fontSize: boyut, lineHeight: 0.98, color: RENK.kagit,
     WebkitTextStroke: `${Math.round(boyut * 0.09)}px ${RENK.lacivert}`, paintOrder: "stroke fill",
     textShadow: `0 ${Math.round(boyut * 0.06)}px 0 ${RENK.lacivert}`, letterSpacing: 1,
   };
@@ -44,7 +44,7 @@ export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket,
         </div>
       </div>
       {/* başlık */}
-      <div style={{ position: "absolute", top: 400, left: 60, right: 60, textAlign: "center" }}>
+      <div style={{ position: "absolute", top: 380, left: 60, right: 60, textAlign: "center" }}>
         <div style={baslik}>{satir1}</div>
         <div style={baslik}>{satir2}</div>
       </div>
@@ -61,7 +61,7 @@ export const Kapak: React.FC<KapakProps> = ({ zemin, satir1, satir2, no, etiket,
               Duyma <span style={{ color: RENK.mercan }}>Sakın</span>
             </div>
             <div style={{ flex: 1, textAlign: "center", fontFamily: FONT.metin, fontWeight: 800, fontSize: 28, letterSpacing: 3, color: RENK.lacivert, opacity: 0.75 }}>
-              {etiket.split("·")[0].trim().toLocaleUpperCase("tr-TR")} #{String(no).padStart(3, "0")}
+              {alt ? alt.toLocaleUpperCase("tr-TR") : `${etiket.split("·")[0].trim().toLocaleUpperCase("tr-TR")} #${String(no).padStart(3, "0")}`}
             </div>
             <div style={{ background: RENK.mercan, color: RENK.kagit, fontFamily: FONT.metin, fontWeight: 800, fontSize: 28,
               letterSpacing: 2, padding: "10px 20px", borderRadius: 14 }}>▶ İZLE</div>

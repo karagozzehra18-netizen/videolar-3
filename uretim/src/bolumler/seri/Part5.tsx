@@ -33,7 +33,7 @@ export const cekimler5 = (O: Record<string, number>): Cekim[] => [
   { bas: O.al - 4, gecis: "cozul", k0: { s: 2.2, cx: 540, cy: 620 }, k1: { s: 2.0, cx: 540, cy: 660 },
     ciz: (lf, f) => (
       <g><YatakUst f={f} lamba={0.35} ay={0.8} ifade="gerilim" acik={0.6} basinc={1} nefes={2.5} kb={{ gor: 1, netlik: 0.9, goz: 1, y: 800 }} />
-        {[0, 1, 2, 3].map((i) => <circle key={i} cx={420 + i * 80} cy={330} r={22} fill={DV.hardal} opacity={ilerle(f, O.say + i * 9, O.say + i * 9 + 4)} />)}
+        {[0, 1, 2, 3].map((i) => <circle key={i} cx={420 + i * 80} cy={840} r={24} fill={DV.hardal} opacity={ilerle(f, O.say + i * 9, O.say + i * 9 + 4)} />)}
         {f > O.ver ? <ellipse cx={540} cy={560 - (f - O.ver) * 2} rx={60 + (f - O.ver) * 3} ry={30 + (f - O.ver)} fill="#fff" opacity={Math.max(0, 0.45 - (f - O.ver) * 0.012)} filter="url(#dv-yumusak)" /> : null}
       </g>
     ) },

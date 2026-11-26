@@ -203,7 +203,7 @@ export const YastikMuska: React.FC<{ f: number; kalk: number; muska: number; par
     <rect width={1080} height={1920} fill="#EDE6DA" />
     {Array.from({ length: 10 }, (_, i) => <rect key={i} x={0} y={i * 200 + 90} width={1080} height={6} fill="#D8CFC0" />)}
     {muska > 0 ? (
-      <g transform="translate(540 1050)" opacity={muska}>
+      <g transform="translate(540 760)" opacity={muska}>  {/* altyazı bandının (1040-1186) üstünde */}
         {parla > 0 ? <circle r={300} fill="url(#dv-lambaIsik)" opacity={parla} /> : null}
         <path d="M-30 -200 C-60 -260 60 -260 30 -200" fill="none" stroke="#7A5A3A" strokeWidth={10} />
         <path d="M-170 -180 L170 -180 L0 160 Z" fill={DV.mercan} />
@@ -213,7 +213,7 @@ export const YastikMuska: React.FC<{ f: number; kalk: number; muska: number; par
     ) : null}
     {parmak > 0 ? (
       <g filter="url(#dv-duman)" opacity={Math.min(1, parmak * 2)}>
-        <path d={`M1080 ${1180} C${1000 - parmak * 260} 1170 ${760 - parmak * 120} 1150 ${700 + (1 - parmak) * 420} 1120 L${700 + (1 - parmak) * 420} 1150 C${820} 1190 1000 1210 1080 1220 Z`} fill={DV.karanlik} />
+        <path d={`M1080 ${900} C${1000 - parmak * 260} 890 ${760 - parmak * 120} 870 ${700 + (1 - parmak) * 420} 840 L${700 + (1 - parmak) * 420} 870 C${820} 910 1000 930 1080 940 Z`} fill={DV.karanlik} />
       </g>
     ) : null}
     <g transform={`translate(0 ${-kalk * 900}) rotate(${-kalk * 8} 540 900)`}>
