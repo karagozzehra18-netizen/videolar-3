@@ -46,10 +46,11 @@ def main():
         hata += not ok
         satirlar.append({"ad": e["ad"], "kare": e["kare"], "sn": round(e["kare"] / FPS, 3), "olculen_sn": None if t is None else round(t, 3), "fark_kare": fark, "gecti": ok})
         print(f"{e['ad']:12s} {e['kare']:9d} {('-' if t is None else f'{t*FPS:9.1f}'):>9s} {('-' if fark is None else f'{fark:+.1f}'):>6s}  {'GEÇTİ' if ok else 'KALDI'}")
-    sonuc = {"efekt_turu": len({e['ad'] for e in z['efektler']}), "yerlesim": len(z["efektler"]), "tepe_db": round(tepe_db(iz), 1), "satirlar": satirlar, "kalan": hata}
+    # bitiş ekranı dokunuş sesleri (kare >= bitis) hikâye efekti sayılmaz
+    sonuc = {"efekt_turu": len({e['ad'] for e in z['efektler'] if e['kare'] < z['bitis']}), "yerlesim": len(z["efektler"]), "tepe_db": round(tepe_db(iz), 1), "satirlar": satirlar, "kalan": hata}
     (d / "ses/denetim.json").write_text(json.dumps(sonuc, ensure_ascii=False, indent=1))
     print(f"{sonuc['efekt_turu']} efekt türü, {len(satirlar)} yerleşim · kalan {hata}")
-    if not 5 <= sonuc["efekt_turu"] <= 8: print("UYARI: efekt türü 5-8 arası olmalı")
+    if not 5 <= sonuc["efekt_turu"] <= 8: print("UYARI: hikâye efekti türü 5-8 arası olmalı")
     sys.exit(1 if hata else 0)
 
 if __name__ == "__main__":
