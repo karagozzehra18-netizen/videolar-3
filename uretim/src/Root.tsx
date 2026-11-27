@@ -3,6 +3,7 @@ import { Composition, Still } from "remotion";
 import "./marka/fontlar";
 import { B001 } from "./bolumler/b001/Video";
 import { DVDeneme } from "./stiller/duz-vektor/Deneme";
+import { KAPAKLAR } from "./bolumler/seri/Kapaklar";
 import { Part1, PART1_SURE } from "./bolumler/seri/Part1";
 import { Part2, PART2_SURE } from "./bolumler/seri/Part2";
 import { Part3, PART3_SURE } from "./bolumler/seri/Part3";
@@ -28,6 +29,7 @@ export const Root: React.FC = () => (
           defaultProps={{ zemin: `bolumler/seri-karabasan/part${i + 1}/cikti/kapak-zemin.png`, ...b.kapak, no: i + 1 } as KapakProps} />
       </React.Fragment>
     ))}
+    {KAPAKLAR.map(({ id, C }) => <Still key={id} id={id} component={C} width={1080} height={1920} />)}
     <Composition id="dv-deneme" component={DVDeneme} durationInFrames={60} fps={30} width={1080} height={1920} />
     <Composition id="b001" component={B001} durationInFrames={z001.toplam} fps={30} width={1080} height={1920} />
     <Still id="k001" component={Kapak} width={1080} height={1920}

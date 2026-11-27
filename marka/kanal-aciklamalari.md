@@ -4,34 +4,44 @@
 - **Kullanıcı adı (her platformda aynı):** @duymasakin
 - **Kısa slogan:** Kulaklığını tak. Işığı kapatma.
 
-## YouTube — Kanal açıklaması
+## YouTube — Kanal açıklaması (güncel: seri formatı, 27.11.2026)
 
 ```
 Kulaklığını tak. Işığı kapatma.
 
-Duyma Sakın'da her video yarım dakikalık bir korku hikâyesi: şehir efsaneleri, Anadolu'nun eski anlatıları ve hâlâ açıklanamayan olaylar. Her sahne kodla, tek tek çizilmiş animasyon; her hikâye farklı bir görsel tarzda.
+Duyma Sakın'da korku hikâyeleri dakikalık partlarla anlatılır: Anadolu'nun eski anlatıları, şehir efsaneleri ve hâlâ açıklanamayan olaylar. Her sahne kodla, tek tek çizilmiş animasyon; her seri farklı bir görsel tarzda.
 
-Hikâyeleri kaynaklarda nasıl geçiyorsa öyle anlatıyoruz; kesin olmayana "anlatılır" diyoruz. Kan, vahşet ya da gerçek kişileri hedef alan içerik yok. Sadece ensende hissedeceğin o soğukluk.
+Şimdi yayında: Karabasan (5 part). Partları sırayla izlemek için "Karabasan" oynatma listesine bak.
 
-Abone ol, bildirimleri aç. Bir sonraki hikâyeyi duymamak için çok geç olabilir.
+Hikâyelerde geçen bilgileri kaynaklarıyla veriyoruz; kesin olmayana "anlatılır" diyoruz. Kan, vahşet ya da gerçek kişileri hedef alan içerik yok.
+
+Abone ol, bildirimleri aç. Bir sonraki partı kaçırma.
 ```
 
 **Kanal anahtar kelimeleri (YouTube Studio → Ayarlar → Kanal):**
 korku hikayeleri, kısa korku, şehir efsaneleri, açıklanamayan olaylar, gizemli olaylar, paranormal, Türk efsaneleri, karabasan, korku animasyon, gerilim
 
+## Instagram — Ad alanı
+
+```
+Duyma Sakın · Korku Hikâyeleri
+```
+
 ## Instagram — Biyografi
 
 ```
-Yarım dakikalık korku hikâyeleri 🎧
-Şehir efsaneleri · Açıklanamayan olaylar
+Kodla çizilmiş korku hikâyeleri 🎧
+Her hikâye 5 part · Şimdi: Karabasan
 Kulaklığını tak. Işığı kapatma.
 ```
 
 ## TikTok — Biyografi
 
 ```
-Yarım dakikalık korku hikâyeleri. Kulaklığını tak, ışığı kapatma.
+Kodla çizilmiş korku hikâyeleri 🎧 5 partlık seriler. Işığı kapatma.
 ```
+
+Kaynak ve tüm video metinleri: `bolumler/seri-karabasan/paylasim_kiti.py` → `paylasim-metinleri.md`.
 
 ## Dosyalar (seçili logo: v6 A — hepsi `marka/secili/`)
 

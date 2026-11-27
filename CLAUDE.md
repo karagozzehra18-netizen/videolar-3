@@ -68,6 +68,7 @@ Kullanıcının ilk ve tam isteği: `belgeler/ilk-istek.md`. Kurallar ve sıra o
 - ✅ ElevenLabs: Starter plan, aylık 40.000 kredi (ticari kullanım dahil), yenilenme 24.12.2026. Anlatıcı sesi: **Emin** (3 numara, `2olWvHmrPO1obgZX9ivZ`), bütün cümleler — `ses` skill'i.
 - ✅ 4. adım: 7 kendi skill'i + araçlar + Remotion üretim projesi + stil kütüphanesi (30 sayfa; motor: gölge oyunu).
 - ✅ Kapak formatı kullanıcıyla belirlendi: etiket hapı · 2 satır · çerçeveli sahne kartı · logo/numara/İZLE şeridi (`kanal-kimligi`).
+- ✅ Seri kapakları v2 + paylaşım kiti (biyografiler, her part için YouTube/Instagram/TikTok metinleri): `bolumler/seri-karabasan/paylasim_kiti.py` → `paylasim-metinleri.md`; kopyala düğmeli sayfa https://claude.ai/artifact/F7Tavbnxmu5iFny54TfHTR
 - ✅ **Karabasan serisi (5 part)** `bolumler/seri-karabasan/part1-5`: düz vektör gece masalı stili, Emin, hikâye formatı. Kontrollü final render'lar `cikti/`. **Yüklenmedi, takvime eklenmedi.**
 - ✅ 5. adım: deneme videosu `bolumler/001-karabasan` (paylaşılmayacak, kullanıcı kararı) (33,7 sn, tam ekran, Emin, hareketli bitiş, -14,8 LUFS, -1,3 dBTP, 24 kare kontrol temiz, 20 efekt yerleşimi ±0,1 kare). **Yüklenmedi, takvime eklenmedi.**
 - ⚠️ Depo herkese açık olabilir; kullanıcıdan Private yapması istendi — kontrol et.

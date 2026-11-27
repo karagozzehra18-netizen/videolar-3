@@ -102,6 +102,13 @@ Kod: `uretim/src/marka/Kapak.tsx` (bölüm başına yalnız veri değişir: `bol
 5. **Alt şerit** (kartın içinde, altta): rozet logo · "Duyma Sakın" · "KORKU #001" (kategori + üç haneli numara) · mercan "▶ İZLE" hapı.
 - Kapak anlatımdan daha kesin bir iddia kurmaz (soru biçimi tercih edilir).
 
+## Seri kapağı (v2, 27.11.2026) — seriler için kullanılır
+Kod: `uretim/src/marka/KapakSeri.tsx`, sahneler `uretim/src/bolumler/seri/Kapaklar.tsx` (kompozisyon `karabasan-pN-kapak2`).
+- Her partın kendi renk tonu (degrade + yıldızlar + hilal + ses dalgası), "SERİ" hapı, 2 satır başlık (1. kâğıt, 2. vurgu rengi),
+  kâğıt çerçeveli kart içinde **özel kurulmuş, net kapak sahnesi** (video karesi değil), sol üstte döndürülmüş **PART N** rozeti, alt şeritte logo · PART N/5 · İZLE.
+- Instagram ızgarası 3:4 kırpımı (y 240-1680) içinde kalır; ızgara önizlemesi `bolumler/seri-karabasan/instagram-izgara-onizleme.png`.
+- Yükleme için `cikti/kapak.jpg` (1080×1920).
+
 ## Kanal metinleri
 - Hazır açıklamalar: `marka/kanal-aciklamalari.md` (YouTube ≤1000, Instagram ≤150, TikTok ≤80 karakter; sınırlar ölçüldü).
 - YouTube başlığında emoji ve `#shorts` yok. Instagram/TikTok biyografisinde tek emoji (🎧) serbest.
